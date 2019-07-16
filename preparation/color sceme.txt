@@ -1,0 +1,6 @@
+Color sceme:
+https://colorhunt.co/palette/138147
+#3c415e
+#738598
+#dfe2e2
+#1cb3c8
