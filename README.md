@@ -13,7 +13,7 @@
 ## General info
 There's a group of friends who likes the metal and rock era when it comes to music and they really enjoy to go to gigs together. The members of this group live in the Netherlands, Belgium and Germany so it's not easy to plan these trips. They have to be up to date with the upcoming events, plan the trips and budget. One of them came up with the idea to make a simple mobile web application for the group with the gig info which everyone can see. Not to mention an ingroup chat could be handy.
 
-* my first experience making UI flow diagrams and screen mockups (It was a mess I can tell you! 😁)
+* my first experience making [UI flow diagrams](https://github.com/WiliTheSParrow/ItGiGls_MobileWebApp/tree/master/preparation/UI%20diagram) and [screen mockups](https://github.com/WiliTheSParrow/ItGiGls_MobileWebApp/tree/master/preparation/Screen%20mockup) (It was a mess I can tell you! 😁)
 * interactive prototype: https://marvelapp.com/94fja9i
 * please check out [this](https://github.com/WiliTheSParrow/ItGIGls_MobileWebApp/blob/master/preparation/deliverable.docx) document for personas, scenarios and mockups
 
