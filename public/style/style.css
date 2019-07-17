@@ -2,18 +2,20 @@
 * === SETTING UP BASICS ===
 */
 
-
 body{
     background: #1cb3c8;
     color: #3c415e;
-    font-family: Agency FB;
-    
+    font-family: Agency FB;   
 }
+
 
 /*
 * === HEADER ===
 */
 
+#header{
+    border: 1px solid #738598;
+}
 
 #header img{
     width: 50%;
@@ -22,3 +24,13 @@ body{
 #header h1{
     font-weight: bold;
 }
+
+
+/*
+* === INFO TABLE ===
+*/
+
+#infoTable{
+    border: 1px solid #738598;
+}
+
