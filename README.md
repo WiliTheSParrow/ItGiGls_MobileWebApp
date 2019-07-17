@@ -18,8 +18,10 @@ There's a group of friends with a passion for metal music and they really enjoy 
 * please check out [this](https://github.com/WiliTheSParrow/ItGIGls_MobileWebApp/blob/master/preparation/deliverable.docx) document for personas, scenarios and mockups
 
 ## Technologies
+* HTML5
+* CSS
+* Bootstrap
 * Marvel Application
-
 
 ## Click on the link below to check out this project
 <a href="#">coming soon</a>
