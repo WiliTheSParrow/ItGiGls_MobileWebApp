@@ -30,7 +30,9 @@ body{
 * === INFO TABLE ===
 */
 
-#infoTable{
+#infoTableHeader{
     border: 1px solid #738598;
+    font-weight: bold;
+    font-size: 24px;
 }
 
