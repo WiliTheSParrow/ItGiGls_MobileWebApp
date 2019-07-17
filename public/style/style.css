@@ -9,12 +9,13 @@ body{
 }
 
 
+
 /*
 * === HEADER ===
 */
 
 #header{
-    border: 1px solid #738598;
+    border: 1px solid #3C415E;
 }
 
 #header img{
@@ -30,9 +31,18 @@ body{
 * === INFO TABLE ===
 */
 
-#infoTableHeader{
-    border: 1px solid #738598;
-    font-weight: bold;
-    font-size: 24px;
+#infoSection{
+    border: 1px solid #3C415E;
 }
 
+#infoTableHeader{
+    border: 1px solid #3C415E;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.infoTableInfo{
+    background: #738598;
+    border: 1px solid #3C415E;
+    font-size: 30px;
+}
