@@ -1,0 +1,24 @@
+/*
+* === SETTING UP BASICS ===
+*/
+
+
+body{
+    background: #1cb3c8;
+    color: #3c415e;
+    font-family: Agency FB;
+    
+}
+
+/*
+* === HEADER ===
+*/
+
+
+#header img{
+    width: 50%;
+}
+
+#header h1{
+    font-weight: bold;
+}
