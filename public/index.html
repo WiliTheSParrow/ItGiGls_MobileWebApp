@@ -8,11 +8,13 @@
     <!--- to specify how the browser should display the page zoom level and dimensions--->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--- Style --->
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="../public/css/jquery.mobile-1.4.5.css">
+    
+
     <!--- jQuery --->
-    <sript src="../public/js/jquery.js"></sript>
-    <sript src="../public/js/jquery.mobile-1.4.5.js"></sript>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.css" />
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
     <!---Main Javascript --->
     <sript src="../public/js/main.js"></sript>
 </head>
@@ -30,14 +32,14 @@
                 <h1>It GiGls</h1>
             </div>
             <div id="messageIcon">
-               <a href="#chatPage" data-role="button">
-                <img src="../public/img/msg.png" alt="message icon">
+                <a href="#chatPage" data-role="button">
+                    <img src="../public/img/msg.png" alt="message icon">
                 </a>
             </div>
         </div>
 
         <!--- Information Bar --->
-        <div id="informationBar" role="main" class="ui-content">
+        <div role="main" class="ui-content" id="informationBar">
             <div id="infoTableHeader">
                 <div>Band</div>
                 <div>Date</div>
@@ -72,8 +74,8 @@
         <!--- Header --->
         <div id="header" data-role="header">
             <div id="homeIcon">
-               <a href="#homePage" data-role="button">
-                <img src="img/hands.png" alt="sign of horns">
+                <a href="#homePage" data-role="button">
+                    <img src="img/hands.png" alt="sign of horns">
                 </a>
             </div>
             <div id="appTitle">
@@ -85,7 +87,7 @@
         </div>
 
         <!--- Chat --->
-        <div id="chat" role="main" class="ui-content">
+        <div role="main" class="ui-content" id="chatBar">
             <p>The chat</p>
         </div>
 
