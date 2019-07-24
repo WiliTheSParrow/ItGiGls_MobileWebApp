@@ -20,7 +20,9 @@ There's a group of friends with a passion for metal music and they really enjoy 
 ## Technologies
 * HTML5
 * CSS
-* Bootstrap
+* JavaScript
+* jQuery
+
 * Marvel Application
 
 ## Click on the link below to check out this project

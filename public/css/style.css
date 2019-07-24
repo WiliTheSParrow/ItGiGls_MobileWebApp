@@ -15,11 +15,13 @@ body{
 */
 
 #header{
-    border: 1px solid #3C415E;
+    border: 2px solid #3C415E;
+    border-bottom: 1px solid #3C415E;
 }
 
 #header img{
-    width: 50%;
+    width: 10%;
+    display:inline;
 }
 
 #header h1{
@@ -31,8 +33,10 @@ body{
 * === INFO TABLE ===
 */
 
-#infoSection{
+#informationBar{
+    padding: 0px;
     border: 1px solid #3C415E;
+    border-top: 1px solid #3C415E;
 }
 
 #infoTableHeader{
