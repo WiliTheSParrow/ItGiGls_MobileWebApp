@@ -22,6 +22,7 @@ There's a group of friends with a passion for metal music and they really enjoy 
 * CSS
 * JavaScript
 * jQuery
+* jQuery Mobile
 * Marvel Application
 
 ## Click on the link below to check out this project
