@@ -76,4 +76,11 @@ body {
     background-color: #1cb3c8;
     color: #3c415e;
     text-align: center;
+
+}
+
+#footer a{
+    text-decoration: none;
+    color: #3c415e;
+    font-size: 24px;
 }
