@@ -6,6 +6,7 @@ body {
     background: #1cb3c8;
     color: #3c415e;
     font-family: 'Abel', sans-serif;
+
 }
 
 
@@ -13,24 +14,29 @@ body {
 * === HEADER ===
 */
 
-#header{
-   border: 3px solid red;
+#header {
+    border: 3px solid red;
 }
 
 
-#header img{
+#header img {
     border: 1px solid red;
     width: 100%;
 }
 
-#header h1{
+#header h1 {
     font-weight: bold;
     color: #3c415e;
-     border: 1px solid red;
+    border: 1px solid red;
+
 }
 
-#header ul{
+#header ul {
     border: 1px solid yellow;
+}
+
+#appTitle {
+    font-size: 24px;
 }
 
 
@@ -38,21 +44,36 @@ body {
 * === INFO TABLE ===
 */
 
-#informationBar{
+#informationBar {
     padding: 0px;
     border: 1px solid #3C415E;
     border-top: 1px solid #3C415E;
-    
+
 }
 
-#infoTableHeader{
+#infoTableHeader {
     border: 1px solid #3C415E;
     font-weight: bold;
     font-size: 30px;
 }
 
-.infoTableInfo{
+.infoTableInfo {
     background: #738598;
     border: 1px solid #3C415E;
     font-size: 30px;
+}
+
+/*
+* === FOOTER ===
+*/
+
+#footer {
+    font-size: 19px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1cb3c8;
+    color: #3c415e;
+    text-align: center;
 }
