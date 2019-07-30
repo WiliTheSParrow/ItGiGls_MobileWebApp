@@ -1,0 +1,8 @@
+{
+  "name": "ItGiGls Mobile Web App",
+  "description": "A Mobile Web Application for a fictional music and concert lover group.",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.6.0"
+  }
+}
