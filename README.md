@@ -21,10 +21,12 @@ There's a group of friends with a passion for metal music and they really enjoy 
 ## Technologies
 * HTML5
 * CSS
+* SCSS (SASS)
 * JavaScript
 * jQuery
 * jQuery Mobile
 * Herokuapp
+* Visual Studio Code
 * Marvel Application
 
 ## Click on the link below to check out this project
