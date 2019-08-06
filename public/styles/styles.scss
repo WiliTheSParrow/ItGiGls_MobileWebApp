@@ -1,25 +1,56 @@
 $mainColor : #1cb3c8;
 $fontColor : #3c415e;
 $columnColor:#738598;
+$basicFontSize: 22px;
 
 
 body {
     background: $mainColor;
     color: $fontColor;
     font-family: 'Abel', sans-serif;
-    font-size: 22px;
-    margin: 0;
-    padding: 0;
+    font-size: $basicFontSize;
 }
 
 
 // HEADER
 
+#header {
+    height: 23vw;
+    overflow: hidden;
+    border: 2px solid red;
+
+    h1 {
+        font-size: $basicFontSize;
+        border: 2px solid red;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+       
+    }
+
+    a{
+        height: 100px;
+        border: 2px solid purple;
+    }
+
+    .responsiveImg {
+        border: 2px solid red;
+        width: 100%;
+        max-width: 50px;
+        height: auto;
+        margin:0;
+    }
+
+}
 
 
 // INFO TABLE
-
+#informationBar{
+    border: 2px solid black;
+}
 
 
 //FOOTER
-
+#footer{
+    border: 2px solid white;
+}

@@ -3,7 +3,40 @@ body {
   color: #3c415e;
   font-family: 'Abel', sans-serif;
   font-size: 22px;
+}
+
+#header {
+  height: 23vw;
+  overflow: hidden;
+  border: 2px solid red;
+}
+
+#header h1 {
+  font-size: 22px;
+  border: 2px solid red;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+#header a {
+  height: 100px;
+  border: 2px solid purple;
+}
+
+#header .responsiveImg {
+  border: 2px solid red;
+  width: 100%;
+  max-width: 50px;
+  height: auto;
   margin: 0;
-  padding: 0;
+}
+
+#informationBar {
+  border: 2px solid black;
+}
+
+#footer {
+  border: 2px solid white;
 }
 /*# sourceMappingURL=styles.css.map */
