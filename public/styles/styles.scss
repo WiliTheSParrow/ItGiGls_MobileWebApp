@@ -2,11 +2,15 @@ $mainColor : #1cb3c8;
 $fontColor : #3c415e;
 $columnColor:#738598;
 
+@mixin flexCenter {
+    height:30vw;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    
+}
 
 
-/*
-* === SETTING UP BASICS ===
-*/
 body {
     background: $mainColor;
     color: $fontColor;
@@ -15,3 +19,8 @@ body {
 
 
 @import "./header"
+
+// INFO TABLE
+
+
+//FOOTER

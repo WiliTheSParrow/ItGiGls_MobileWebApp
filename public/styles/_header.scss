@@ -1,21 +1,16 @@
 #header {
-    border: 3px solid red;
 
-    img {
-        border: 1px solid red;
-       
+    .responsive {
+        width: 100%;
+        height: auto;
+        @include flexCenter;
     }
 
     h1 {
         font-weight: bold;
-        border: 1px solid red;
     }
 
-    ul{
-        border: 1px solid yellow;
-    }
-
-    #appTitle{
+    #appTitle {
         font-size: 24px;
     }
 }

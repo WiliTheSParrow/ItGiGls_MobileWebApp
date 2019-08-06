@@ -1,27 +1,24 @@
-/*
-* === SETTING UP BASICS ===
-*/
 body {
   background: #1cb3c8;
   color: #3c415e;
   font-family: 'Abel', sans-serif;
 }
 
-#header {
-  border: 3px solid red;
-}
-
-#header img {
-  border: 1px solid red;
+#header .responsive {
+  width: 100%;
+  height: auto;
+  height: 30vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #header h1 {
   font-weight: bold;
-  border: 1px solid red;
-}
-
-#header ul {
-  border: 1px solid yellow;
 }
 
 #header #appTitle {
