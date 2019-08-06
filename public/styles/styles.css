@@ -2,26 +2,8 @@ body {
   background: #1cb3c8;
   color: #3c415e;
   font-family: 'Abel', sans-serif;
-}
-
-#header .responsive {
-  width: 100%;
-  height: auto;
-  height: 30vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  vertical-align: middle;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#header h1 {
-  font-weight: bold;
-}
-
-#header #appTitle {
-  font-size: 24px;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=styles.css.map */
