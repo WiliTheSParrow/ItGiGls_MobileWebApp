@@ -1,4 +1,30 @@
+/*
+* === SETTING UP BASICS ===
+*/
 body {
-  background: #341f92;
+  background: #1cb3c8;
+  color: #3c415e;
+  font-family: 'Abel', sans-serif;
+}
+
+#header {
+  border: 3px solid red;
+}
+
+#header img {
+  border: 1px solid red;
+}
+
+#header h1 {
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+#header ul {
+  border: 1px solid yellow;
+}
+
+#header #appTitle {
+  font-size: 24px;
 }
 /*# sourceMappingURL=styles.css.map */

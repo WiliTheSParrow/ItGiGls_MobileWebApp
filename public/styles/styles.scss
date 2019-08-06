@@ -1,3 +1,17 @@
+$mainColor : #1cb3c8;
+$fontColor : #3c415e;
+$columnColor:#738598;
+
+
+
+/*
+* === SETTING UP BASICS ===
+*/
 body {
-    background: rgb(52, 31, 146);
+    background: $mainColor;
+    color: $fontColor;
+    font-family: 'Abel', sans-serif;
 }
+
+
+@import "./header"
