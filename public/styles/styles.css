@@ -31,7 +31,7 @@ body #header .responsiveImg {
 
 body #informationBar {
   background: #738598;
-  border-bottom: 2px solid #3c415e;
+  border-bottom: 1px solid #3c415e;
   border-top: 2px solid #3c415e;
   padding: 0;
   margin: 0;
@@ -39,8 +39,16 @@ body #informationBar {
 
 body #informationBar #infoTableHeader {
   background: #1cb3c8;
-  border-bottom: 1px solid #3c415e;
+  border-bottom: 2px solid #3c415e;
   font-weight: bold;
+  padding: 5px;
+  padding-left: 30px;
+}
+
+body #informationBar .infoTableInfo {
+  border-bottom: 2px solid #3c415e;
+  padding: 5px;
+  padding-left: 30px;
 }
 
 body #footer {

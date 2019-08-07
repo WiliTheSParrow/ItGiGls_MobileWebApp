@@ -22,7 +22,13 @@ $fonts:(basic: 22px,
 
 ;
 
-$padding: 5px;
+$paddings:(basic: 5px,
+    leftSide: 30px,
+);
+
+@function padding($paddingSize) {
+    @return map-get($paddings, $paddingSize)
+};
 
 // DESIGN ================================
 
@@ -52,7 +58,7 @@ body {
         }
 
         .responsiveImg {
-            padding: $padding;
+            padding: padding(basic);
             width: 100%;
             max-width: 40px;
             height: 40px;
@@ -64,15 +70,23 @@ body {
 
     #informationBar {
         background: color(accent);
-        border-bottom: 2px solid color(fontLine);
+        border-bottom: 1px solid color(fontLine);
         border-top: 2px solid color(fontLine);
         padding: 0;
         margin: 0;
 
         #infoTableHeader {
             background: color(primary);
-            border-bottom: 1px solid color(fontLine);
+            border-bottom: 2px solid color(fontLine);
             font-weight: bold;
+            padding: padding(basic);
+            padding-left: padding(leftSide);
+        }
+
+        .infoTableInfo {
+            border-bottom: 2px solid color(fontLine);
+            padding: padding(basic);
+            padding-left: padding(leftSide);
         }
     }
 
