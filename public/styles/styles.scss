@@ -3,6 +3,7 @@
 $colors: (primary:#1cb3c8,
     fontLine: #3c415e,
     accent: #738598,
+    accentLighten: lighten(#738598, 10%),
 );
 
 
@@ -13,7 +14,8 @@ $colors: (primary:#1cb3c8,
 ;
 
 $fonts:(basic: 22px,
-    footer: 10px,
+    footer: 15px,
+    headerSize: 24px,
 );
 
 @function font($fontSize) {
@@ -23,13 +25,16 @@ $fonts:(basic: 22px,
 ;
 
 $paddings:(basic: 5px,
+topSide: 10px,
     leftSide: 30px,
     bottomSide: 50px,
 );
 
 @function padding($paddingSize) {
     @return map-get($paddings, $paddingSize)
-};
+}
+
+;
 
 // DESIGN ================================
 
@@ -52,7 +57,7 @@ body {
         display: inline-block;
 
         p {
-            font-size: font(basic);
+            font-size: font(headerSize);
             font-weight: bold;
             text-align: center;
 
@@ -92,7 +97,25 @@ body {
     }
 
     #footer {
-        border: 2px solid white;
+
+        font-size: font(footer);
+        text-align: center;
+        color: color(fontLine);
+        font-weight: bold;
+        margin-top: padding(topSide);
+
+        p {
+            padding: 0;
+            margin: 0;
+            
+
+            a, i{
+                text-decoration: none;
+                color: color(fontLine);
+                font-weight: normal;
+                
+            }
+        }
     }
 
 

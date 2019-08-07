@@ -17,7 +17,7 @@ body #header {
 }
 
 body #header p {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
@@ -52,6 +52,21 @@ body #informationBar .infoTableInfo {
 }
 
 body #footer {
-  border: 2px solid white;
+  font-size: 15px;
+  text-align: center;
+  color: #3c415e;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+body #footer p {
+  padding: 0;
+  margin: 0;
+}
+
+body #footer p a, body #footer p i {
+  text-decoration: none;
+  color: #3c415e;
+  font-weight: normal;
 }
 /*# sourceMappingURL=styles.css.map */
