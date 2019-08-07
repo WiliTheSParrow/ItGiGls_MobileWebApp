@@ -99,10 +99,15 @@ body {
     #footer {
 
         font-size: font(footer);
-        text-align: center;
+        
         color: color(fontLine);
         font-weight: bold;
         margin-top: padding(topSide);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: padding(topSide);
 
         p {
             padding: 0;

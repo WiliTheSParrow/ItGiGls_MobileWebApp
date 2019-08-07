@@ -53,10 +53,14 @@ body #informationBar .infoTableInfo {
 
 body #footer {
   font-size: 15px;
-  text-align: center;
   color: #3c415e;
   font-weight: bold;
   margin-top: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 body #footer p {
