@@ -63,7 +63,17 @@ body {
 
 
     #informationBar {
-        border: 2px solid black;
+        background: color(accent);
+        border-bottom: 2px solid color(fontLine);
+        border-top: 2px solid color(fontLine);
+        padding: 0;
+        margin: 0;
+
+        #infoTableHeader {
+            background: color(primary);
+            border-bottom: 1px solid color(fontLine);
+            font-weight: bold;
+        }
     }
 
     #footer {
