@@ -1,52 +1,74 @@
-$mainColor : #1cb3c8;
-$fontColor : #3c415e;
-$columnColor:#738598;
-$basicFontSize: 22px;
+// VARIABLES, FUNCTIONS =================
 
-body, html {
+$colors: (primary:#1cb3c8,
+    fontLine: #3c415e,
+    accent: #738598,
+);
+
+
+@function color($colorName) {
+    @return map-get($colors, $colorName)
+}
+
+;
+
+$fonts:(basic: 22px,
+    footer: 10px,
+);
+
+@function font($fontSize) {
+    @return map-get($fonts, $fontSize)
+}
+
+;
+
+$padding: 5px;
+
+// DESIGN ================================
+
+body,
+html {
     height: 100%;
 }
 
+;
+
 body {
-    background: $mainColor;
-    color: $fontColor;
+    background: color(primary);
+    color: color(fontLine);
     font-family: 'Abel', sans-serif;
-    font-size: $basicFontSize;
+    font-size: font(basic);
     margin: 0;
 
     #header {
         width: 100%;
-        border: 2px solid red;
-    
+        display: inline-block;
+
         p {
-            font-size: $basicFontSize;
-            border: 2px solid red;
-            height: 100%;
+            font-size: font(basic);
+            font-weight: bold;
             text-align: center;
+
         }
-    
+
         .responsiveImg {
-            border: 2px solid red;
+            padding: $padding;
             width: 100%;
-            max-width: 50px;
-            height: 50px;
-            
+            max-width: 40px;
+            height: 40px;
+
         }
-    
     }
-}
 
 
 
+    #informationBar {
+        border: 2px solid black;
+    }
+
+    #footer {
+        border: 2px solid white;
+    }
 
 
-// INFO TABLE
-#informationBar{
-    border: 2px solid black;
-}
-
-
-//FOOTER
-#footer{
-    border: 2px solid white;
 }
