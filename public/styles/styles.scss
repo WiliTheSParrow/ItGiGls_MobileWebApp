@@ -24,6 +24,7 @@ $fonts:(basic: 22px,
 
 $paddings:(basic: 5px,
     leftSide: 30px,
+    bottomSide: 50px,
 );
 
 @function padding($paddingSize) {
