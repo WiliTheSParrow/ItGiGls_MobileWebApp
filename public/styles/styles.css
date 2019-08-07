@@ -1,35 +1,32 @@
+body, html {
+  height: 100%;
+}
+
 body {
   background: #1cb3c8;
   color: #3c415e;
   font-family: 'Abel', sans-serif;
   font-size: 22px;
+  margin: 0;
 }
 
-#header {
-  height: 23vw;
-  overflow: hidden;
+body #header {
+  width: 100%;
   border: 2px solid red;
 }
 
-#header h1 {
+body #header p {
   font-size: 22px;
   border: 2px solid red;
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  height: 100%;
+  text-align: center;
 }
 
-#header a {
-  height: 100px;
-  border: 2px solid purple;
-}
-
-#header .responsiveImg {
+body #header .responsiveImg {
   border: 2px solid red;
   width: 100%;
   max-width: 50px;
-  height: auto;
-  margin: 0;
+  height: 50px;
 }
 
 #informationBar {
