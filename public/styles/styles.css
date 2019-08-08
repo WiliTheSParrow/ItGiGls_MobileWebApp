@@ -74,4 +74,19 @@ body #footer p a, body #footer p i {
   font-weight: normal;
   padding-left: 10px;
 }
+
+body #topBtn {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background: #1cb3c8;
+  color: #738598;
+  border: none;
+  text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
+  cursor: pointer;
+  display: none;
+}
 /*# sourceMappingURL=styles.css.map */
