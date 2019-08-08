@@ -4,7 +4,7 @@
   "description": "A Mobile Web App for a fictional music and concert lover group.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/WiliTheSParrow/ItGiGls_MobileWebApp#readme",
   "dependencies": {
-    "express": "^4.17.1"
-  },
-    "scripts":{
-        "start": "node index.js"
-    }
+    "express": "^4.17.1",
+    "serve-favicon": "^2.5.0"
+  }
 }
