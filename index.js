@@ -14,7 +14,6 @@ app.use(express.static('src'));
 app.use(express('public'));
 app.use(favicon(__dirname + '/public/img/hands4_SKG_icon.ico'));
 
-var port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/public/index.html'));
@@ -22,4 +21,7 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(port);
+server.connection({
+  host: (process.env.HOST || 'localhost'),
+  port: (process.env.PORT || 3000)
+});
