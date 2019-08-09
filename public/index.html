@@ -84,43 +84,18 @@
             </div>
             <div class="infoTableInfo" data-role="navbar">
                 <ul>
-                    <li>
-                        Band1
+                    <li v-for="band in gigBands">
+                        {{band}}
                     </li>
-                    <li>
-                        Date1
+                    <li v-for="date in gigDates">
+                        {{date}}
                     </li>
-                    <li>
-                        Where1
-                    </li>
-                </ul>
-            </div>
-            <div class="infoTableInfo row" data-role="navbar">
-                <ul>
-                    <li>
-                        Band2
-                    </li>
-                    <li>
-                        Date2
-                    </li>
-                    <li>
-                        Where2
+                    <li v-for="country in gigCountries">
+                        {{country}}
                     </li>
                 </ul>
             </div>
-            <div class="infoTableInfo row" data-role="navbar">
-                <ul>
-                    <li>
-                        Band3
-                    </li>
-                    <li>
-                        Date3
-                    </li>
-                    <li>
-                        Where3
-                    </li>
-                </ul>
-            </div>
+            
         </div>
 
 
