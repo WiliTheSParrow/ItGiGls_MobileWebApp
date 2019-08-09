@@ -51,6 +51,8 @@
 
 <body>
 
+    <div id="app">
+
     <!--- FIRST PAGE --->
     <div id="homePage" data-role="page">
 
@@ -126,10 +128,7 @@
 
         <div id="footer" data-role="footer">
             <p>
-                &copy; 2019
-                <script>
-                    new Date().getFullYear() > 2010 && document.write("-" + new Date().getFullYear());
-                </script>, ItGiGls Mobile Web Application.
+                &copy; 2019, ItGiGls Mobile Web Application.
             </p>
             <p>
                 Design by Julia Wilhelm
@@ -169,15 +168,18 @@
         </div>
 
     </div>
-
-    <!--- Scroll down button -->
-    <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
+</div>
+    
 
     <!-- Vue -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
+    <script src="../public/js/events.js"></script>
+
     <!---Main Javascript --->
-    <script src="/public/js/main.js"></script>
+    <script src="../public/js/main.js"></script>
+
+    
 
 
 </body>

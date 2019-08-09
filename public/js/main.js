@@ -1,4 +1,6 @@
-var app = new Vue({
+var gigInfo = data.concerts;
+
+new Vue({
     el: "#app",
 
     data: {
@@ -7,9 +9,22 @@ var app = new Vue({
         where: []
     },
 
-    created: function(){},
+    
 
-    methods: {},
+    methods: {
+
+        getData: function(){
+            for(var i = 0; i < this.gigInfo.length; i++){
+                this.band.push(this.gigInfo[i].band);
+                return this.band
+
+            };
+
+            console.log(this.getData());
+
+        }
+
+    },
 
 });
 
