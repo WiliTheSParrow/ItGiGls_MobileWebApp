@@ -84,13 +84,13 @@
             </div>
             <div class="infoTableInfo" data-role="navbar">
                 <ul>
-                    <li v-for="band in gigBands">
+                    <li v-for="band in listOfBands">
                         {{band}}
                     </li>
-                    <li v-for="date in gigDates">
+                    <li v-for="date in listOfBands">
                         {{date}}
                     </li>
-                    <li v-for="country in gigCountries">
+                    <li v-for="country in listOfCountries">
                         {{country}}
                     </li>
                 </ul>
@@ -146,12 +146,14 @@
 </div>
     
 
+
     <!-- Vue -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
-    <script src="../public/js/events.js"></script>
+    
 
     <!---Main Javascript --->
+    <script src="../public/js/events.js"></script>
     <script src="../public/js/main.js"></script>
 
     
