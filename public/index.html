@@ -84,6 +84,22 @@
                 </div>
                 <div class="infoTableInfo" data-role="navbar">
 
+
+                    <ul v-for="(value,key) in dataForTable" data-role="listview">
+
+                        <li>
+                            {{value.band}}
+                        </li>
+                        <li>
+                            {{value.date}}
+                        </li>
+                        <li>
+                            {{value.country}}
+                        </li>
+
+                    </ul>
+
+
                     <!-- <tbody>
                         <tr v-for="(value,key) in dataForTable">
 
@@ -114,17 +130,7 @@
                         </li>
                     </ul> -->
 
-                    <ul v-for="(value,key) in dataForTable" data-role="listview">
-                            <li>
-                                {{value.band}}
-                            </li>
-                            <li>
-                                {{value.date}}
-                            </li>
-                            <li>
-                                {{value.country}}
-                            </li>
-                        </ul>
+
 
                 </div>
 

@@ -25,7 +25,7 @@ $fonts:(basic: 22px,
 ;
 
 $paddings:(basic: 5px,
-topSide: 10px,
+    topSide: 10px,
     leftSide: 30px,
     bottomSide: 50px,
 );
@@ -80,6 +80,7 @@ body {
         border-top: 2px solid color(fontLine);
         padding: 0;
         margin: 0;
+        width: 100%;
 
         #infoTableHeader {
             background: color(primary);
@@ -91,15 +92,21 @@ body {
 
         .infoTableInfo {
             border-bottom: 2px solid color(fontLine);
-            padding: padding(basic);
-            padding-left: padding(leftSide);
+
+
+            ul {
+                border-bottom: 2px solid color(fontLine);
+                padding: padding(basic);
+                padding-left: padding(leftSide);
+
+            }
         }
     }
 
     #footer {
 
         font-size: font(footer);
-        
+
         color: color(fontLine);
         font-weight: bold;
         margin-top: padding(topSide);
@@ -112,9 +119,10 @@ body {
         p {
             padding: 0;
             margin: 0;
-            
 
-            a, i{
+
+            a,
+            i {
                 text-decoration: none;
                 color: color(fontLine);
                 font-weight: normal;
@@ -136,7 +144,7 @@ body {
         text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
         cursor: pointer;
         display: none;
-    
+
 
     }
 }
