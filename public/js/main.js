@@ -13,13 +13,13 @@ var app = new Vue({
     },
 
     created: function () {
-        if (location.pathname == "/index.html") {
-            this.getData();
-            
-        }
+
+        this.getData();
+
+
         console.log("hello it is me again");
         console.log(this.listOfBands);
-        
+
 
     },
 
@@ -27,12 +27,12 @@ var app = new Vue({
 
     methods: {
         getData: function () {
-            for (var i = 0; i < this.gigInfo.length; i++) {
-                if (gigInfo[i].band == true){
-                this.listOfBands.push(this.gigInfo[i].band);
-                return this.listOfBands;
-            }}
-            
+            for (var i = 0; i < gigInfo.length; i++) {
+
+                this.listOfBands.push(gigInfo[i].band);
+
+            }
+
         }
     },
 
