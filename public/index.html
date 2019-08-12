@@ -82,9 +82,27 @@
                         </li>
                     </ul>
                 </div>
-              <div class="infoTableInfo" data-role="navbar"> 
-                  
-                    <ul>
+                <div class="infoTableInfo" data-role="navbar">
+
+                    <!-- <tbody>
+                        <tr v-for="(value,key) in dataForTable">
+
+                            <td>{{value.band}}</td>
+                            <td>{{value.date}}</td>
+                            <td>{{value.country}}</td>
+                        </tr>
+                    </tbody> -->
+
+                    <!-- <tbody>
+                    <tr>
+                    
+                        <td v-for="band in listOfBands">{{band}}</td>
+                        <td v-for="date in dateOfGigs">{{date}}</td>
+                        <td v-for="country in listOfCountries">{{country}}</td>
+                    </tr>
+                </tbody> -->
+
+                    <!-- <ul data-role="listview">
                         <li v-for="band in listOfBands">
                             {{band}}
                         </li>
@@ -94,8 +112,21 @@
                         <li v-for="country in listOfCountries">
                             {{country}}
                         </li>
-                    </ul>
-                </div> 
+                    </ul> -->
+
+                    <ul v-for="(value,key) in dataForTable" data-role="listview">
+                            <li>
+                                {{value.band}}
+                            </li>
+                            <li>
+                                {{value.date}}
+                            </li>
+                            <li>
+                                {{value.country}}
+                            </li>
+                        </ul>
+
+                </div>
 
             </div>
 
