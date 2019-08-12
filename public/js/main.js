@@ -1,25 +1,14 @@
-console.log("hello it is me");
 var gigInfo = data.concerts;
-console.log(gigInfo);
-console.log(gigInfo[0].band);
 
 var app = new Vue({
     el: "#app",
 
     data: {
         dataForTable:[],
-        listOfBands: [],
-        dateOfGigs: [],
-        listOfCountries: []
     },
 
     created: function () {
         this.getData();
-        console.log("hello it is me again");
-        console.log(this.dataForTable);
-        console.log(this.listOfBands);
-        console.log(this.dateOfGigs);
-        console.log(this.listOfCountries);
     },
 
 
@@ -28,9 +17,6 @@ var app = new Vue({
         getData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
-                this.listOfBands.push(gigInfo[i].band);
-                this.dateOfGigs.push(gigInfo[i].date);
-                this.listOfCountries.push(gigInfo[i].country);
             }
         }
     }

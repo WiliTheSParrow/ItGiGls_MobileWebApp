@@ -26,7 +26,8 @@ $fonts:(basic: 22px,
 
 $paddings:(basic: 5px,
     topSide: 10px,
-    leftSide: 30px,
+    leftSide: 20px,
+    rightSide: 20px,
     bottomSide: 50px,
 );
 
@@ -88,17 +89,21 @@ body {
             font-weight: bold;
             padding: padding(basic);
             padding-left: padding(leftSide);
+           
         }
 
         .infoTableInfo {
-            border-bottom: 2px solid color(fontLine);
-
+            
 
             ul {
                 border-bottom: 2px solid color(fontLine);
                 padding: padding(basic);
                 padding-left: padding(leftSide);
 
+                li{
+                    width: 33%;
+                }
+            
             }
         }
     }
