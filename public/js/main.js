@@ -3,7 +3,7 @@ var gigInfo = data.concerts;
 console.log(gigInfo);
 
 
-new Vue({
+var app = new Vue({
     el: "#app",
 
     data: {
