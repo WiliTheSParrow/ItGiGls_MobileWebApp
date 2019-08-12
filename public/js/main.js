@@ -1,3 +1,5 @@
+console.log("hello it is me");
+
 var gigInfo = data.concerts;
 
 console.log(gigInfo);
@@ -12,9 +14,26 @@ var app = new Vue({
         listOfCountries: []
     },
 
-    
+    created: function(){
+        if (location.pathname=="/index.html"){
+            app.getData();
+        }
+        
+    },
 
     
+
+    methods:{
+        getData: function (){
+            for (var i = 0; i < gigInfo.length;i++){
+                if (gigInfo[i] == "band"){
+                    app.listOfBands.push(gigInfo[i]);
+                    console.log(app.listOfBands);
+                };
+
+            }
+        }
+    },    
 
 });
 
