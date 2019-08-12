@@ -13,14 +13,11 @@ var app = new Vue({
     },
 
     created: function () {
-
         this.getData();
-
-
         console.log("hello it is me again");
         console.log(this.listOfBands);
-
-
+        console.log(this.dateOfGigs);
+        console.log(this.listOfCountries);
     },
 
 
@@ -28,14 +25,12 @@ var app = new Vue({
     methods: {
         getData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
-
                 this.listOfBands.push(gigInfo[i].band);
-
+                this.dateOfGigs.push(gigInfo[i].date);
+                this.listOfCountries.push(gigInfo[i].country);
             }
-
         }
-    },
-
+    }
 });
 
 
