@@ -1,9 +1,7 @@
 console.log("hello it is me");
-
 var gigInfo = data.concerts;
-
 console.log(gigInfo);
-
+console.log(gigInfo[0].band);
 
 var app = new Vue({
     el: "#app",
@@ -14,26 +12,29 @@ var app = new Vue({
         listOfCountries: []
     },
 
-    created: function(){
-        if (location.pathname=="/index.html"){
-            app.getData();
+    created: function () {
+        if (location.pathname == "/index.html") {
+            this.getData();
+            
         }
+        console.log("hello it is me again");
+        console.log(this.listOfBands);
         
+
     },
 
-    
 
-    methods:{
-        getData: function (){
-            for (var i = 0; i < gigInfo.length;i++){
-                if (gigInfo[i] == "band"){
-                    app.listOfBands.push(gigInfo[i]);
-                    console.log(app.listOfBands);
-                };
 
-            }
+    methods: {
+        getData: function () {
+            for (var i = 0; i < this.gigInfo.length; i++) {
+                if (gigInfo[i].band == true){
+                this.listOfBands.push(this.gigInfo[i].band);
+                return this.listOfBands;
+            }}
+            
         }
-    },    
+    },
 
 });
 
