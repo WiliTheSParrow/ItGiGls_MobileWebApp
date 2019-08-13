@@ -25,6 +25,7 @@ There's a group of friends with a passion for metal music and they really enjoy 
 * JavaScript
 * jQuery
 * jQuery Mobile
+* Node JS
 * Herokuapp
 * Visual Studio Code
 * Marvel Application
