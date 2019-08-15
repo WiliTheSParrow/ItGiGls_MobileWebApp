@@ -95,6 +95,8 @@ body {
 
         .infoTableInfo {
 
+            padding-bottom: 40px;
+
 
             ul {
                 border-bottom: 2px solid color(fontLine);
@@ -154,15 +156,15 @@ body {
     #footer {
 
         font-size: font(footer);
-
+        background: color(primary);
         color: color(fontLine);
         font-weight: bold;
-        margin-top: padding(topSide);
         position: fixed;
         bottom: 0;
+        height: 40px;
         width: 100%;
         text-align: center;
-        padding-bottom: padding(topSide);
+        padding: padding(topSide);
 
         p {
             padding: 0;

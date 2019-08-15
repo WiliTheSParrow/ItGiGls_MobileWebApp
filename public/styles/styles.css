@@ -46,6 +46,10 @@ body #informationBar #infoTableHeader {
   padding-left: 20px;
 }
 
+body #informationBar .infoTableInfo {
+  padding-bottom: 40px;
+}
+
 body #informationBar .infoTableInfo ul {
   border-bottom: 2px solid #3c415e;
   padding-left: 20px;
@@ -92,14 +96,15 @@ body #informationBar .infoTableInfo .ui-li-desc {
 
 body #footer {
   font-size: 15px;
+  background: #1cb3c8;
   color: #3c415e;
   font-weight: bold;
-  margin-top: 10px;
   position: fixed;
   bottom: 0;
+  height: 40px;
   width: 100%;
   text-align: center;
-  padding-bottom: 10px;
+  padding: 10px;
 }
 
 body #footer p {
