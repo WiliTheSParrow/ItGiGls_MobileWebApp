@@ -114,7 +114,8 @@ body {
                     background: color(lightest);
                     display: flex;
                     
-                   
+                    .ui-li-desc {
+                        margin:0; }
 
                     #gigAddress {
                         border: 2px solid purple;
@@ -143,14 +144,11 @@ body {
 
 
                 }
+                
             }
-
-            .ui-li-desc {
-                margin:0;
-            }
-
-
         }
+
+        
     }
 
     #footer {

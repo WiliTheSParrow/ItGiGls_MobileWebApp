@@ -68,6 +68,10 @@ body #informationBar .infoTableInfo ul #moreInfo {
   display: flex;
 }
 
+body #informationBar .infoTableInfo ul #moreInfo .ui-li-desc {
+  margin: 0;
+}
+
 body #informationBar .infoTableInfo ul #moreInfo #gigAddress {
   border: 2px solid purple;
   width: 50%;
@@ -88,10 +92,6 @@ body #informationBar .infoTableInfo ul #moreInfo #ticketPriceBtn {
 
 body #informationBar .infoTableInfo ul #moreInfo #ticketPriceBtn button {
   border: 2px solid green;
-}
-
-body #informationBar .infoTableInfo .ui-li-desc {
-  margin: 0;
 }
 
 body #footer {
