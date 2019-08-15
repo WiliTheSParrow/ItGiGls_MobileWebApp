@@ -82,10 +82,16 @@
                         </li>
                     </ul>
                 </div>
+
+                <div>
+                    <button class="collapsible">Something</button>
+                    <p class="content">blablabla</p>
+                </div>
+
                 <div class="infoTableInfo" data-role="navbar">
 
 
-                    <ul v-for="(value,key) in dataForTable" data-role="listview">
+                    <ul v-for="(value,key) in dataForTable" data-role="listview" class="collapsible">
 
                         <li>
                             {{value.band}}
@@ -97,7 +103,7 @@
                             {{value.country}}
                         </li>
 
-                        <div id="moreInfo">
+                        <div id="moreInfo" class="content">
 
                             <div id="detailInfos">
 
@@ -118,7 +124,6 @@
                             </div>
 
                         </div>
-
 
                     </ul>
                 </div>
@@ -181,8 +186,12 @@
     <!---Main Javascript --->
 
     <script src="../public/js/main.js"></script>
-    <script async defer
+    <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKdOAn-t3a1M8t2a9k_OiLwc_wJwSOpwQ&callback=initMap">
+    </script> -->
+
+    <script>
+    
     </script>
 
 </body>
