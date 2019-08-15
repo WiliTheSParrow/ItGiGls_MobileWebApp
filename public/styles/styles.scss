@@ -90,38 +90,64 @@ body {
             font-weight: bold;
             padding: padding(basic);
             padding-left: padding(leftSide);
-           
+
         }
 
         .infoTableInfo {
-            
+
 
             ul {
                 border-bottom: 2px solid color(fontLine);
                 padding-left: padding(leftSide);
                 
 
-                li{
+                li {
                     width: 33%;
+                    
                 }
-                
-                #moreInfo{
+
+                #moreInfo {
                     height: 400px;
                     width: 100%;
                     background: color(lightest);
-                    display: inline-flex;
+                    display: flex;
+                    
+                   
 
-                    p {
-                        border: 2px solid red;
+                    #gigAddress {
+                        border: 2px solid purple;
+                        width: 50%;
+                        
+
+                        p {
+                            border: 2px solid red;
+                            align-items: flex-start;
+                            font-size: font(basic);
+                            
+                        }
                     }
 
-                    button{
-                        border: 2px solid green;
+                    #ticketPriceBtn {
+                        border: 2px solid pink;
+                        width: 50%;
+                        
+                        button {
+                            border: 2px solid green;
+                            
+                        }
                     }
+
+
+
+
                 }
             }
 
-            
+            .ui-li-desc {
+                margin:0;
+            }
+
+
         }
     }
 
