@@ -59,6 +59,17 @@ body #informationBar .infoTableInfo ul #moreInfo {
   height: 400px;
   width: 100%;
   background: #dfe2e2;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body #informationBar .infoTableInfo ul #moreInfo p {
+  border: 2px solid red;
+}
+
+body #informationBar .infoTableInfo ul #moreInfo button {
+  border: 2px solid green;
 }
 
 body #footer {

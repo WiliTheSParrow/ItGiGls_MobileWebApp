@@ -98,7 +98,6 @@ body {
 
             ul {
                 border-bottom: 2px solid color(fontLine);
-                
                 padding-left: padding(leftSide);
                 
 
@@ -110,7 +109,15 @@ body {
                     height: 400px;
                     width: 100%;
                     background: color(lightest);
-                    
+                    display: inline-flex;
+
+                    p {
+                        border: 2px solid red;
+                    }
+
+                    button{
+                        border: 2px solid green;
+                    }
                 }
             }
 
