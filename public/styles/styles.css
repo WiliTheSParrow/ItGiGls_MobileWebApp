@@ -63,21 +63,29 @@ body #informationBar .infoTableInfo ul #moreInfo {
   height: 400px;
   width: 100%;
   background: #dfe2e2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 body #informationBar .infoTableInfo ul #moreInfo .ui-li-desc {
   margin: 0;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #gigAddress {
-  border: 2px solid purple;
-  width: 50%;
+body #informationBar .infoTableInfo ul #moreInfo #detailInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #gigAddress p {
+body #informationBar .infoTableInfo ul #moreInfo #detailInfos #gigAddress {
+  border: 2px solid purple;
+  width: 70%;
+  height: 100px;
+}
+
+body #informationBar .infoTableInfo ul #moreInfo #detailInfos #gigAddress p {
   border: 2px solid red;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -85,13 +93,15 @@ body #informationBar .infoTableInfo ul #moreInfo #gigAddress p {
   font-size: 22px;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #ticketPriceBtn {
-  border: 2px solid pink;
-  width: 50%;
+body #informationBar .infoTableInfo ul #moreInfo #detailInfos button {
+  border: 2px solid green;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #ticketPriceBtn button {
-  border: 2px solid green;
+body #informationBar .infoTableInfo ul #moreInfo #map {
+  border: 2px solid black;
+  background: pink;
+  height: 290px;
+  width: 100%;
 }
 
 body #footer {
