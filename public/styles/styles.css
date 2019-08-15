@@ -48,12 +48,17 @@ body #informationBar #infoTableHeader {
 
 body #informationBar .infoTableInfo ul {
   border-bottom: 2px solid #3c415e;
-  padding: 5px;
   padding-left: 20px;
 }
 
 body #informationBar .infoTableInfo ul li {
   width: 33%;
+}
+
+body #informationBar .infoTableInfo ul #moreInfo {
+  height: 400px;
+  width: 100%;
+  background: #dfe2e2;
 }
 
 body #footer {
