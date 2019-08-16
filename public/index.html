@@ -67,8 +67,11 @@
                 </a>
             </div>
 
+        
+
             <!--- Information Bar --->
             <div role="main" class="ui-content" id="informationBar">
+                <!-- Header -->
                 <div id="infoTableHeader" data-role="navbar">
                     <ul>
                         <li>
@@ -83,49 +86,48 @@
                     </ul>
                 </div>
 
-                <div>
-                    <button class="collapsible">Something</button>
-                    <p class="content">blablabla</p>
-                </div>
-
+                <!-- Info Stuff -->
                 <div class="infoTableInfo" data-role="navbar">
 
+                    
+                            <ul v-for="(value,key) in dataForTable" data-role="listview">
+                                
+                                <li>
+                                    {{value.band}}
+                                </li>
+                                <li>
+                                    {{value.date}}
+                                </li>
+                                <li>
+                                    {{value.country}}
+                                </li>
+                            
+                                <!-- Collapsible part -->
+                                <div id="moreInfo">
 
-                    <ul v-for="(value,key) in dataForTable" data-role="listview" class="collapsible">
+                                    <div id="detailInfos">
 
-                        <li>
-                            {{value.band}}
-                        </li>
-                        <li>
-                            {{value.date}}
-                        </li>
-                        <li>
-                            {{value.country}}
-                        </li>
+                                        <div id="gigAddress">
+                                            <p>{{value.address}}</p>
+                                            <p>{{value.place}}</p>
+                                            <p>{{value.zipCode}}</p>
+                                        </div>
 
-                        <div id="moreInfo" class="content">
+                                        <button href="#">
+                                            {{value.ticketPrice}}
+                                        </button>
 
-                            <div id="detailInfos">
+                                    </div>
 
-                                <div id="gigAddress">
-                                    <p>{{value.address}}</p>
-                                    <p>{{value.place}}</p>
-                                    <p>{{value.zipCode}}</p>
+                                    <div id="map">
+                                        The map
+                                    </div>
+
                                 </div>
+                                <!-- Collapsible End -->
 
-                                <button href="#">
-                                    {{value.ticketPrice}}
-                                </button>
-
-                            </div>
-
-                            <div id="map">
-                                The map
-                            </div>
-
-                        </div>
-
-                    </ul>
+                            </ul>
+                        
                 </div>
 
 
@@ -191,7 +193,7 @@
     </script> -->
 
     <script>
-    
+
     </script>
 
 </body>
