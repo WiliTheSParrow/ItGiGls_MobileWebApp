@@ -107,51 +107,54 @@ body {
                 div {
                     border: 2px solid red;
 
-
-
                 }
 
 
             }
 
-            #moreInfo {
-                height: 400px;
-                width: 100%;
-                background: color(lightest);
+            .content {
+                display: none;}
 
-                .ui-li-desc {
-                    margin: 0;
-                }
 
-                #detailInfos {
-                    display: flex;
-                    flex-direction: row;
+                #moreInfo {
+                    height: 400px;
+                    width: 100%;
+                    background: color(lightest);
 
-                    #gigAddress {
-                        border: 2px solid purple;
-                        width: 70%;
-                        height: 100px;
+                    .ui-li-desc {
+                        margin: 0;
+                    }
 
-                        p {
-                            border: 2px solid red;
-                            align-items: flex-start;
-                            font-size: font(basic);
+                    #detailInfos {
+                        display: flex;
+                        flex-direction: row;
+
+                        #gigAddress {
+                            border: 2px solid purple;
+                            width: 70%;
+                            height: 100px;
+
+                            p {
+                                border: 2px solid red;
+                                align-items: flex-start;
+                                font-size: font(basic);
+                            }
+                        }
+
+                        button {
+                            border: 2px solid green;
                         }
                     }
 
-                    button {
-                        border: 2px solid green;
+
+                    #map {
+                        border: 2px solid black;
+                        background: pink;
+                        height: 290px;
+                        width: 100%;
                     }
                 }
-
-
-                #map {
-                    border: 2px solid black;
-                    background: pink;
-                    height: 290px;
-                    width: 100%;
-                }
-            }
+            
         }
 
     }

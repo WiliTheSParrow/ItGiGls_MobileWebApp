@@ -87,10 +87,10 @@
                 </div>
 
                 <!-- Info Stuff -->
-                <div class="infoTableInfo" data-role="navbar">
+                <div class="infoTableInfo" data-role="navbar" v-for="(value,key) in dataForTable">
 
                     <!-- Collapsible Button START -->
-                    <div v-for="(value,key) in dataForTable" class="collapsible">
+                    <div class="collapsible">
 
                         <div>
                             <p>{{value.band}}</p>
@@ -107,8 +107,8 @@
                     </div>
                     <!-- Collapsible Button END -->
 
-                    <!-- Collapsible part -->
-                    <div v-for="(value,key) in dataForTable" id="moreInfo" class="content">
+                    <!-- Collapsible Content START -->
+                    <div id="moreInfo" class="content">
 
                         <div id="detailInfos">
 
@@ -129,7 +129,7 @@
                         </div>
 
                     </div>
-                    <!-- Collapsible End -->
+                    <!-- Collapsible Content END -->
 
 
 

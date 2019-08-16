@@ -66,6 +66,10 @@ body #informationBar .infoTableInfo .collapsible div {
   border: 2px solid red;
 }
 
+body #informationBar .infoTableInfo .content {
+  display: none;
+}
+
 body #informationBar .infoTableInfo #moreInfo {
   height: 400px;
   width: 100%;
