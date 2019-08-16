@@ -1,8 +1,3 @@
-body,
-html {
-  height: 100%;
-}
-
 body {
   background: #1cb3c8;
   color: #3c415e;
@@ -34,8 +29,6 @@ body #informationBar {
   border-bottom: 1px solid #3c415e;
   border-top: 2px solid #3c415e;
   padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
 body #informationBar #infoTableHeader {
@@ -43,75 +36,58 @@ body #informationBar #infoTableHeader {
   border-bottom: 2px solid #3c415e;
   font-weight: bold;
   padding: 5px;
-  padding-left: 20px;
 }
 
-body #informationBar .infoTableInfo {
-  padding-bottom: 40px;
+body #informationBar #infoTableHeader ul div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-body #informationBar .infoTableInfo .collapsible {
+body #informationBar #infoTableInfo .collapsible {
   border-bottom: 2px solid #3c415e;
   padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  width: 100%;
 }
 
-body #informationBar .infoTableInfo .collapsible div {
-  border: 2px solid red;
+body #informationBar #infoTableInfo .collapsible div {
+  width: 33%;
 }
 
-body #informationBar .infoTableInfo .content {
+body #informationBar #infoTableInfo .content {
   display: none;
 }
 
-body #informationBar .infoTableInfo #moreInfo {
-  height: 400px;
+body #informationBar #infoTableInfo #moreInfo {
   width: 100%;
   background: #dfe2e2;
 }
 
-body #informationBar .infoTableInfo #moreInfo .ui-li-desc {
-  margin: 0;
-}
-
-body #informationBar .infoTableInfo #moreInfo #detailInfos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-body #informationBar .infoTableInfo #moreInfo #detailInfos #gigAddress {
+body #informationBar #infoTableInfo #moreInfo #gigAddress {
   border: 2px solid purple;
-  width: 70%;
-  height: 100px;
 }
 
-body #informationBar .infoTableInfo #moreInfo #detailInfos #gigAddress p {
+body #informationBar #infoTableInfo #moreInfo #gigAddress p {
   border: 2px solid red;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   font-size: 22px;
 }
 
-body #informationBar .infoTableInfo #moreInfo #detailInfos button {
+body #informationBar #infoTableInfo #moreInfo button {
   border: 2px solid green;
+  cursor: pointer;
 }
 
-body #informationBar .infoTableInfo #moreInfo #map {
+body #informationBar #infoTableInfo #moreInfo #map {
   border: 2px solid black;
   background: pink;
-  height: 290px;
   width: 100%;
 }
 

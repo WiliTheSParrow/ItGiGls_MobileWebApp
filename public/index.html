@@ -68,28 +68,35 @@
             </div>
 
 
-
             <!--- Information Bar --->
             <div role="main" class="ui-content" id="informationBar">
-                <!-- Header -->
+
+                <!-- Header START-->
                 <div id="infoTableHeader" data-role="navbar">
                     <ul>
-                        <li>
-                            Band
-                        </li>
-                        <li>
-                            Date
-                        </li>
-                        <li>
-                            Where
-                        </li>
+                        <div>
+                            <li>
+                                Band
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                Date
+                            </li>
+                        </div>
+                        <div>
+                            <li>
+                                Where
+                            </li>
+                        </div>
                     </ul>
                 </div>
+                <!-- Header END-->
 
-                <!-- Info Stuff -->
-                <div class="infoTableInfo" data-role="navbar" v-for="(value,key) in dataForTable">
+                <!-- This is where the magic begins -->
+                <div id="infoTableInfo" data-role="navbar" v-for="(value,key) in dataForTable">
 
-                    <!-- Collapsible Button START -->
+                    <!-- Collapsible RowBtn START -->
                     <div class="collapsible">
 
                         <div>
@@ -105,7 +112,7 @@
                         </div>
 
                     </div>
-                    <!-- Collapsible Button END -->
+                    <!-- Collapsible RowBtn END -->
 
                     <!-- Collapsible Content START -->
                     <div id="moreInfo" class="content">
@@ -118,8 +125,8 @@
                                 <p>{{value.zipCode}}</p>
                             </div>
 
-                            <button href="#">
-                                {{value.ticketPrice}}
+                            <button type="button">
+                                <a href="#">{{value.ticketPrice}}</a>
                             </button>
 
                         </div>
@@ -130,11 +137,8 @@
 
                     </div>
                     <!-- Collapsible Content END -->
-
-
-
                 </div>
-
+                <!-- This is where the magic ends -->
 
 
                 <div id="footer" data-role="footer">
@@ -154,9 +158,7 @@
                             <i class="fab fa-github-square"> </i>
                         </a>
                     </p>
-
                 </div>
-
             </div>
         </div>
 

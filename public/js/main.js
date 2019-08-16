@@ -26,13 +26,11 @@ var app = new Vue({
     }
 });
 
-
-
 //Scroll To Top Button:
 $(document).ready(function () {
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 40) {
+        if ($(this).scrollTop() > 20) {
             $('#topBtn').fadeIn();
         } else {
             $('#topBtn').fadeOut();
@@ -45,6 +43,7 @@ $(document).ready(function () {
         }, 800);
     });
 });
+
 /* 
 //Google Map:
 function initMap() {

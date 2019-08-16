@@ -40,21 +40,12 @@ $paddings:(basic: 5px,
 
 // DESIGN ================================
 
-body,
-html {
-    height: 100%;
-}
-
-;
-
 body {
     background: color(primary);
     color: color(fontLine);
     font-family: 'Abel', sans-serif;
     font-size: font(basic);
     margin: 0;
-
-
 
     #header {
         width: 100%;
@@ -64,7 +55,6 @@ body {
             font-size: font(headerSize);
             font-weight: bold;
             text-align: center;
-
         }
 
         .responsiveImg {
@@ -72,95 +62,76 @@ body {
             width: 100%;
             max-width: 40px;
             height: 40px;
-
         }
     }
-
 
     #informationBar {
         background: color(accent);
         border-bottom: 1px solid color(fontLine);
         border-top: 2px solid color(fontLine);
         padding: 0;
-        margin: 0;
-        width: 100%;
 
         #infoTableHeader {
             background: color(primary);
             border-bottom: 2px solid color(fontLine);
             font-weight: bold;
             padding: padding(basic);
-            padding-left: padding(leftSide);
 
+            ul div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
         }
 
-        .infoTableInfo {
-            padding-bottom: 40px;
+        #infoTableInfo {
 
             .collapsible {
                 border-bottom: 2px solid color(fontLine);
                 padding: padding(basic);
                 display: flex;
-                flex-direction: row;
-
+                width: 100%;
 
                 div {
-                    border: 2px solid red;
-
+                    width: 33%;
                 }
-
-
             }
 
             .content {
-                display: none;}
+                display: none;
+            }
+
+            #moreInfo {
+                width: 100%;
+                background: color(lightest);
+
+                #gigAddress {
+                    border: 2px solid purple;
 
 
-                #moreInfo {
-                    height: 400px;
-                    width: 100%;
-                    background: color(lightest);
-
-                    .ui-li-desc {
-                        margin: 0;
-                    }
-
-                    #detailInfos {
-                        display: flex;
-                        flex-direction: row;
-
-                        #gigAddress {
-                            border: 2px solid purple;
-                            width: 70%;
-                            height: 100px;
-
-                            p {
-                                border: 2px solid red;
-                                align-items: flex-start;
-                                font-size: font(basic);
-                            }
-                        }
-
-                        button {
-                            border: 2px solid green;
-                        }
-                    }
-
-
-                    #map {
-                        border: 2px solid black;
-                        background: pink;
-                        height: 290px;
-                        width: 100%;
+                    p {
+                        border: 2px solid red;
+                        font-size: font(basic);
                     }
                 }
-            
-        }
 
+                button {
+                    border: 2px solid green;
+                    cursor: pointer;
+                }
+
+
+                #map {
+                    border: 2px solid black;
+                    background: pink;
+                    width: 100%;
+
+                }
+            }
+        }
     }
 
     #footer {
-
         font-size: font(footer);
         background: color(primary);
         color: color(fontLine);
@@ -175,7 +146,6 @@ body {
         p {
             padding: 0;
             margin: 0;
-
 
             a,
             i {
@@ -200,7 +170,5 @@ body {
         text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
         cursor: pointer;
         display: none;
-
-
     }
 }
