@@ -54,7 +54,7 @@ body {
     font-size: font(basic);
     margin: 0;
 
-    
+
 
     #header {
         width: 100%;
@@ -97,54 +97,63 @@ body {
         .infoTableInfo {
             padding-bottom: 40px;
 
-            ul {
+            .collapsible {
                 border-bottom: 2px solid color(fontLine);
-                padding-left: padding(leftSide);
+                padding: padding(basic);
+                display: flex;
+                flex-direction: row;
 
-                li {
-                    width: 33%;
+
+                div {
+                    border: 2px solid red;
+
+
+
                 }
 
-                #moreInfo {
-                    height: 400px;
+
+            }
+
+            #moreInfo {
+                height: 400px;
+                width: 100%;
+                background: color(lightest);
+
+                .ui-li-desc {
+                    margin: 0;
+                }
+
+                #detailInfos {
+                    display: flex;
+                    flex-direction: row;
+
+                    #gigAddress {
+                        border: 2px solid purple;
+                        width: 70%;
+                        height: 100px;
+
+                        p {
+                            border: 2px solid red;
+                            align-items: flex-start;
+                            font-size: font(basic);
+                        }
+                    }
+
+                    button {
+                        border: 2px solid green;
+                    }
+                }
+
+
+                #map {
+                    border: 2px solid black;
+                    background: pink;
+                    height: 290px;
                     width: 100%;
-                    background: color(lightest);
-
-                    .ui-li-desc {
-                        margin: 0;
-                    }
-
-                    #detailInfos {
-                        display: flex;
-                        flex-direction: row;
-
-                        #gigAddress {
-                            border: 2px solid purple;
-                            width: 70%;
-                            height: 100px;
-
-                            p {
-                                border: 2px solid red;
-                                align-items: flex-start;
-                                font-size: font(basic);
-                            }
-                        }
-
-                        button {
-                            border: 2px solid green;
-                        }
-                    }
-
-
-                    #map {
-                        border: 2px solid black;
-                        background: pink;
-                        height: 290px;
-                        width: 100%;
-                    }
                 }
             }
         }
+
     }
 
     #footer {

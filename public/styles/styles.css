@@ -50,26 +50,9 @@ body #informationBar .infoTableInfo {
   padding-bottom: 40px;
 }
 
-body #informationBar .infoTableInfo ul {
+body #informationBar .infoTableInfo .collapsible {
   border-bottom: 2px solid #3c415e;
-  padding-left: 20px;
-}
-
-body #informationBar .infoTableInfo ul li {
-  width: 33%;
-}
-
-body #informationBar .infoTableInfo ul #moreInfo {
-  height: 400px;
-  width: 100%;
-  background: #dfe2e2;
-}
-
-body #informationBar .infoTableInfo ul #moreInfo .ui-li-desc {
-  margin: 0;
-}
-
-body #informationBar .infoTableInfo ul #moreInfo #detailInfos {
+  padding: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,13 +62,37 @@ body #informationBar .infoTableInfo ul #moreInfo #detailInfos {
           flex-direction: row;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #detailInfos #gigAddress {
+body #informationBar .infoTableInfo .collapsible div {
+  border: 2px solid red;
+}
+
+body #informationBar .infoTableInfo #moreInfo {
+  height: 400px;
+  width: 100%;
+  background: #dfe2e2;
+}
+
+body #informationBar .infoTableInfo #moreInfo .ui-li-desc {
+  margin: 0;
+}
+
+body #informationBar .infoTableInfo #moreInfo #detailInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body #informationBar .infoTableInfo #moreInfo #detailInfos #gigAddress {
   border: 2px solid purple;
   width: 70%;
   height: 100px;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #detailInfos #gigAddress p {
+body #informationBar .infoTableInfo #moreInfo #detailInfos #gigAddress p {
   border: 2px solid red;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -93,11 +100,11 @@ body #informationBar .infoTableInfo ul #moreInfo #detailInfos #gigAddress p {
   font-size: 22px;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #detailInfos button {
+body #informationBar .infoTableInfo #moreInfo #detailInfos button {
   border: 2px solid green;
 }
 
-body #informationBar .infoTableInfo ul #moreInfo #map {
+body #informationBar .infoTableInfo #moreInfo #map {
   border: 2px solid black;
   background: pink;
   height: 290px;

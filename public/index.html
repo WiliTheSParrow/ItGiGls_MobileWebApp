@@ -67,7 +67,7 @@
                 </a>
             </div>
 
-        
+
 
             <!--- Information Bar --->
             <div role="main" class="ui-content" id="informationBar">
@@ -89,45 +89,50 @@
                 <!-- Info Stuff -->
                 <div class="infoTableInfo" data-role="navbar">
 
-                    
-                            <ul v-for="(value,key) in dataForTable" data-role="listview">
-                                
-                                <li>
-                                    {{value.band}}
-                                </li>
-                                <li>
-                                    {{value.date}}
-                                </li>
-                                <li>
-                                    {{value.country}}
-                                </li>
-                            
-                                <!-- Collapsible part -->
-                                <div id="moreInfo">
+                    <!-- Collapsible Button START -->
+                    <div v-for="(value,key) in dataForTable" class="collapsible">
 
-                                    <div id="detailInfos">
+                        <div>
+                            <p>{{value.band}}</p>
+                        </div>
 
-                                        <div id="gigAddress">
-                                            <p>{{value.address}}</p>
-                                            <p>{{value.place}}</p>
-                                            <p>{{value.zipCode}}</p>
-                                        </div>
+                        <div>
+                            <p>{{value.date}}</p>
+                        </div>
 
-                                        <button href="#">
-                                            {{value.ticketPrice}}
-                                        </button>
+                        <div>
+                            <p>{{value.country}}</p>
+                        </div>
 
-                                    </div>
+                    </div>
+                    <!-- Collapsible Button END -->
 
-                                    <div id="map">
-                                        The map
-                                    </div>
+                    <!-- Collapsible part -->
+                    <div v-for="(value,key) in dataForTable" id="moreInfo" class="content">
 
-                                </div>
-                                <!-- Collapsible End -->
+                        <div id="detailInfos">
 
-                            </ul>
-                        
+                            <div id="gigAddress">
+                                <p>{{value.address}}</p>
+                                <p>{{value.place}}</p>
+                                <p>{{value.zipCode}}</p>
+                            </div>
+
+                            <button href="#">
+                                {{value.ticketPrice}}
+                            </button>
+
+                        </div>
+
+                        <div id="map">
+                            The map
+                        </div>
+
+                    </div>
+                    <!-- Collapsible End -->
+
+
+
                 </div>
 
 
