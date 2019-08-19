@@ -91,10 +91,14 @@ body {
                 padding: padding(basic);
                 display: flex;
                 width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
 
-                div {
+                div{
                     width: 33%;
+                    text-align: center;
                 }
+
             }
 
             .content {

@@ -56,10 +56,16 @@ body #informationBar #infoTableInfo .collapsible {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body #informationBar #infoTableInfo .collapsible div {
   width: 33%;
+  text-align: center;
 }
 
 body #informationBar #infoTableInfo .content {
