@@ -112,20 +112,37 @@ body {
                 background: color(lightest);
 
                 #detailInfos {
-                    display: flex;
-                   
-                    #gigAddress {
-                        border: 2px solid purple;
+                    display: inline-flex;
+                    width: 100%;
+                    height: 100px;
 
+                    #gigAddress {
+                        margin-top: 10px;
+                        width: 80%;
+                        
                         p {
-                            border: 2px solid red;
                             font-size: font(basic);
+                            margin: 0;
+                            margin-left: 20px;
                         }
                     }
 
-                    button {
-                        border: 2px solid green;
-                        cursor: pointer;
+                    #ticketsPrice {
+                        width: 20%;
+                        text-align: center;
+                        justify-content: center;
+                        padding-right: 10px;
+        
+                        a {
+                            text-decoration: none;
+                                                       
+                            p {
+                                font-size: font(basic);
+                                color: color(fontLine);
+                                cursor: pointer;
+                            
+                            }
+                        }
                     }
                 }
 
