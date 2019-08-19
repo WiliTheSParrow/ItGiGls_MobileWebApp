@@ -61,11 +61,15 @@ body #informationBar #infoTableInfo .collapsible {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body #informationBar #infoTableInfo .collapsible div {
   width: 33%;
-  text-align: center;
+  height: 100%;
 }
 
 body #informationBar #infoTableInfo .content {
@@ -77,16 +81,22 @@ body #informationBar #infoTableInfo #moreInfo {
   background: #dfe2e2;
 }
 
-body #informationBar #infoTableInfo #moreInfo #gigAddress {
+body #informationBar #infoTableInfo #moreInfo #detailInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #informationBar #infoTableInfo #moreInfo #detailInfos #gigAddress {
   border: 2px solid purple;
 }
 
-body #informationBar #infoTableInfo #moreInfo #gigAddress p {
+body #informationBar #infoTableInfo #moreInfo #detailInfos #gigAddress p {
   border: 2px solid red;
   font-size: 22px;
 }
 
-body #informationBar #infoTableInfo #moreInfo button {
+body #informationBar #infoTableInfo #moreInfo #detailInfos button {
   border: 2px solid green;
   cursor: pointer;
 }
@@ -95,6 +105,7 @@ body #informationBar #infoTableInfo #moreInfo #map {
   border: 2px solid black;
   background: pink;
   width: 100%;
+  height: 100%;
 }
 
 body #footer {
