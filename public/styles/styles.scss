@@ -14,7 +14,7 @@ $colors: (primary:#1cb3c8,
 
 ;
 
-$fonts:(basic: 22px,
+$fonts:(basic: 20px,
     footer: 15px,
     headerSize: 24px,
 );
@@ -40,17 +40,23 @@ $paddings:(basic: 5px,
 
 // DESIGN ================================
 
+.ui-content{
+    padding: 0;
+}
+
 body {
     background: color(primary);
     color: color(fontLine);
     font-family: 'Abel', sans-serif;
     font-size: font(basic);
+    padding: 0;
     margin: 0;
     
 
     #header {
         width: 100%;
         display: inline-block;
+        
 
         p {
             font-size: font(headerSize);
@@ -68,8 +74,7 @@ body {
 
     #informationBar {
         border-top: 2px solid color(fontLine);
-        padding: 0;
-        
+        width: 100%;
 
         #infoTableHeader {
             background: color(primary);
@@ -89,7 +94,7 @@ body {
             .collapsible {
                 background: color(accent);
                 border-bottom: 2px solid color(fontLine);
-                padding: padding(basic);
+             
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
@@ -119,12 +124,13 @@ body {
 
                     #gigAddress {
                         margin-top: 10px;
+                        margin-left: 10px;
                         width: 80%;
                         
                         p {
                             font-size: font(basic);
                             margin: 0;
-                            margin-left: 20px;
+                            
                         }
                     }
 
@@ -149,7 +155,7 @@ body {
 
 
                 #map {
-                    border: 2px solid black;
+                    
                     background: pink;
                     width: 100%;
                     height: 100%;
@@ -188,6 +194,7 @@ body {
                 color: color(fontLine);
                 font-weight: normal;
                 padding-left: padding(topSide);
+                font-size: font(headerSize);
             }
         }
     }
