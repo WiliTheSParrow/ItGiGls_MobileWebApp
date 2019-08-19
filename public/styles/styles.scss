@@ -40,7 +40,7 @@ $paddings:(basic: 5px,
 
 // DESIGN ================================
 
-.ui-content{
+.ui-content {
     padding: 0;
 }
 
@@ -51,12 +51,12 @@ body {
     font-size: font(basic);
     padding: 0;
     margin: 0;
-    
+
 
     #header {
         width: 100%;
         display: inline-block;
-        
+
 
         p {
             font-size: font(headerSize);
@@ -94,7 +94,7 @@ body {
             .collapsible {
                 background: color(accent);
                 border-bottom: 2px solid color(fontLine);
-             
+
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
@@ -126,11 +126,11 @@ body {
                         margin-top: 10px;
                         margin-left: 10px;
                         width: 80%;
-                        
+
                         p {
                             font-size: font(basic);
                             margin: 0;
-                            
+
                         }
                     }
 
@@ -139,15 +139,15 @@ body {
                         text-align: center;
                         justify-content: center;
                         padding-right: 10px;
-        
+
                         a {
                             text-decoration: none;
-                                                       
+
                             p {
                                 font-size: font(basic);
                                 color: color(fontLine);
                                 cursor: pointer;
-                            
+
                             }
                         }
                     }
@@ -155,7 +155,7 @@ body {
 
 
                 #map {
-                    
+
                     background: pink;
                     width: 100%;
                     height: 100%;
@@ -164,11 +164,11 @@ body {
             }
         }
 
-        #footerPadding{
+        #footerPadding {
             width: 100%;
             height: 50px;
         }
-        
+
     }
 
     #footer {
@@ -213,4 +213,36 @@ body {
         cursor: pointer;
         display: none;
     }
+}
+
+// MEDIA QUERIES ============================
+
+@media screen and (min-width: 810px) {
+
+    #informationBar {
+
+        #infoTableHeader {
+            width: 30%;
+
+            .countryGiG {
+                display: none;
+            }
+
+        }
+
+        #infoTableInfo {
+
+            .content {
+                display: inline-block;
+
+            }
+
+            width: 30%;
+
+            .countryGiG {
+                display: none;
+            }
+        }
+    }
+
 }

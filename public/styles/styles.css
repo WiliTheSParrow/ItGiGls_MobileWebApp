@@ -175,4 +175,22 @@ body #topBtn {
   cursor: pointer;
   display: none;
 }
+
+@media screen and (min-width: 810px) {
+  #informationBar #infoTableHeader {
+    width: 30%;
+  }
+  #informationBar #infoTableHeader .countryGiG {
+    display: none;
+  }
+  #informationBar #infoTableInfo {
+    width: 30%;
+  }
+  #informationBar #infoTableInfo .content {
+    display: inline-block;
+  }
+  #informationBar #infoTableInfo .countryGiG {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
