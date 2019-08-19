@@ -46,6 +46,7 @@ body {
     font-family: 'Abel', sans-serif;
     font-size: font(basic);
     margin: 0;
+    
 
     #header {
         width: 100%;
@@ -66,10 +67,9 @@ body {
     }
 
     #informationBar {
-        background: color(accent);
-        border-bottom: 1px solid color(fontLine);
         border-top: 2px solid color(fontLine);
         padding: 0;
+        
 
         #infoTableHeader {
             background: color(primary);
@@ -87,6 +87,7 @@ body {
         #infoTableInfo {
 
             .collapsible {
+                background: color(accent);
                 border-bottom: 2px solid color(fontLine);
                 padding: padding(basic);
                 display: flex;
@@ -156,9 +157,16 @@ body {
                 }
             }
         }
+
+        #footerPadding{
+            width: 100%;
+            height: 50px;
+        }
+        
     }
 
     #footer {
+        border-top: 1px solid color(fontLine);
         font-size: font(footer);
         background: color(primary);
         color: color(fontLine);
