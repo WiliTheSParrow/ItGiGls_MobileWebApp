@@ -219,30 +219,39 @@ body {
 
 @media screen and (min-width: 810px) {
 
+    body{
+
     #informationBar {
 
         #infoTableHeader {
             width: 30%;
+            padding:0;
+            border-right: 2px solid color(fontLine);
+            
 
             .countryGiG {
                 display: none;
+            }
+
+            ul div{
+                width: 50%;
             }
 
         }
 
         #infoTableInfo {
-
-            .content {
-                display: inline-block;
-
-            }
-
+            border-right: 2px solid #3c415e;
             width: 30%;
 
             .countryGiG {
                 display: none;
             }
+
+            .collapsible div{
+                width: 50%;
+                align-items: center;
+            }
         }
     }
 
-}
+}}

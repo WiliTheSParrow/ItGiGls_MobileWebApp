@@ -177,20 +177,29 @@ body #topBtn {
 }
 
 @media screen and (min-width: 810px) {
-  #informationBar #infoTableHeader {
+  body #informationBar #infoTableHeader {
     width: 30%;
+    padding: 0;
+    border-right: 2px solid #3c415e;
   }
-  #informationBar #infoTableHeader .countryGiG {
+  body #informationBar #infoTableHeader .countryGiG {
     display: none;
   }
-  #informationBar #infoTableInfo {
+  body #informationBar #infoTableHeader ul div {
+    width: 50%;
+  }
+  body #informationBar #infoTableInfo {
+    border-right: 2px solid #3c415e;
     width: 30%;
   }
-  #informationBar #infoTableInfo .content {
-    display: inline-block;
-  }
-  #informationBar #infoTableInfo .countryGiG {
+  body #informationBar #infoTableInfo .countryGiG {
     display: none;
+  }
+  body #informationBar #infoTableInfo .collapsible div {
+    width: 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
