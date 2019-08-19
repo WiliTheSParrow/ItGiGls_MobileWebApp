@@ -124,8 +124,8 @@ body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a p {
 
 body #informationBar #infoTableInfo #moreInfo #map {
   background: pink;
-  width: 100%;
-  height: 100%;
+  width: 500x;
+  height: 500px;
 }
 
 body #informationBar #footerPadding {
