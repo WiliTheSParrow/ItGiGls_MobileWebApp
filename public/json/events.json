@@ -1,6 +1,19 @@
 {
   "concerts": [
     {
+      "band": "Rammstein",
+      "address": "Meiereistraße 7",
+      "place": "Wien",
+      "zipCode": 1020,
+      "country": "Austria",
+      "institution": "Ernst Happel Stadion",
+      "date": "2019-08-22",
+      "facebookEvent": "https://www.facebook.com/events/300865707309871/",
+      "ticketPrice": "SOLD OUT",
+      "ticketBuy": "https://www.eventim.com/rammstein/",
+      "mapsToShow": "https://maps.google.com/maps?q=Ernst-Happel-Stadion&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    },
+    {
       "band": "Static-x",
       "address": "Noordersingel 28/30",
       "place": "Antwerpen",
@@ -12,6 +25,19 @@
       "ticketPrice": "€31",
       "ticketBuy": "https://www.eventbrite.be/e/tickets-static-x-59382210791?aff=eprofsaved",
       "mapsToShow": "https://maps.google.com/maps?q=Noordersingel%2028%2F30%20%20Antwerpen%20%202140&t=&z=17&ie=UTF8&iwloc=&output=embed"
+    },
+    {
+      "band": "Clawfinger",
+      "address": "Siegburgerstraße 110",
+      "place": "Koeln",
+      "zipCode": 50679,
+      "country": "Germany",
+      "institution": "Essigfabrik",
+      "date": "2019-10-12",
+      "facebookEvent": "https://www.facebook.com/events/2253322301660388/",
+      "ticketPrice": "€34,85",
+      "ticketBuy": "https://www.eventim.de/event/clawfinger-essigfabrik-11632956/",
+      "mapsToShow": "https://maps.google.com/maps?q=Essigfabrik&t=&z=13&ie=UTF8&iwloc=&output=embed"
     },
     {
       "band": "Eluveitie, Lacuna Coil, Infected Rain",
