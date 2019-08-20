@@ -122,10 +122,18 @@ body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a p {
   cursor: pointer;
 }
 
-body #informationBar #infoTableInfo #moreInfo #map {
-  background: pink;
-  width: 500x;
+body #informationBar #infoTableInfo #moreInfo #map .mapouter {
+  position: relative;
+  text-align: right;
   height: 500px;
+  width: 100%;
+}
+
+body #informationBar #infoTableInfo #moreInfo #map .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 100%;
 }
 
 body #informationBar #footerPadding {

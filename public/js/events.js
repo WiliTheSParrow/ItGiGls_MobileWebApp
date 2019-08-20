@@ -9,7 +9,8 @@ var data = {
       "date": "2019-10-06",
       "facebookEvent": "none",
       "ticketPrice": "€31",
-      "ticketBuy": "https://www.eventbrite.be/e/tickets-static-x-59382210791?aff=eprofsaved"
+      "ticketBuy": "https://www.eventbrite.be/e/tickets-static-x-59382210791?aff=eprofsaved",
+      "mapsToShow": "https://maps.google.com/maps?q=Noordersingel%2028%2F30%20%20Antwerpen%20%202140&t=&z=17&ie=UTF8&iwloc=&output=embed",
     },
     {
       "band": "Eluveitie, Lacuna Coil, Infected Rain",
