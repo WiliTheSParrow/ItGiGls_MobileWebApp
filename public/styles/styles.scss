@@ -130,7 +130,6 @@ body {
                         p {
                             font-size: font(basic);
                             margin: 0;
-
                         }
 
                         #institution{
@@ -143,13 +142,20 @@ body {
                         text-align: center;
                         justify-content: center;
                         padding-right: 10px;
+                        
+                        
 
                         a {
                             text-decoration: none;
+                            background: color(accent);
+                            border: 2px solid color(fontLine);
+                            border-radius: 100px;                            
 
                             p {
                                 font-size: font(basic);
-                                color: color(fontLine);
+                                color: color(lightest);
+                                font-weight: bold;
+                                text-shadow: 1px 1px color(fontLine);
                                 cursor: pointer;
 
                             }

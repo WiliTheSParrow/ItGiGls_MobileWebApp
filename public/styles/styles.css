@@ -118,11 +118,16 @@ body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice {
 
 body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a {
   text-decoration: none;
+  background: #738598;
+  border: 2px solid #3c415e;
+  border-radius: 100px;
 }
 
 body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a p {
   font-size: 20px;
-  color: #3c415e;
+  color: #dfe2e2;
+  font-weight: bold;
+  text-shadow: 1px 1px #3c415e;
   cursor: pointer;
 }
 
