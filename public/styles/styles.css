@@ -176,30 +176,45 @@ body #topBtn {
   display: none;
 }
 
+/* 
+// MEDIA QUERIES ============================
+
 @media screen and (min-width: 810px) {
-  body #informationBar #infoTableHeader {
-    width: 30%;
-    padding: 0;
-    border-right: 2px solid #3c415e;
-  }
-  body #informationBar #infoTableHeader .countryGiG {
-    display: none;
-  }
-  body #informationBar #infoTableHeader ul div {
-    width: 50%;
-  }
-  body #informationBar #infoTableInfo {
-    border-right: 2px solid #3c415e;
-    width: 30%;
-  }
-  body #informationBar #infoTableInfo .countryGiG {
-    display: none;
-  }
-  body #informationBar #infoTableInfo .collapsible div {
-    width: 50%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
+
+    body{
+
+    #informationBar {
+
+        #infoTableHeader {
+            width: 30%;
+            padding:0;
+            border-right: 2px solid color(fontLine);
+            
+
+            .countryGiG {
+                display: none;
+            }
+
+            ul div{
+                width: 50%;
+            }
+
+        }
+
+        #infoTableInfo {
+            border-right: 2px solid #3c415e;
+            width: 30%;
+
+            .countryGiG {
+                display: none;
+            }
+
+            .collapsible div{
+                width: 50%;
+                align-items: center;
+            }
+        }
+    }
+
+}} */
 /*# sourceMappingURL=styles.css.map */

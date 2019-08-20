@@ -28,7 +28,7 @@ var app = new Vue({
 
 
 
-/* //Scroll To Top Button:
+//Scroll To Top Button:
 $(document).ready(function () {
 
     $(window).scroll(function () {
@@ -45,9 +45,9 @@ $(document).ready(function () {
         }, 800);
     });
 });
- */
 
- 
+
+ /* 
 //Google Map:
 function initMap() {
     // The location of Uluru
@@ -66,7 +66,8 @@ function initMap() {
         position: uluru,
         map: map
     });
-};
+}; */
+
 
 //Collapsible:
 var coll = document.getElementsByClassName("collapsible");
