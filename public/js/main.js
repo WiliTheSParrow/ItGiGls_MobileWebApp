@@ -47,7 +47,7 @@ $(document).ready(function () {
 });
 
 
- /* 
+ 
 //Google Map:
 function initMap() {
     // The location of Uluru
@@ -66,7 +66,7 @@ function initMap() {
         position: uluru,
         map: map
     });
-}; */
+};
 
 
 //Collapsible:
