@@ -120,7 +120,7 @@ body {
                 #detailInfos {
                     display: inline-flex;
                     width: 100%;
-                    height: 100px;
+                    height: 120px;
 
                     #gigAddress {
                         margin-top: 10px;
@@ -131,6 +131,10 @@ body {
                             font-size: font(basic);
                             margin: 0;
 
+                        }
+
+                        #institution{
+                            font-weight: bold;
                         }
                     }
 
@@ -155,7 +159,7 @@ body {
 
 
                 #map {
-                    
+
                     .mapouter {
 
                         position: relative;
