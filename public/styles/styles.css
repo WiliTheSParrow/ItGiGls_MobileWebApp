@@ -6,7 +6,6 @@ body {
   background: #1cb3c8;
   color: #3c415e;
   font-family: 'Abel', sans-serif;
-  font-size: 20px;
   padding: 0;
   margin: 0;
 }
@@ -37,6 +36,7 @@ body #informationBar {
 body #informationBar #infoTableHeader {
   background: #1cb3c8;
   border-bottom: 2px solid #3c415e;
+  font-size: 20px;
   font-weight: bold;
   padding: 5px;
 }
@@ -52,9 +52,13 @@ body #informationBar #infoTableHeader ul div {
           justify-content: space-evenly;
 }
 
-body #informationBar #infoTableInfo .collapsible {
+body #informationBar #infoTableInfo {
   background: #738598;
   border-bottom: 2px solid #3c415e;
+}
+
+body #informationBar #infoTableInfo .collapsible {
+  background: #738598;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,9 +69,6 @@ body #informationBar #infoTableInfo .collapsible {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 body #informationBar #infoTableInfo .collapsible div {
@@ -113,7 +114,7 @@ body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 20px;
+  padding-right: 40px;
 }
 
 body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a {
@@ -159,6 +160,9 @@ body #footer {
   height: 40px;
   width: 100%;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
 }
 

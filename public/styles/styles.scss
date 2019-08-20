@@ -48,7 +48,7 @@ body {
     background: color(primary);
     color: color(fontLine);
     font-family: 'Abel', sans-serif;
-    font-size: font(basic);
+    
     padding: 0;
     margin: 0;
 
@@ -56,10 +56,12 @@ body {
     #header {
         width: 100%;
         display: inline-block;
+        
 
 
         p {
             font-size: font(headerSize);
+            
             font-weight: bold;
             text-align: center;
         }
@@ -79,6 +81,7 @@ body {
         #infoTableHeader {
             background: color(primary);
             border-bottom: 2px solid color(fontLine);
+            font-size: font(basic);
             font-weight: bold;
             padding: padding(basic);
 
@@ -90,21 +93,24 @@ body {
         }
 
         #infoTableInfo {
+            background: color(accent);
+            border-bottom: 2px solid color(fontLine);
 
             .collapsible {
                 background: color(accent);
-                border-bottom: 2px solid color(fontLine);
+                
 
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 text-align: center;
-                justify-content: center;
+                
 
                 div {
                     width: 33%;
                     height: 100%;
+                    
                 }
 
             }
@@ -141,7 +147,7 @@ body {
                         width: 20%;
                         text-align: center;
                         justify-content: center;
-                        padding-right: 20px;
+                        padding-right: 40px;
                         
                         
 
@@ -203,6 +209,7 @@ body {
         height: 40px;
         width: 100%;
         text-align: center;
+        justify-content: center;
         padding: padding(topSide);
 
         p {
