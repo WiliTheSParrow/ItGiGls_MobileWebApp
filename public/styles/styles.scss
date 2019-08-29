@@ -254,7 +254,31 @@ body {
     .chatlogs{
         padding: 10px;
         background: color(lightest);
+        width: 100%;
         height: 70%;
+
+        .chat{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            margin-bottom: 10px;
+
+            .user-photo{
+                width: 60px;
+                height: 60px;
+                background: color(primary);
+                border-radius: 50%;
+                
+            }
+
+            .chat-message{
+                width: 69%;
+                padding: 15px;
+                margin: 5px 10px 0;
+                background: #fff;
+                
+            }
+        }
     }
     
 
