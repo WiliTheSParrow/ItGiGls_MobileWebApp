@@ -195,45 +195,19 @@ body #topBtn {
   display: none;
 }
 
-/* 
-// MEDIA QUERIES ============================
+.chatbox {
+  border-top: 1px solid #3c415e;
+  height: 100vh;
+}
 
-@media screen and (min-width: 810px) {
+.chatbox .chatlogs {
+  padding: 10px;
+  background: #dfe2e2;
+  height: 70%;
+}
 
-    body{
-
-    #informationBar {
-
-        #infoTableHeader {
-            width: 30%;
-            padding:0;
-            border-right: 2px solid color(fontLine);
-            
-
-            .countryGiG {
-                display: none;
-            }
-
-            ul div{
-                width: 50%;
-            }
-
-        }
-
-        #infoTableInfo {
-            border-right: 2px solid #3c415e;
-            width: 30%;
-
-            .countryGiG {
-                display: none;
-            }
-
-            .collapsible div{
-                width: 50%;
-                align-items: center;
-            }
-        }
-    }
-
-}} */
+.chatbox .chat-form {
+  background: #1cb3c8;
+  border-top: 1px solid #3c415e;
+}
 /*# sourceMappingURL=styles.css.map */

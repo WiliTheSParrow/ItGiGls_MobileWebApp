@@ -243,44 +243,24 @@ body {
     }
 }
 
-/* 
-// MEDIA QUERIES ============================
 
-@media screen and (min-width: 810px) {
+// CHAT ============================
 
-    body{
+.chatbox{
+    
+    border-top: 1px solid color(fontLine);
+    height: 100vh;
 
-    #informationBar {
-
-        #infoTableHeader {
-            width: 30%;
-            padding:0;
-            border-right: 2px solid color(fontLine);
-            
-
-            .countryGiG {
-                display: none;
-            }
-
-            ul div{
-                width: 50%;
-            }
-
-        }
-
-        #infoTableInfo {
-            border-right: 2px solid #3c415e;
-            width: 30%;
-
-            .countryGiG {
-                display: none;
-            }
-
-            .collapsible div{
-                width: 50%;
-                align-items: center;
-            }
-        }
+    .chatlogs{
+        padding: 10px;
+        background: color(lightest);
+        height: 70%;
     }
+    
 
-}} */
+    .chat-form{
+        background: color(primary);
+        border-top: 1px solid color(fontLine);
+    
+    }
+}
