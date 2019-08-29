@@ -205,6 +205,8 @@ body #topBtn {
   background: #dfe2e2;
   width: 100%;
   height: 70%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .chatbox .chatlogs .chat {
@@ -229,16 +231,26 @@ body #topBtn {
 }
 
 .chatbox .chatlogs .chat .chat-message {
-  width: 69%;
+  width: 65%;
   padding: 15px;
   margin: 5px 10px 0;
-  background: #fff;
   font-size: 20px;
   border-radius: 10px;
 }
 
+.chatbox .chatlogs .friend .chat-message {
+  background: #fff;
+}
+
+.chatbox .chatlogs .self .chat-message {
+  background: #c4caca;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
 .chatbox .chat-form {
   background: #1cb3c8;
-  border-top: 1px solid #3c415e;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=styles.css.map */

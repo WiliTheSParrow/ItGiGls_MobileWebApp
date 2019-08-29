@@ -5,6 +5,7 @@ $colors: (primary:#1cb3c8,
     accent: #738598,
     accentLighten: lighten(#738598, 10%),
     lightest: #dfe2e2,
+    lightestDarken: darken(#dfe2e2, 10%),
 );
 
 
@@ -256,6 +257,9 @@ body {
         background: color(lightest);
         width: 100%;
         height: 70%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
 
         .chat{
             display: flex;
@@ -270,21 +274,31 @@ body {
                 border-radius: 50%;
                 
             }
+            
 
             .chat-message{
-                width: 69%;
+                width: 65%;
                 padding: 15px;
                 margin: 5px 10px 0;
-                background: #fff;
                 font-size: font(basic);
                 border-radius: 10px;
-            }
+            }            
+        }
+
+        .friend .chat-message{
+            background: #fff;
+        }
+
+        .self .chat-message{
+            background: color(lightestDarken);
+            order: -1;
         }
     }
     
     .chat-form{
         background: color(primary);
-        border-top: 1px solid color(fontLine);
+       
+        margin-top: 20px;
     
     }
 }
