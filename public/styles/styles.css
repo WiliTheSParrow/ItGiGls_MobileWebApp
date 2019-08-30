@@ -270,12 +270,17 @@ body #topBtn {
 }
 
 .chatbox .chat-form textarea {
-  background: #fff;
-  color: #909fae;
+  background: #dfe2e2;
+  color: #3c415e;
   width: 75%;
   height: 105px;
   border: 1px solid #3c415e;
   border-radius: 20px;
   resize: none;
+  padding: 10px;
+}
+
+.chatbox .chat-form textarea:focus {
+  background: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

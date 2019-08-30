@@ -315,14 +315,23 @@ body {
         display: flex;
         align-items: flex-start;
         textarea{
-            background: #fff;
-            color: color(accentLighten);
+            background: color(lightest);
+            color: color(fontLine);
             width: 75%;
             height: 105px;
             border: 1px solid color(fontLine);
             border-radius: 20px;
             resize: none;
+            padding: 10px;
+            
+        
         }
     
+    }
+
+    .chat-form{
+        textarea:focus{
+            background: #fff;
+        }
     }
 }
