@@ -236,6 +236,11 @@ body #topBtn {
   height: 60px;
   background: #1cb3c8;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.chatbox .chatlogs .chat .user-photo img {
+  width: 100%;
 }
 
 .chatbox .chatlogs .chat .chat-message {

@@ -272,7 +272,11 @@ body {
                 height: 60px;
                 background: color(primary);
                 border-radius: 50%;
+                overflow: hidden;
+            }
 
+            .user-photo img{
+                width: 100%;
             }
 
 
