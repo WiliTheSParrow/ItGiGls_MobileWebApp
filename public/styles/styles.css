@@ -203,7 +203,6 @@ body #topBtn {
 .chatbox .chatlogs {
   padding: 10px;
   background: #dfe2e2;
-  width: 100%;
   height: 70%;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -249,8 +248,34 @@ body #topBtn {
           order: -1;
 }
 
+.chatbox .chatlogs::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chatbox .chatlogs::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #c4caca;
+}
+
 .chatbox .chat-form {
   background: #1cb3c8;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.chatbox .chat-form textarea {
+  background: #fff;
+  color: #909fae;
+  width: 75%;
+  height: 105px;
+  border: 1px solid #3c415e;
+  border-radius: 20px;
+  resize: none;
 }
 /*# sourceMappingURL=styles.css.map */

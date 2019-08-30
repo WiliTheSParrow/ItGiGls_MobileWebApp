@@ -255,7 +255,7 @@ body {
     .chatlogs{
         padding: 10px;
         background: color(lightest);
-        width: 100%;
+        
         height: 70%;
         overflow-x: hidden;
         overflow-y: scroll;
@@ -293,12 +293,36 @@ body {
             background: color(lightestDarken);
             order: -1;
         }
+
+       
+
+        
     }
+
+    .chatlogs::-webkit-scrollbar{
+        width: 10px;
+    }
+    
+    .chatlogs::-webkit-scrollbar-thumb{
+        border-radius: 5px;
+        background: color(lightestDarken);
+    }   
     
     .chat-form{
         background: color(primary);
-       
-        margin-top: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+        display: flex;
+        align-items: flex-start;
+        textarea{
+            background: #fff;
+            color: color(accentLighten);
+            width: 75%;
+            height: 105px;
+            border: 1px solid color(fontLine);
+            border-radius: 20px;
+            resize: none;
+        }
     
     }
 }
