@@ -198,6 +198,15 @@ body #topBtn {
 .chatbox {
   border-top: 1px solid #3c415e;
   height: 100vh;
+  /* 
+    .chat-form textarea::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .chat-form textarea::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: color(lightestDarken);
+    } */
 }
 
 .chatbox .chatlogs {
@@ -282,5 +291,13 @@ body #topBtn {
 
 .chatbox .chat-form textarea:focus {
   background: #fff;
+}
+
+.chatbox .chat-form button {
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -49,7 +49,7 @@ body {
     background: color(primary);
     color: color(fontLine);
     font-family: 'Abel', sans-serif;
-    
+
     padding: 0;
     margin: 0;
 
@@ -57,12 +57,12 @@ body {
     #header {
         width: 100%;
         display: inline-block;
-        
+
 
 
         p {
             font-size: font(headerSize);
-            
+
             font-weight: bold;
             text-align: center;
         }
@@ -99,19 +99,19 @@ body {
 
             .collapsible {
                 background: color(accent);
-                
+
 
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
                 text-align: center;
-                
+
 
                 div {
                     width: 33%;
                     height: 100%;
-                    
+
                 }
 
             }
@@ -139,7 +139,7 @@ body {
                             margin: 0;
                         }
 
-                        #institution{
+                        #institution {
                             font-weight: bold;
                         }
                     }
@@ -149,14 +149,14 @@ body {
                         text-align: center;
                         justify-content: center;
                         padding-right: 40px;
-                        
-                        
+
+
 
                         a {
                             text-decoration: none;
                             // background: color(accent);
                             border: 2px solid color(fontLine);
-                            border-radius: 10px;                            
+                            border-radius: 10px;
 
                             p {
                                 font-size: font(basic);
@@ -247,74 +247,75 @@ body {
 
 // CHAT ============================
 
-.chatbox{
-    
+.chatbox {
+
     border-top: 1px solid color(fontLine);
     height: 100vh;
 
-    .chatlogs{
+    .chatlogs {
         padding: 10px;
         background: color(lightest);
-        
+
         height: 70%;
         overflow-x: hidden;
         overflow-y: scroll;
 
 
-        .chat{
+        .chat {
             display: flex;
             flex-flow: row wrap;
             align-items: flex-start;
             margin-bottom: 10px;
 
-            .user-photo{
+            .user-photo {
                 width: 60px;
                 height: 60px;
                 background: color(primary);
                 border-radius: 50%;
-                
-            }
-            
 
-            .chat-message{
+            }
+
+
+            .chat-message {
                 width: 65%;
                 padding: 15px;
                 margin: 5px 10px 0;
                 font-size: font(basic);
                 border-radius: 10px;
-            }            
+            }
         }
 
-        .friend .chat-message{
+        .friend .chat-message {
             background: #fff;
         }
 
-        .self .chat-message{
+        .self .chat-message {
             background: color(lightestDarken);
             order: -1;
         }
 
-       
 
-        
+
+
     }
 
-    .chatlogs::-webkit-scrollbar{
+    .chatlogs::-webkit-scrollbar {
         width: 10px;
     }
-    
-    .chatlogs::-webkit-scrollbar-thumb{
+
+    .chatlogs::-webkit-scrollbar-thumb {
         border-radius: 5px;
         background: color(lightestDarken);
-    }   
-    
-    .chat-form{
+    }
+
+    .chat-form {
         background: color(primary);
         margin-top: 10px;
         margin-left: 10px;
         display: flex;
         align-items: flex-start;
-        textarea{
+
+        textarea {
             background: color(lightest);
             color: color(fontLine);
             width: 75%;
@@ -323,15 +324,34 @@ body {
             border-radius: 20px;
             resize: none;
             padding: 10px;
-            
-        
+           
         }
-    
-    }
 
-    .chat-form{
-        textarea:focus{
+        
+
+        textarea:focus {
             background: #fff;
         }
+
+        button {
+            margin-left: 10px;
+            width: 50px;
+            height: 50px;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+
     }
+/* 
+    .chat-form textarea::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .chat-form textarea::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: color(lightestDarken);
+    } */
+
+
 }
