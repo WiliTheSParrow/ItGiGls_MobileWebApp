@@ -316,10 +316,12 @@ body #topBtn {
   border-radius: 20px;
   resize: none;
   padding: 10px;
+  cursor: text;
 }
 
 .chatbox .chat-form textarea:focus {
   background: #fff;
+  cursor: text;
 }
 
 .chatbox .chat-form button {

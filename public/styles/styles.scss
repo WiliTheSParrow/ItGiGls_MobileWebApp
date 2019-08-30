@@ -340,6 +340,7 @@ body {
             border-radius: 20px;
             resize: none;
             padding: 10px;
+            cursor: text;
 
         }
 
@@ -347,6 +348,7 @@ body {
 
         textarea:focus {
             background: #fff;
+            cursor: text;
         }
 
         button {
