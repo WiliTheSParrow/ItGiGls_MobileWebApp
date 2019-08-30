@@ -252,13 +252,14 @@ body {
     border-top: 1px solid color(fontLine);
     height: 100vh;
 
+
     .chatlogs {
         padding: 10px;
         background: color(lightest);
-
         height: 70%;
         overflow-x: hidden;
         overflow-y: scroll;
+        
 
 
         .chat {
@@ -266,6 +267,11 @@ body {
             flex-flow: row wrap;
             align-items: flex-start;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            
 
             .user-photo {
                 width: 60px;
@@ -273,9 +279,10 @@ body {
                 background: color(primary);
                 border-radius: 50%;
                 overflow: hidden;
+                box-shadow: 4px 5px 10px color(accent);
             }
 
-            .user-photo img{
+            .user-photo img {
                 width: 100%;
             }
 
@@ -286,6 +293,7 @@ body {
                 margin: 5px 10px 0;
                 font-size: font(basic);
                 border-radius: 10px;
+                box-shadow: 4px 5px 10px color(accent);
             }
         }
 
@@ -318,6 +326,10 @@ body {
         margin-left: 10px;
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
 
         textarea {
             background: color(lightest);
@@ -328,10 +340,10 @@ body {
             border-radius: 20px;
             resize: none;
             padding: 10px;
-           
+
         }
 
-        
+
 
         textarea:focus {
             background: #fff;
@@ -347,7 +359,8 @@ body {
 
 
     }
-/* 
+
+    /* 
     .chat-form textarea::-webkit-scrollbar {
         width: 10px;
     }
