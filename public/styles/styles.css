@@ -331,4 +331,8 @@ body #topBtn {
   opacity: 1;
   cursor: pointer;
 }
+
+.chatbox .chat-form .fa-paper-plane {
+  font-size: 50px;
+}
 /*# sourceMappingURL=styles.css.map */
