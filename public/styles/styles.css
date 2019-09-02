@@ -198,15 +198,6 @@ body #topBtn {
 .chatbox {
   border-top: 1px solid #3c415e;
   height: 100vh;
-  /* 
-    .chat-form textarea::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    .chat-form textarea::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background: color(lightestDarken);
-    } */
 }
 
 .chatbox .chatlogs {
@@ -236,9 +227,6 @@ body #topBtn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .chatbox .chatlogs .chat .user-photo {
@@ -249,6 +237,9 @@ body #topBtn {
   overflow: hidden;
   -webkit-box-shadow: 4px 5px 10px #738598;
           box-shadow: 4px 5px 10px #738598;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .chatbox .chatlogs .chat .user-photo img {
@@ -267,6 +258,17 @@ body #topBtn {
 
 .chatbox .chatlogs .friend .chat-message {
   background: #fff;
+}
+
+.chatbox .chatlogs .friend .chat-message::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid #fff;
+  border-bottom: 13px solid transparent;
+  margin: 13px 00 -25px;
 }
 
 .chatbox .chatlogs .self .chat-message {
@@ -308,15 +310,16 @@ body #topBtn {
 }
 
 .chatbox .chat-form textarea {
+  resize: none;
   background: #dfe2e2;
   color: #3c415e;
   width: 75%;
   height: 105px;
   border: 1px solid #3c415e;
   border-radius: 20px;
-  resize: none;
   padding: 15px;
   cursor: text;
+  overflow: auto;
 }
 
 .chatbox .chat-form textarea:focus {

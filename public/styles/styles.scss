@@ -270,8 +270,6 @@ body {
             flex-wrap: wrap;
             align-content: center;
             justify-content: center;
-            align-items: center;
-            
 
             .user-photo {
                 width: 60px;
@@ -280,6 +278,7 @@ body {
                 border-radius: 50%;
                 overflow: hidden;
                 box-shadow: 4px 5px 10px color(accent);
+                align-items: flex-start;
             }
 
             .user-photo img {
@@ -299,13 +298,22 @@ body {
 
         .friend .chat-message {
             background: #fff;
-            
+        }
+
+        .friend .chat-message::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 13px solid transparent;
+            border-right: 26px solid #fff;
+            border-bottom: 13px solid transparent;
+            margin: 13px 00 -25px;
         }
 
         .self .chat-message {
             background: color(lightestDarken);
             order: -1;
-            
         }
 
     }
@@ -331,16 +339,16 @@ body {
         align-items: center;
 
         textarea {
+            resize: none;
             background: color(lightest);
             color: color(fontLine);
             width: 75%;
             height: 105px;
             border: 1px solid color(fontLine);
             border-radius: 20px;
-            resize: none;
             padding: 15px;
             cursor: text;
-
+            overflow: auto;
         }
 
 
@@ -365,16 +373,6 @@ body {
 
 
     }
-
-    /* 
-    .chat-form textarea::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    .chat-form textarea::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background: color(lightestDarken);
-    } */
 
 
 }
