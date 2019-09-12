@@ -1,5 +1,7 @@
+//Get data from events.js
 var gigInfo = data.concerts;
 
+//Initialize Vue.js
 var app = new Vue({
     el: "#app",
 
