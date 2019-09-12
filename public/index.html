@@ -40,6 +40,7 @@
 
 <body>
 
+    <!--- VUE JS --->
     <div id="app">
 
         <!--- FIRST PAGE --->
@@ -51,6 +52,7 @@
                     <img src="../public/img/hands4.png" alt="sign of horns" class="responsiveImg">
                 </a>
 
+                <!--- Page Title -->
                 <p>ItGiGls - Be Up To Date!</p>
 
                 <a href="#chatPage" data-role="button">
@@ -170,22 +172,28 @@
         <!--- SECOND PAGE --->
         <div data-role="page" id="chatPage">
 
-            <!--- Header --->
+            <!--- Header START-->
             <div id="header" data-role="header">
+
                 <a href="#homePage" data-role="button">
                     <img src="../public/img/hands4.png" alt="sign of horns" class="responsiveImg">
                 </a>
+
+                <!--- Page Title -->
                 <p>Chat</p>
+
                 <a href="#chatPage" data-role="button">
                     <img src="../public/img/msg2.png" alt="message icon" class="responsiveImg">
                 </a>
+
             </div>
+            <!--- Header END-->
 
-            <!--- Chat --->
-
+            <!--- Chat START--->
             <div class="chatbox">
                 <div class="chatlogs">
 
+                    <!-- Message Bubbles START-->
                     <div class="chat friend">
                         <div class="user-photo"><img src="/public/img/userOne.jpg" alt="User One"></div>
                         <p class="chat-message">Hoi!</p>
@@ -223,17 +231,22 @@
                             iusto, tempora exercitationem cum odit excepturi quaerat libero quibusdam, necessitatibus
                             beatae. Facilis praesentium vero laboriosam quaerat numquam! Placeat, vel quod. </p>
                     </div>
-
+                    <!-- Message Bubbles END-->
 
                 </div>
 
+                <!--- Message Textarea START-->
                 <div class="chat-form">
                     <textarea placeholder="Write your text here..."></textarea>
                     <button><i class="far fa-paper-plane"></i></button>
                 </div>
+                <!--- Message Textarea END-->
+                
             </div>
+            <!--- Chat END--->
 
         </div>
+
     </div>
 
     <!--- Concert Data -->
