@@ -18,11 +18,8 @@ var app = new Vue({
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
             }
-        },
-
-        collapse: function(){
-            
         }
+       
     }
 });
 
