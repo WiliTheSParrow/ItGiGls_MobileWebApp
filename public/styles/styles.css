@@ -28,6 +28,11 @@ body #header .responsiveImg {
   height: 40px;
 }
 
+body #header .fa-sign-out-alt {
+  font-size: 50px;
+  color: #3c415e;
+}
+
 body #informationBar {
   border-top: 2px solid #3c415e;
   width: 100%;
@@ -337,5 +342,25 @@ body #topBtn {
 
 .chatbox .chat-form .fa-paper-plane {
   font-size: 50px;
+}
+
+#loginBtn {
+  background: #dfe2e2;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#loginBtn button {
+  border: 2px solid black;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
