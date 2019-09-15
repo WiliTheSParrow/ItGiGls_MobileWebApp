@@ -354,13 +354,11 @@ body #topBtn {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #loginBtn button {
-  border: 2px solid black;
+  border: 2px solid #3c415e;
   border-radius: 20px;
+  background-color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */

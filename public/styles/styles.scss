@@ -392,12 +392,13 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     
 
     button {
-        border: 2px solid black;
+        border: 2px solid color(fontLine);
         border-radius: 20px;
+        background-color: #ffffff;
 
     }
 }
