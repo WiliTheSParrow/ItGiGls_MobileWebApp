@@ -7,6 +7,7 @@ var app = new Vue({
 
     data: {
         dataForTable: [],
+        collapseMenuPath: false,
     },
 
     created: function () {
