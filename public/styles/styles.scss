@@ -4,6 +4,7 @@ $colors: (primary:#1cb3c8,
     fontLine: #3c415e,
     accent: #738598,
     accentLighten: lighten(#738598, 10%),
+    accentDarken: darken(#738598, 5%),
     lightest: #dfe2e2,
     lightestDarken: darken(#dfe2e2, 10%),
 );
@@ -106,8 +107,6 @@ body {
 
             .collapsible {
                 background: color(accent);
-
-
                 display: flex;
                 width: 100%;
                 flex-wrap: wrap;
@@ -123,8 +122,15 @@ body {
 
             }
 
+            .active, .collapsible:hover {
+                background-color: color(accentDarken);
+              }
+
             .content {
-                display: none;
+                
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out;
             }
 
             #moreInfo {
@@ -392,8 +398,8 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    
-    
+
+
 
     button {
         border: 2px solid color(fontLine);
