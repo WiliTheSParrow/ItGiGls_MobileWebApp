@@ -58,14 +58,14 @@ body {
     #header {
         width: 100%;
         display: inline-block;
-
+        
 
 
         p {
             font-size: font(headerSize);
-
             font-weight: bold;
             text-align: center;
+            
         }
 
         .responsiveImg {
@@ -91,11 +91,14 @@ body {
             font-size: font(basic);
             font-weight: bold;
             padding: padding(basic);
+            cursor: pointer;
+            
 
             ul div {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
+                
             }
 
 

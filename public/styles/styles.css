@@ -44,6 +44,7 @@ body #informationBar #infoTableHeader {
   font-size: 20px;
   font-weight: bold;
   padding: 5px;
+  cursor: pointer;
 }
 
 body #informationBar #infoTableHeader ul div {
