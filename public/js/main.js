@@ -1,6 +1,6 @@
 //Get data from events.js
 var gigInfo = data.concerts;
-console.log(gigInfo);
+
 
 //Initialize Vue.js
 var app = new Vue({
@@ -14,9 +14,6 @@ var app = new Vue({
     created: function () {
         this.getData();
         console.log(this.dataForTable);
-        this.sortingTheDataByBand();
-        console.log(this.dataForTable);
-        this.sortingTheDataByCountry();
     },
 
 
@@ -31,7 +28,7 @@ var app = new Vue({
         
 
         sortingTheDataByBand: function () {
-           
+
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if(a.date < b.date){return -1;}
                 if(a.date > b.date){return 1;}
@@ -103,3 +100,6 @@ for (var i = 0; i < coll.length; i++) {
 
 
 };
+
+var clickBand = document.getElementById("headerBand");
+clickBand.addEventListener("click", function(){console.log("You clicked band header");});
