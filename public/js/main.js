@@ -101,5 +101,7 @@ for (var i = 0; i < coll.length; i++) {
 
 };
 
-var clickBand = document.getElementById("headerBand");
-clickBand.addEventListener("click", function(){console.log("You clicked band header");});
+
+document.getElementById("headerBand").addEventListener("click", function(){console.log("You clicked the band header");});
+document.getElementById("headerDate").addEventListener("click", function(){console.log("You clicked the date header");});
+document.getElementById("headerCountry").addEventListener("click", function(){console.log("You clicked the country header");});
