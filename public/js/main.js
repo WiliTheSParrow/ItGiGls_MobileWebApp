@@ -20,6 +20,7 @@ var app = new Vue({
         console.log(this.dataForTable);
         console.log("2nd!")
         this.sortingTheData();
+        console.log(this.sortedCountry);
         console.log(this.sortedBand);
 
     },
@@ -55,10 +56,19 @@ var app = new Vue({
             /* for(var i=0; i < this.dataForTable.length; i++){
                 this.sortedBand.push(this.dataForTable[i]['band']);
                 this.sortedBand.sort();
-            } */
+            } 
+            
+            users.sort(function(a, b){
+    if(a.firstname < b.firstname) { return -1; }
+    if(a.firstname > b.firstname) { return 1; }
+    return 0;
+})
+            */
 
             this.sortedBand = [...gigInfo].sort(function (a, b) {
-                return a.band - b.band
+                if(a.band < b.band){return -1;}
+                if(a.band > b.band){return 1;}
+                return 0;
             })
         }
 
