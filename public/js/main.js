@@ -8,21 +8,15 @@ var app = new Vue({
 
     data: {
         dataForTable: [],
-        sortedBand: [],
-        sortedDate: [],
-        sortedCountry: [],
-
+        
     },
 
     created: function () {
         this.getData();
-        console.log("1st!")
         console.log(this.dataForTable);
-        console.log("2nd!")
-        this.sortingTheData();
-        console.log(this.sortedCountry);
-        console.log(this.sortedBand);
-
+        this.sortingTheDataByBand();
+        console.log(this.dataForTable);
+        this.sortingTheDataByCountry();
     },
 
 
@@ -34,45 +28,36 @@ var app = new Vue({
                 this.dataForTable.push(gigInfo[i]);
             }
         },
-        /* 
-                sortMembers: function () {
-                    //Loyalty:
-                    this.membersVotesLeastParty = [...this.members].sort(function (a, b) {
-                        return a.votes_with_party_pct - b.votes_with_party_pct
-                    });
-                    this.membersVotesMostParty = [...this.members].sort(function (a, b) {
-                        return b.votes_with_party_pct - a.votes_with_party_pct
-                    });
-                    //Attendance:
-                    this.membersMissedVotesPercDesc = [...this.members].sort(function (a, b) {
-                        return b.missed_votes_pct - a.missed_votes_pct
-                    });
-                    this.membersMissedVotesPercAsc = [...this.members].sort(function (a, b) {
-                        return a.missed_votes_pct - b.missed_votes_pct
-                    })
-                }, */
+        
 
-        sortingTheData: function () {
-            /* for(var i=0; i < this.dataForTable.length; i++){
-                this.sortedBand.push(this.dataForTable[i]['band']);
-                this.sortedBand.sort();
-            } 
-            
-            users.sort(function(a, b){
-    if(a.firstname < b.firstname) { return -1; }
-    if(a.firstname > b.firstname) { return 1; }
-    return 0;
-})
-            */
+        sortingTheDataByBand: function () {
+           
+            this.dataForTable = [...gigInfo].sort(function (a, b) {
+                if(a.date < b.date){return -1;}
+                if(a.date > b.date){return 1;}
+                return 0;
+            })
+        },
 
-            this.sortedBand = [...gigInfo].sort(function (a, b) {
+        sortingTheDataByDate: function(){
+
+            this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if(a.band < b.band){return -1;}
                 if(a.band > b.band){return 1;}
                 return 0;
             })
-        }
+        },
+        
+        sortingTheDataByCountry: function(){
 
-    }
+            this.dataForTable = [...gigInfo].sort(function (a, b) {
+                if(a.country < b.country){return -1;}
+                if(a.country > b.country){return 1;}
+                return 0;
+            })
+        } 
+
+    },
 });
 
 
