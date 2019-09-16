@@ -7,7 +7,10 @@ var app = new Vue({
 
     data: {
         dataForTable: [],
-        collapseMenuPath: false,
+        sortedBand: [],
+        sortedDate: [],
+        sortedCountry: [],
+        
     },
 
     created: function () {
@@ -21,13 +24,6 @@ var app = new Vue({
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
             }
-        },
-
-        login: function () {
-            var provider = new firebase.auth.GoogleAuthProvider();
-            firebase.auth().signInWithPopup(provider).then(function () {
-                app.getPosts();
-            })
         }
 
     }
