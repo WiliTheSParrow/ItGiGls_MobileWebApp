@@ -13,10 +13,7 @@ var app = new Vue({
 
     created: function () {
         this.getData();
-        console.log(this.dataForTable);
-        this.sortingTheDataByBand();
-        console.log(this.dataForTable);
-       
+        
     },
 
 
