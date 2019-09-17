@@ -16,6 +16,7 @@ var app = new Vue({
         console.log(this.dataForTable);
         this.sortingTheDataByBand();
         console.log(this.dataForTable);
+       
     },
 
 
@@ -30,6 +31,8 @@ var app = new Vue({
 
 
         sortingTheDataByBand: function () {
+            document.getElementById("headerBand").addEventListener("click", function () {console.log("You clicked the band header from Vue");
+            });
 
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.band < b.band) {
@@ -66,7 +69,8 @@ var app = new Vue({
                 }
                 return 0;
             })
-        }
+        },
+
 
     },
 });
@@ -116,14 +120,14 @@ for (var i = 0; i < coll.length; i++) {
 };
 
 //Get elements:
-var tableHeaderBand = document.getElementById("headerBand");
+//var tableHeaderBand = document.getElementById("headerBand");
 var tableHeaderDate = document.getElementById("headerDate");
 var tableHeaderCountry = document.getElementById("headerCountry");
 
 //Event listeners for header:
-tableHeaderBand.addEventListener("click", function () {
+/* tableHeaderBand.addEventListener("click", function () {
     console.log("You clicked the band header");
-});
+}); */
 tableHeaderDate.addEventListener("click", function () {
     console.log("You clicked the date header");
 });
