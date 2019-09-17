@@ -14,7 +14,8 @@ var app = new Vue({
     created: function () {
         this.getData();
         console.log(this.dataForTable);
-
+        this.sortingTheDataByBand();
+        console.log(this.dataForTable);
     },
 
 
@@ -31,10 +32,10 @@ var app = new Vue({
         sortingTheDataByBand: function () {
 
             this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if (a.date < b.date) {
+                if (a.band < b.band) {
                     return -1;
                 }
-                if (a.date > b.date) {
+                if (a.band > b.band) {
                     return 1;
                 }
                 return 0;
@@ -44,10 +45,10 @@ var app = new Vue({
         sortingTheDataByDate: function () {
 
             this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if (a.band < b.band) {
+                if (a.date < b.date) {
                     return -1;
                 }
-                if (a.band > b.band) {
+                if (a.date > b.date) {
                     return 1;
                 }
                 return 0;
