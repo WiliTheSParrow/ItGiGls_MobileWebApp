@@ -1,19 +1,20 @@
-//Get data from events.js
+//Get show data from events.js:
 var gigInfo = data.concerts;
 
 
-//Initialize Vue.js
+//Initialize Vue.js:
 var app = new Vue({
     el: "#app",
 
     data: {
         dataForTable: [],
-        
+
     },
 
     created: function () {
         this.getData();
         console.log(this.dataForTable);
+
     },
 
 
@@ -25,34 +26,46 @@ var app = new Vue({
                 this.dataForTable.push(gigInfo[i]);
             }
         },
-        
+
 
         sortingTheDataByBand: function () {
 
             this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if(a.date < b.date){return -1;}
-                if(a.date > b.date){return 1;}
+                if (a.date < b.date) {
+                    return -1;
+                }
+                if (a.date > b.date) {
+                    return 1;
+                }
                 return 0;
             })
         },
 
-        sortingTheDataByDate: function(){
+        sortingTheDataByDate: function () {
 
             this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if(a.band < b.band){return -1;}
-                if(a.band > b.band){return 1;}
+                if (a.band < b.band) {
+                    return -1;
+                }
+                if (a.band > b.band) {
+                    return 1;
+                }
                 return 0;
             })
         },
-        
-        sortingTheDataByCountry: function(){
+
+        sortingTheDataByCountry: function () {
 
             this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if(a.country < b.country){return -1;}
-                if(a.country > b.country){return 1;}
+                if (a.country < b.country) {
+                    return -1;
+                }
+                if (a.country > b.country) {
+                    return 1;
+                }
                 return 0;
             })
-        } 
+        }
 
     },
 });
@@ -101,7 +114,18 @@ for (var i = 0; i < coll.length; i++) {
 
 };
 
+//Get elements:
+var tableHeaderBand = document.getElementById("headerBand");
+var tableHeaderDate = document.getElementById("headerDate");
+var tableHeaderCountry = document.getElementById("headerCountry");
 
-document.getElementById("headerBand").addEventListener("click", function(){console.log("You clicked the band header");});
-document.getElementById("headerDate").addEventListener("click", function(){console.log("You clicked the date header");});
-document.getElementById("headerCountry").addEventListener("click", function(){console.log("You clicked the country header");});
+//Event listeners for header:
+tableHeaderBand.addEventListener("click", function () {
+    console.log("You clicked the band header");
+});
+tableHeaderDate.addEventListener("click", function () {
+    console.log("You clicked the date header");
+});
+tableHeaderCountry.addEventListener("click", function () {
+    console.log("You clicked the country header");
+});
