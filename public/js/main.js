@@ -69,8 +69,7 @@ var app = new Vue({
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
                 app.getPosts();
-            })
-            .catch(function () {
+            }).catch(function () {
                 alert("Something went wrong...");
             });
         },
