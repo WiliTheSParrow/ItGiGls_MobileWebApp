@@ -12,18 +12,39 @@ var app = new Vue({
     },
 
     created: function () {
-        this.getData();
-
+        this.getGigData();
+		this.getData("");
+		firebase.auth().onAuthStateChanged(function (user) {
+			if (user != null) {
+				this.loggedIn = true;
+				app.getPosts();
+			} else {
+				this.loggedIn = false;
+			}
+		});
     },
 
 
 
     methods: {
+        getData: function (url) {
+			fetch(url, {
+					method: "GET"
+				})
+				.then(function (response) {
+					return response.json()
+				})
+				.catch(function (error) {
+					console.log(error)
+				});
+		},
 
-        getData: function () {
+        getGigData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
             }
+
+            
         },
 
 
