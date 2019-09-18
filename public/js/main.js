@@ -69,10 +69,34 @@ var app = new Vue({
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
                 app.getPosts();
-            }).catch(function () {
-                alert("Something went wrong...");
             });
+           /*  .catch(function () {
+                alert("Something went wrong...");
+            }); */
         },
+
+        getPosts: function(){
+
+        /* Cicmo
+        getPosts: function () {
+            firebase.database().ref('myMatch').on('value', function (data) {
+                app.posts = data.val();
+            });        },
+
+        Jae
+        getPosts: function () {
+			app.loggedIn = true;
+			app.currentUser = firebase.auth().currentUser.email;
+			firebase.database().ref('chat1').on('value', function (data) {
+				app.conversations = data.val();
+				$(".textArea").animate({
+					scrollTop: $(".textArea").prop("scrollHeight")
+				}, 700);
+			})
+		},
+
+        */
+    }
 
 
     },
