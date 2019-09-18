@@ -13,7 +13,7 @@ var app = new Vue({
 
     created: function () {
         this.getData();
-        
+
     },
 
 
@@ -64,12 +64,16 @@ var app = new Vue({
             })
         },
 
+
         loginWithGoogle: function () {
-			var provider = new firebase.auth.GoogleAuthProvider();
-			firebase.auth().signInWithPopup(provider).then(function () {
-				app.getPosts();
-			})
-		},
+            var provider = new firebase.auth.GoogleAuthProvider();
+            firebase.auth().signInWithPopup(provider).then(function () {
+                app.getPosts();
+            });
+            .catch(function () {
+                alert("Something went wrong...");
+            });
+        },
 
 
     },
