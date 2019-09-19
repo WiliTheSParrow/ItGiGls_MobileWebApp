@@ -196,6 +196,7 @@
                     <!-- Message Bubbles START-->
                      <div v-if="loggedIn" v-for="post in posts" v-bind:class="{ 'me': (post.email == currentUser), 'other': (post.email != currentUser) }" class="chat friend">
                         <div class="user-photo"><img :src="post.image" alt="User One"></div>
+                       
                         <p class="chat-message">{{post.body}}</p>
                     </div>
 
@@ -284,7 +285,7 @@
 
             <!--- LOGIN START-->
             <div id="loginBtn">
-                <button id="login" v-on:click="login">Click here to log in</button>
+                <span v-if="!loggedIn"><button id="login" v-on:click="login">Click here to log in</button></span>
             </div>
 
             <!--Footer with contact info START -->
@@ -332,7 +333,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
-    
+
 
     <!--- Concert Data -->
     <script src="../js/events.js"></script>
