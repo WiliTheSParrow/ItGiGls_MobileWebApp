@@ -11,7 +11,8 @@ var app = new Vue({
         currentUser: '',
         loggedIn: '',
         isActive: "hide",
-        posts: {}
+        posts: {},
+        
     },
 
     created: function () {
@@ -162,7 +163,7 @@ var app = new Vue({
             app.loggedIn = true;
             app.currentUser = firebase.auth().currentUser.email;
             firebase.database().ref('giglchat').on('value', function (data) {
-                this.posts = data.val();
+                app.posts = data.val();
                 $(".chatlogs").animate({
                     scrollTop: $(".chatlogs").prop("scrollHeight")
                 }, 700);
