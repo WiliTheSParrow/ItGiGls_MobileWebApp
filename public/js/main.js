@@ -8,12 +8,13 @@ var app = new Vue({
 
     data: {
         dataForTable: [],
-
+        currentUser: '',
+		loggedIn: '',
     },
 
     created: function () {
         this.getGigData();
-		this.getData("");
+		// this.getData("");
 		firebase.auth().onAuthStateChanged(function (user) {
 			if (user != null) {
 				this.loggedIn = true;
@@ -27,7 +28,7 @@ var app = new Vue({
 
 
     methods: {
-        getData: function (url) {
+        /* getData: function (url) {
 			fetch(url, {
 					method: "GET"
 				})
@@ -38,7 +39,7 @@ var app = new Vue({
 					console.log(error)
 				});
 		},
-
+ */
         getGigData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
@@ -89,14 +90,42 @@ var app = new Vue({
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
-                app.getPosts();
+                this.getPosts();
             });
            /*  .catch(function () {
                 alert("Something went wrong...");
             }); */
         },
 
+        logout: function () {
+			firebase.auth().signOut();
+			this.loggedIn = false;
+        },
         
+        writeNewPost: function (chat1) {
+
+			var text = document.getElementById("textInput").value;
+			var name = firebase.auth().currentUser.displayName;
+			var img = firebase.auth().currentUser.photoURL;
+			var mail = firebase.auth().currentUser.email;
+			var date = new Date();
+			var timetoString = String(date);
+			var sliceTime = timetoString.slice(0, 21);
+
+			var post = {
+				name: name,
+				body: text,
+				image: img,
+				email: mail,
+				creationTime: sliceTime
+			};
+             // Get a key for a new Post.
+			var newPostKey = firebase.database().ref().child('chat1').push().key;
+			var updates = {};
+			updates[newPostKey] = post;
+			$("#textInput").val("");
+			return firebase.database().ref('chat1').update(updates);
+		},
 
         getPosts: function(){
 
