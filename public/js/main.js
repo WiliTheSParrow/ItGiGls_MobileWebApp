@@ -9,20 +9,21 @@ var app = new Vue({
     data: {
         dataForTable: [],
         currentUser: '',
-		loggedIn: '',
+        loggedIn: '',
+        isActive: "hide",
     },
 
     created: function () {
         this.getGigData();
-		// this.getData("");
-		firebase.auth().onAuthStateChanged(function (user) {
-			if (user != null) {
-				this.loggedIn = true;
-				app.getPosts();
-			} else {
-				this.loggedIn = false;
-			}
-		});
+        // this.getData("");
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user != null) {
+                this.loggedIn = true;
+                app.getPosts();
+            } else {
+                this.loggedIn = false;
+            }
+        });
     },
 
 
@@ -40,12 +41,21 @@ var app = new Vue({
 				});
 		},
  */
+
+        toggleClass: function (value) {
+            if (this.isActive != value) {
+                this.isActive = value;
+            } else {
+                this.isActive = "hide";
+            }
+        },
+
         getGigData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
             }
 
-            
+
         },
 
 
@@ -92,42 +102,40 @@ var app = new Vue({
             firebase.auth().signInWithPopup(provider).then(function () {
                 this.getPosts();
             });
-           /*  .catch(function () {
-                alert("Something went wrong...");
-            }); */
+            /*  .catch(function () {
+                 alert("Something went wrong...");
+             }); */
         },
 
         logout: function () {
-			firebase.auth().signOut();
-			this.loggedIn = false;
+            firebase.auth().signOut();
+            this.loggedIn = false;
         },
-        
+
         writeNewPost: function (chat1) {
 
-			var text = document.getElementById("textInput").value;
-			var name = firebase.auth().currentUser.displayName;
-			var img = firebase.auth().currentUser.photoURL;
-			var mail = firebase.auth().currentUser.email;
-			var date = new Date();
-			var timetoString = String(date);
-			var sliceTime = timetoString.slice(0, 21);
+            var text = document.getElementById("textInput").value;
+            var name = firebase.auth().currentUser.displayName;
+            var img = firebase.auth().currentUser.photoURL;
+            var mail = firebase.auth().currentUser.email;
+            var date = new Date();
+            var timetoString = String(date);
+            var sliceTime = timetoString.slice(0, 21);
 
-			var post = {
-				name: name,
-				body: text,
-				image: img,
-				email: mail,
-				creationTime: sliceTime
-			};
-             // Get a key for a new Post.
-			var newPostKey = firebase.database().ref().child('chat1').push().key;
-			var updates = {};
-			updates[newPostKey] = post;
-			$("#textInput").val("");
-			return firebase.database().ref('chat1').update(updates);
-		},
-
-        getPosts: function(){
+            var post = {
+                name: name,
+                body: text,
+                image: img,
+                email: mail,
+                creationTime: sliceTime
+            };
+            // Get a key for a new Post.
+            var newPostKey = firebase.database().ref().child('chat1').push().key;
+            var updates = {};
+            updates[newPostKey] = post;
+            $("#textInput").val("");
+            return firebase.database().ref('chat1').update(updates);
+        },
 
         /* Cicmo
         getPosts: function () {
@@ -148,10 +156,25 @@ var app = new Vue({
 		},
 
         */
-    }
 
+        getPosts: function () {
+            this.loggedIn = true;
+            this.currentUser = firebase.auth().currentUser.email;
+            firebase.database().ref('chat1').on('value', function (data) {
+                this.conversations = data.val();
+                $(".textArea").animate({
+                    scrollTop: $(".textArea").prop("scrollHeight")
+                }, 700);
+            })
+        },
+
+     
 
     },
+
+
+
+},
 });
 
 
