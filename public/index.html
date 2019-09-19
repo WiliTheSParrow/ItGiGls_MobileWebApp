@@ -194,7 +194,7 @@
                 <div class="chatlogs">
 
                     <!-- Message Bubbles START-->
-                    <div class="chat friend">
+                    <!-- <div class="chat friend">
                         <div class="user-photo"><img src="../img/userOne.jpg" alt="User One"></div>
                         <p class="chat-message">Hoi!</p>
                     </div>
@@ -244,15 +244,15 @@
                         <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe inventore
                             iusto, tempora exercitationem cum odit excepturi quaerat libero quibusdam, necessitatibus
                             beatae. Facilis praesentium vero laboriosam quaerat numquam! Placeat, vel quod. </p>
-                    </div>
+                    </div> -->
                     <!-- Message Bubbles END-->
 
                 </div>
 
                 <!--- Message Textarea START-->
-                <div class="chat-form">
-                    <textarea id="textInput" placeholder="Write your text here..."></textarea>
-                    <button><i class="far fa-paper-plane"></i></button>
+                <div class="chat-form"  v-if="loggedIn == true">
+                    <textarea id="textInput" @keyup.enter="writeNewPost" placeholder="Write your text here..."></textarea>
+                    <button @click="writeNewPost"><i class="far fa-paper-plane"></i></button>
                 </div>
                 <!--- Message Textarea END-->
 
@@ -311,15 +311,6 @@
 
     </div>
 
-    <!--- Concert Data -->
-    <script src="../js/events.js"></script>
-
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-
-    <!---Main Javascript --->
-    <script src="../js/main.js"></script>
-
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
 
@@ -340,6 +331,15 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+
+    <!--- Concert Data -->
+    <script src="../js/events.js"></script>
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+    <!---Main Javascript --->
+    <script src="../js/main.js"></script>
 
 </body>
 

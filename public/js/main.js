@@ -100,7 +100,7 @@ var app = new Vue({
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
-                this.getPosts();
+                app.getPosts();
             });
             /*  .catch(function () {
                  alert("Something went wrong...");
@@ -109,10 +109,10 @@ var app = new Vue({
 
         logout: function () {
             firebase.auth().signOut();
-            this.loggedIn = false;
+            app.loggedIn = false;
         },
 
-        writeNewPost: function (chat1) {
+        writeNewPost: function (giglchat) {
 
             var text = document.getElementById("textInput").value;
             var name = firebase.auth().currentUser.displayName;
@@ -130,11 +130,11 @@ var app = new Vue({
                 creationTime: sliceTime
             };
             // Get a key for a new Post.
-            var newPostKey = firebase.database().ref().child('chat1').push().key;
+            var newPostKey = firebase.database().ref().child('giglchat').push().key;
             var updates = {};
             updates[newPostKey] = post;
             $("#textInput").val("");
-            return firebase.database().ref('chat1').update(updates);
+            return firebase.database().ref('giglchat').update(updates);
         },
 
         /* Cicmo
@@ -147,7 +147,7 @@ var app = new Vue({
         getPosts: function () {
 			app.loggedIn = true;
 			app.currentUser = firebase.auth().currentUser.email;
-			firebase.database().ref('chat1').on('value', function (data) {
+			firebase.database().ref('giglchat').on('value', function (data) {
 				app.conversations = data.val();
 				$(".textArea").animate({
 					scrollTop: $(".textArea").prop("scrollHeight")
@@ -158,24 +158,23 @@ var app = new Vue({
         */
 
         getPosts: function () {
-            this.loggedIn = true;
-            this.currentUser = firebase.auth().currentUser.email;
-            firebase.database().ref('chat1').on('value', function (data) {
-                this.conversations = data.val();
+            app.loggedIn = true;
+            app.currentUser = firebase.auth().currentUser.email;
+            firebase.database().ref('giglchat').on('value', function (data) {
+                app.conversations = data.val();
                 $(".textArea").animate({
                     scrollTop: $(".textArea").prop("scrollHeight")
                 }, 700);
             })
         },
 
-     
+
 
     },
 
 
 
-},
-});
+}, );
 
 
 
