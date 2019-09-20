@@ -107,6 +107,7 @@ var app = new Vue({
             /*  .catch(function () {
                  alert("Something went wrong...");
              }); */
+             app.loggedIn = true;
         },
 
         logout: function () {
