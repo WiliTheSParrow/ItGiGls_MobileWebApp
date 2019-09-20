@@ -184,8 +184,8 @@
                     </a>
 
                     <!--- Page Title -->
-                    <p v-if="!loggedIn">Chat</p>
-                    <p v-if="loggedIn">LogIn</p>
+                    <p v-if="loggedIn">Chat</p>
+                    <p v-if="!loggedIn">LogIn</p>
 
                     <a href="#" data-role="button" v-on:click="logout">
                         <i class="fas fa-sign-out-alt"></i>
@@ -199,7 +199,7 @@
                 </div>
 
                 <div class="chatbox">
-                    <div class="chatlogs">
+                    <div class="chatlogs" v-if="loggedIn">
 
                         <!-- Message Bubbles START-->
                         <div v-for="post in posts"
@@ -207,8 +207,14 @@
                             class="chat friend">
                             <div class="user-photo"><img :src="post.image" alt="User One"></div>
 
-                            <p class="chat-message">{{post.body}}</p>
+
+                            <div class="chat-message">
+                                <p>{{post.name}}</p>
+                                <p>{{post.body}}</p>
+                            </div>
+                            <p>{{post.creationTime}}</p>
                         </div>
+
 
                         <!---<div class="chat self">
                         <div class="user-photo"><img src="../img/userTwo.jpg" alt="User Two"></div>
