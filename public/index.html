@@ -172,38 +172,41 @@
         <!--- SECOND PAGE --->
         <div data-role="page" id="chatPage">
 
-            <!--- Header START-->
-            <div id="header" data-role="header">
+            <div v-if="loggedIn">
 
-                <a href="#homePage" data-role="button">
-                    <img src="../img/hands4.png" alt="sign of horns" class="responsiveImg">
-                </a>
+                <!--- Chat START--->
 
-                <!--- Page Title -->
-                <p>Chat</p>
+                <!--- Header START-->
+                <div id="header" data-role="header">
 
-                <a href="#loginChatPage" data-role="button">
-                    <i class="fas fa-sign-out-alt"></i>
-                </a>
+                    <a href="#homePage" data-role="button">
+                        <img src="../img/hands4.png" alt="sign of horns" class="responsiveImg">
+                    </a>
 
-            </div>
-            <!--- Header END-->
+                    <!--- Page Title -->
+                    <p>Chat</p>
+
+                    <a href="#" data-role="button" v-on:click="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+
+                </div>
+                <!--- Header END-->
 
 
-            <!--- Chat START--->
-            <div class="chatbox" v-if="loggedIn">
-                <div class="chatlogs">
+                <div class="chatbox">
+                    <div class="chatlogs">
 
-                    <!-- Message Bubbles START-->
-                    <div v-for="post in posts"
-                        v-bind:class="{ 'me': (post.email == currentUser), 'other': (post.email != currentUser) }"
-                        class="chat friend">
-                        <div class="user-photo"><img :src="post.image" alt="User One"></div>
+                        <!-- Message Bubbles START-->
+                        <div v-for="post in posts"
+                            v-bind:class="{ 'me': (post.email == currentUser), 'other': (post.email != currentUser) }"
+                            class="chat friend">
+                            <div class="user-photo"><img :src="post.image" alt="User One"></div>
 
-                        <p class="chat-message">{{post.body}}</p>
-                    </div>
+                            <p class="chat-message">{{post.body}}</p>
+                        </div>
 
-                    <!---<div class="chat self">
+                        <!---<div class="chat self">
                         <div class="user-photo"><img src="../img/userTwo.jpg" alt="User Two"></div>
                         <p class="chat-message">Hey! :-) </p>
                     </div>
@@ -249,25 +252,26 @@
                             iusto, tempora exercitationem cum odit excepturi quaerat libero quibusdam, necessitatibus
                             beatae. Facilis praesentium vero laboriosam quaerat numquam! Placeat, vel quod. </p>
                     </div> -->
-                    <!-- Message Bubbles END-->
+                        <!-- Message Bubbles END-->
+
+                    </div>
+
+                    <!--- Message Textarea START-->
+                    <div class="chat-form">
+                        <textarea id="textInput" @keyup.enter="writeNewPost"
+                            placeholder="Write your text here..."></textarea>
+                        <button @click="writeNewPost"><i class="far fa-paper-plane"></i></button>
+                    </div>
+                    <!--- Message Textarea END-->
 
                 </div>
-
-                <!--- Message Textarea START-->
-                <div class="chat-form">
-                    <textarea id="textInput" @keyup.enter="writeNewPost"
-                        placeholder="Write your text here..."></textarea>
-                    <button @click="writeNewPost"><i class="far fa-paper-plane"></i></button>
-                </div>
-                <!--- Message Textarea END-->
-
             </div>
             <!--- Chat END--->
 
 
 
 
-            <!-- THIRD/LOGIN PAGE -->
+            <!-- LOGIN PAGE START -->
 
             <div v-if="!loggedIn">
                 <!--- Header START-->
@@ -313,6 +317,7 @@
                 <div id="footerPadding"></div>
                 <!--Footer with contact info END -->
             </div>
+            <!-- LOGIN PAGE END -->
         </div>
 
     </div>

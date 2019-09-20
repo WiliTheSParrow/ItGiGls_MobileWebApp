@@ -346,6 +346,7 @@ body #topBtn {
   height: 50px;
   opacity: 1;
   cursor: pointer;
+  color: #1cb3c8;
 }
 
 .chatbox .chat-form .fa-paper-plane {
