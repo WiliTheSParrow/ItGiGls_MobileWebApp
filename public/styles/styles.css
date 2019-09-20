@@ -82,7 +82,8 @@ body #informationBar #infoTableInfo .collapsible div {
   height: 100%;
 }
 
-body #informationBar #infoTableInfo .active, body #informationBar #infoTableInfo .collapsible:hover {
+body #informationBar #infoTableInfo .active,
+body #informationBar #infoTableInfo .collapsible:hover {
   background-color: #66788b;
 }
 
@@ -272,8 +273,8 @@ body #topBtn {
 
 .chatbox .chatlogs .chat .chat-message {
   width: 65%;
-  padding: 15px;
-  margin: 5px 10px 0;
+  padding: 5px;
+  margin: 5px 5px 0;
   font-size: 20px;
   border-radius: 10px;
   -webkit-box-shadow: 4px 5px 10px #738598;
