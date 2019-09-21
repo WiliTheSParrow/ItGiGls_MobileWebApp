@@ -9,13 +9,11 @@ $colors: (primary:#1cb3c8,
     lightestDarken: darken(#dfe2e2, 10%),
 );
 
-
 @function color($colorName) {
     @return map-get($colors, $colorName)
 }
 
 ;
-
 $fonts:(basic: 20px,
     footer: 15px,
     headerSize: 24px,
@@ -26,7 +24,6 @@ $fonts:(basic: 20px,
 }
 
 ;
-
 $paddings:(basic: 5px,
     topSide: 10px,
     leftSide: 20px,
@@ -50,22 +47,17 @@ body {
     background: color(primary);
     color: color(fontLine);
     font-family: 'Abel', sans-serif;
-
     padding: 0;
     margin: 0;
-
 
     #header {
         width: 100%;
         display: inline-block;
 
-
-
         p {
             font-size: font(headerSize);
             font-weight: bold;
             text-align: center;
-
         }
 
         .responsiveImg {
@@ -93,15 +85,11 @@ body {
             padding: padding(basic);
             cursor: pointer;
 
-
             ul div {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
-
             }
-
-
         }
 
         #infoTableInfo {
@@ -116,13 +104,10 @@ body {
                 justify-content: space-evenly;
                 text-align: center;
 
-
                 div {
                     width: 33%;
                     height: 100%;
-
                 }
-
             }
 
             .active,
@@ -131,7 +116,6 @@ body {
             }
 
             .content {
-
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.5s ease-out;
@@ -167,8 +151,6 @@ body {
                         justify-content: center;
                         padding-right: 40px;
 
-
-
                         a {
                             text-decoration: none;
                             // background: color(accent);
@@ -181,17 +163,13 @@ body {
                                 font-weight: bold;
                                 // text-shadow: 1px 1px color(fontLine);
                                 cursor: pointer;
-
                             }
                         }
                     }
                 }
 
-
                 #map {
-
                     .mapouter {
-
                         position: relative;
                         text-align: right;
                         height: 500px;
@@ -199,7 +177,6 @@ body {
                     }
 
                     .gmap_canvas {
-
                         overflow: hidden;
                         background: none !important;
                         height: 500px;
@@ -261,14 +238,11 @@ body {
     }
 }
 
-
 // CHAT ============================
 
 .chatbox {
-
     border-top: 1px solid color(fontLine);
     height: 100vh;
-
 
     .chatlogs {
         padding: 10px;
@@ -276,8 +250,6 @@ body {
         height: 70%;
         overflow-x: hidden;
         overflow-y: scroll;
-
-
 
         .chat {
             display: flex;
@@ -302,7 +274,6 @@ body {
                 width: 100%;
             }
 
-
             .chat-message {
                 width: 65%;
                 padding: 5px;
@@ -310,15 +281,13 @@ body {
                 font-size: font(basic);
                 border-radius: 10px;
                 box-shadow: 4px 5px 10px color(accent);
-
             }
-            
         }
 
         .friend .chat-message {
             background: #fff;
 
-           
+
         }
 
         /* .friend .chat-message::before {
@@ -332,7 +301,6 @@ body {
             margin: 13px 00 -25px;
             
         } */
-
         .self .chat-message {
             background: color(lightestDarken);
             order: -1;
@@ -373,8 +341,6 @@ body {
             overflow: auto;
         }
 
-
-
         textarea:focus {
             background: #fff;
             cursor: text;
@@ -386,18 +352,12 @@ body {
             height: 50px;
             opacity: 1;
             cursor: pointer;
-
-
         }
 
         .fa-paper-plane {
             font-size: 50px;
         }
-
-
     }
-
-
 }
 
 // LOGIN PAGE ==========================
@@ -408,12 +368,8 @@ body {
     display: flex;
     flex-direction: column;
 
-
-
     button {
         border: 2px solid color(fontLine);
         border-radius: 20px;
-
-
     }
 }
