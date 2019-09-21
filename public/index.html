@@ -1,57 +1,40 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>ItGiGls</title>
-
     <!--- FaviconSETUP -->
     <link rel="shortcut icon" href="../img/hands4_SKG_icon.ico">
     <link rel="apple-touch-icon" href="../img/favicon_icon.png">
     <link rel="icon" sizes="192x192" href="../img/favicon_icon.png">
-
     <!--- Launcher Title -->
     <meta name="apple-mobile-web-app-title" content="itGiGls">
     <meta property="og:site_name" content="itGiGls">
-
     <!---Style Status Bar-->
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#1cb3c8">
     <meta name="u2f-enabled" content="true">
-
     <!--- to specify how the browser should display the page zoom level and dimensions--->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--- Google Fonts --->
     <link href="https://fonts.googleapis.com/css?family=Abel|Quicksand&display=swap" rel="stylesheet">
-
-    <!--- jQuery --->
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.css" />
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-
-    <!--- CSS --->
     <link rel="stylesheet" href="../styles/styles.css">
-
-    <!--- Fontawesome --->
     <script src="https://kit.fontawesome.com/3526fd308e.js"></script>
 </head>
 
 <body>
-
     <!--- VUE JS --->
     <div id="app">
-
         <!--- FIRST PAGE --->
         <div id="homePage" data-role="page">
-
             <!--- Header START --->
             <div id="header" data-role="header">
                 <a href="#homePage" data-role="button">
                     <img src="../img/hands4.png" alt="sign of horns" class="responsiveImg">
                 </a>
-
                 <!--- Page Title -->
                 <p>ItGiGls - Be Up To Date!</p>
 
@@ -60,10 +43,8 @@
                 </a>
             </div>
             <!--- Header END --->
-
             <!--- Information Bar START--->
             <div role="main" class="ui-content" id="informationBar">
-
                 <!--- Header START-->
                 <div id="infoTableHeader" data-role="navbar">
                     <ul>
@@ -85,40 +66,30 @@
                     </ul>
                 </div>
                 <!-- Header END-->
-
                 <!-- Concert Info Table START -->
                 <div id="infoTableInfo" data-role="navbar" v-for="(value,key) in dataForTable">
-
                     <!-- Collapsible RowBtn START -->
                     <div class="collapsible">
-
                         <div>
                             <p>{{value.band}}</p>
                         </div>
-
                         <div>
                             <p>{{value.date}}</p>
                         </div>
-
                         <div>
                             <p>{{value.country}}</p>
                         </div>
-
                     </div>
                     <!-- Collapsible RowBtn END -->
-
                     <!-- Collapsible RowBtn Content START -->
                     <div id="moreInfo" class="content">
-
                         <div id="detailInfos">
-
                             <div id="gigAddress">
                                 <p id="institution">{{value.institution}}</p>
                                 <p>{{value.address}}</p>
                                 <p>{{value.place}}</p>
                                 <p>{{value.zipCode}}</p>
                             </div>
-
                             <div id="ticketsPrice">
                                 <a :href=value.ticketBuy target="_blank">
                                     <p>
@@ -127,7 +98,6 @@
                                 </a>
                             </div>
                         </div>
-
                         <div id="map">
                             <div class="mapouter">
                                 <div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas"
@@ -142,7 +112,6 @@
                     <!-- Collapsible RowBtn Content END -->
                 </div>
                 <!-- Concert Info Table END -->
-
                 <!--Footer with contact info START -->
                 <div id="footer" data-role="footer">
                     <p>
@@ -163,110 +132,54 @@
                 </div>
                 <div id="footerPadding"></div>
                 <!--Footer with contact info END -->
-
-
             </div>
             <!--- Information Bar END--->
         </div>
-
         <!--- SECOND PAGE --->
         <div data-role="page" id="chatPage">
-
             <div>
-
                 <!--- Chat START--->
-
                 <!--- Header START-->
                 <div id="header" data-role="header">
-
                     <a href="#homePage" data-role="button">
                         <img src="../img/hands4.png" alt="sign of horns" class="responsiveImg">
                     </a>
-
                     <!--- Page Title -->
                     <p v-if="loggedIn">Chat</p>
                     <p v-if="!loggedIn">LogIn</p>
-
                     <a href="#" data-role="button" v-on:click="logout">
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
-
                 </div>
                 <!--- Header END-->
                 <!--- LOGIN START-->
                 <div id="loginBtn" v-if="!loggedIn">
                     <button id="login" v-on:click="login">Click here to log in</button>
                 </div>
-
                 <div class="chatbox">
                     <div class="chatlogs" v-if="loggedIn">
-
                         <!-- Message Bubbles START-->
                         <div v-for="post in posts"
                             v-bind:class="{ 'me': (post.email == currentUser), 'other': (post.email != currentUser) }"
                             class="chat friend">
                             <div class="user-photo"><img :src="post.image" alt="User One"></div>
-
-
                             <div class="chat-message">
                                 <p id="name">{{post.name}}</p>
                                 <p>{{post.body}}</p>
                                 <p id="date">{{post.creationTime}}</p>
                             </div>
-                            
                         </div>
 
 
                         <!---<div class="chat self">
                         <div class="user-photo"><img src="../img/userTwo.jpg" alt="User Two"></div>
                         <p class="chat-message">Hey! :-) </p>
-                    </div>
+                    </div>-->
 
-                    <div class="chat friend">
-                        <div class="user-photo"><img src="../img/userOne.jpg" alt="User One"></div>
-                        <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-                            placeat quae corporis quas minus cum possimus odit atque rerum voluptate esse, odio at nam
-                            libero excepturi., voluptas numquam vero fugit?</p>
-                    </div>
 
-                    <div class="chat self">
-                        <div class="user-photo"><img src="../img/userTwo.jpg" alt="User Two"></div>
-                        <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe inventore
-                            iusto, tempora exercitationem cum odit excepturi quaerat libero quibusdam, necessitatibus
-                            beatae. Facilis praesentium vero laboriosam quaerat numquam! Placeat, vel quod. </p>
-                    </div>
-
-                    <div class="chat friend">
-                        <div class="user-photo"><img src="../img/userOne.jpg" alt="User One"></div>
-                        <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-                            placeat quae corporis quas minus cum possimus odit atque rerum voluptate esse, odio at nam
-                            libero excepturi, voluptas numquam vero fugit?</p>
-                    </div>
-
-                    <div class="chat self">
-                        <div class="user-photo"><img src="../img/userTwo.jpg" alt="User Two"></div>
-                        <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe inventore
-                            iusto, tempora exercitationem cum odit excepturi quaerat libero quibusdam, necessitatibus
-                            beatae. Facilis praesentium vero laboriosam quaerat numquam! Placeat, vel quod. </p>
-                    </div>
-
-                    <div class="chat friend">
-                        <div class="user-photo"><img src="../img/userOne.jpg" alt="User One"></div>
-                        <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-                            placeat quae corporis quas minus cum possimus odit atque rerum voluptate esse, odio at nam
-                            libero excepturi, voluptas numquam vero fugit?</p>
-                    </div>
-
-                    <div class="chat self">
-                        <div class="user-photo"><img src="../img/userTwo.jpg" alt="User Two"></div>
-                        <p class="chat-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe inventore
-                            iusto, tempora exercitationem cum odit excepturi quaerat libero quibusdam, necessitatibus
-                            beatae. Facilis praesentium vero laboriosam quaerat numquam! Placeat, vel quod. </p>
-                    </div> -->
                         <!-- Message Bubbles END-->
 
                     </div>
-
                     <!--- Message Textarea START-->
                     <div class="chat-form">
                         <textarea id="textInput" @keyup.enter="writeNewPost"
@@ -279,15 +192,8 @@
             </div>
             <!--- Chat END--->
         </div>
-
     </div>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -302,17 +208,9 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
-
-
-    <!--- Concert Data -->
     <script src="../js/events.js"></script>
-
-    <!-- Vue -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-
-    <!---Main Javascript --->
     <script src="../js/main.js"></script>
-
 </body>
 
 </html>
