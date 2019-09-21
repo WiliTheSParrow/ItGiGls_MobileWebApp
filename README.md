@@ -31,7 +31,7 @@ There's a group of friends with a passion for metal music and they really enjoy 
 * Marvel Application
 
 ## Click on the link below to check out this project
-<a href="#">coming soon</a>
+<a href="https://itgigls-7ea48.firebaseapp.com/">https://itgigls-7ea48.firebaseapp.com/</a>
 
 ## Features
 * Version 1.0
