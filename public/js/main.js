@@ -1,23 +1,15 @@
-//Get show data from events.js:
 var gigInfo = data.concerts;
-
-
-//Initialize Vue.js:
 var app = new Vue({
     el: "#app",
-
     data: {
         dataForTable: [],
         currentUser: '',
         loggedIn: '',
         isActive: "hide",
         posts: {},
-        
     },
-
     created: function () {
         this.getGigData();
-        // this.getData("");
         firebase.auth().onAuthStateChanged(function (user) {
             if (user != null) {
                 this.loggedIn = true;
@@ -27,23 +19,7 @@ var app = new Vue({
             }
         });
     },
-
-
-
     methods: {
-        /* getData: function (url) {
-			fetch(url, {
-					method: "GET"
-				})
-				.then(function (response) {
-					return response.json()
-				})
-				.catch(function (error) {
-					console.log(error)
-				});
-		},
- */
-
         toggleClass: function (value) {
             if (this.isActive != value) {
                 this.isActive = value;
@@ -51,16 +27,11 @@ var app = new Vue({
                 this.isActive = "hide";
             }
         },
-
         getGigData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
             }
-
-
         },
-
-
         sortingTheDataByBand: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.band < b.band) {
@@ -72,7 +43,6 @@ var app = new Vue({
                 return 0;
             })
         },
-
         sortingTheDataByDate: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.date < b.date) {
@@ -84,9 +54,7 @@ var app = new Vue({
                 return 0;
             })
         },
-
         sortingTheDataByCountry: function () {
-
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.country < b.country) {
                     return -1;
@@ -97,26 +65,18 @@ var app = new Vue({
                 return 0;
             })
         },
-
-
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
                 app.getPosts();
             });
-            /*  .catch(function () {
-                 alert("Something went wrong...");
-             }); */
-             app.loggedIn = true;
+            app.loggedIn = true;
         },
-
         logout: function () {
             firebase.auth().signOut();
             app.loggedIn = false;
         },
-
         writeNewPost: function (giglchat) {
-
             var text = document.getElementById("textInput").value;
             var name = firebase.auth().currentUser.displayName;
             var img = firebase.auth().currentUser.photoURL;
@@ -124,7 +84,6 @@ var app = new Vue({
             var date = new Date();
             var timetoString = String(date);
             var sliceTime = timetoString.slice(0, 21);
-
             var post = {
                 name: name,
                 body: text,
@@ -132,34 +91,12 @@ var app = new Vue({
                 email: mail,
                 creationTime: sliceTime
             };
-            // Get a key for a new Post.
             var newPostKey = firebase.database().ref().child('giglchat').push().key;
             var updates = {};
             updates[newPostKey] = post;
             $("#textInput").val("");
             return firebase.database().ref('giglchat').update(updates);
         },
-
-        /* Cicmo
-        getPosts: function () {
-            firebase.database().ref('myMatch').on('value', function (data) {
-                app.posts = data.val();
-            });        },
-
-        Jae
-        getPosts: function () {
-			app.loggedIn = true;
-			app.currentUser = firebase.auth().currentUser.email;
-			firebase.database().ref('giglchat').on('value', function (data) {
-				app.conversations = data.val();
-				$(".textArea").animate({
-					scrollTop: $(".textArea").prop("scrollHeight")
-				}, 700);
-			})
-		},
-
-        */
-
         getPosts: function () {
             app.loggedIn = true;
             app.currentUser = firebase.auth().currentUser.email;
@@ -170,20 +107,10 @@ var app = new Vue({
                 }, 700);
             })
         },
-
-
-
     },
-
-
-
 }, );
-
-
-
 //Scroll To Top Button:
 $(document).ready(function () {
-
     $(window).scroll(function () {
         if ($(this).scrollTop() > 20) {
             $('#topBtn').fadeIn();
@@ -191,36 +118,23 @@ $(document).ready(function () {
             $('#topBtn').fadeOut();
         }
     });
-
     $("#topBtn").click(function () {
         $('html , body').animate({
             scrollTop: 0
         }, 800);
     });
 });
-
-
 //Collapsible:
 var coll = document.getElementsByClassName("collapsible");
-
-
 for (var i = 0; i < coll.length; i++) {
-
-
-
     coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
-
         //content:
         var content = this.nextElementSibling;
-
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
-
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
         }
     });
-
-
 };
