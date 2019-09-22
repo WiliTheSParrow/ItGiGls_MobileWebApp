@@ -1,6 +1,7 @@
 var gigInfo = data.concerts;
 var app = new Vue({
     el: "#app",
+
     data: {
         dataForTable: [],
         currentUser: '',
@@ -19,6 +20,7 @@ var app = new Vue({
             }
         });
     },
+
     methods: {
         toggleClass: function (value) {
             if (this.isActive != value) {
@@ -109,6 +111,7 @@ var app = new Vue({
         },
     },
 }, );
+
 //Scroll To Top Button:
 $(document).ready(function () {
     $(window).scroll(function () {
@@ -124,6 +127,7 @@ $(document).ready(function () {
         }, 800);
     });
 });
+
 //Collapsible:
 var coll = document.getElementsByClassName("collapsible");
 for (var i = 0; i < coll.length; i++) {
