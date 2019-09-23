@@ -162,3 +162,11 @@ $(document).ready(function () {
         i++;
     });
 });
+
+$(document).ready(function () {
+    var i = 0;
+    $('.accordion-section-title').each(function () {
+        $(this).attr('href', "#chSelect" + i);
+        i++;
+    });
+});
