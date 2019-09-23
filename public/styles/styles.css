@@ -91,7 +91,6 @@ body #informationBar .accordion-section .accordion-section-content {
   overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
-  padding: 15px;
   display: none;
   width: 100%;
   background: #dfe2e2;
@@ -121,12 +120,12 @@ body #informationBar .accordion-section .accordion-section-content #detailInfos 
 }
 
 body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice {
-  width: 20%;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding-right: 40px;
+  width: 40vw;
 }
 
 body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice a {
@@ -147,13 +146,14 @@ body #informationBar .accordion-section .accordion-section-content #map .mapoute
   text-align: right;
   height: 500px;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body #informationBar .accordion-section .accordion-section-content #map .gmap_canvas {
-  overflow: hidden;
   background: none !important;
   height: 500px;
-  width: 100%;
+  width: 100vw;
 }
 
 body #informationBar #footerPadding {

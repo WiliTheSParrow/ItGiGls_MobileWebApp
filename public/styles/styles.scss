@@ -92,7 +92,7 @@ body {
             }
         }
 
-       .accordion-section {
+        .accordion-section {
             background: color(accent);
             border-bottom: 2px solid color(fontLine);
 
@@ -115,11 +115,11 @@ body {
                 background-color: color(accentDarken);
             }
 
-           .accordion-section-content {
+            .accordion-section-content {
                 //max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.5s ease-out;
-                padding: 15px;
+                //padding: 15px;
                 display: none;
                 width: 100%;
                 background: color(lightest);
@@ -145,10 +145,11 @@ body {
                     }
 
                     #ticketsPrice {
-                        width: 20%;
+                        
                         text-align: center;
                         justify-content: center;
                         padding-right: 40px;
+                        width: 40vw;
 
                         a {
                             text-decoration: none;
@@ -168,18 +169,22 @@ body {
                 }
 
                 #map {
+                    
                     .mapouter {
                         position: relative;
                         text-align: right;
                         height: 500px;
                         width: 100%;
+                        padding: 0;
+                        margin:0;
                     }
 
                     .gmap_canvas {
-                        overflow: hidden;
+                        //overflow: hidden;
                         background: none !important;
                         height: 500px;
-                        width: 100%;
+                        width: 100vw;
+                       
                     }
                 }
             }
@@ -412,4 +417,3 @@ body {
 .accordion-section:last-child .accordion-section-title {
 	border-bottom:none;
 } */
-
