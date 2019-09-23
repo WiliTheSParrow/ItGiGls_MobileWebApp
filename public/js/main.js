@@ -129,19 +129,28 @@ $(document).ready(function () {
 });
 
 //Collapsible:
-var coll = document.getElementsByClassName("collapsible");
 
-for (var i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-        
-        this.classList.toggle("active");
-        //content:
-        var content = this.nextElementSibling;
+$(document).ready(function () {
+    function close_accordion_section() {
+        $('.accordion .accordion-section-title').removeClass('active');
+        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+    }
 
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
+    $('.accordion-section-title').click(function (e) {
+        // Grab current anchor value
+        var currentAttrValue = $(this).attr('href');
+
+        if ($(e.target).is('.active')) {
+            close_accordion_section();
         } else {
-            content.style.maxHeight = content.scrollHeight + "px";
+            close_accordion_section();
+
+            // Add active class to section title
+            $(this).addClass('active');
+            // Open up the hidden content panel
+            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
         }
+
+        e.preventDefault();
     });
-};
+});
