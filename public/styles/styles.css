@@ -58,12 +58,12 @@ body #informationBar #infoTableHeader ul div {
           justify-content: space-evenly;
 }
 
-body #informationBar #infoTableInfo {
+body #informationBar .accordion-section {
   background: #738598;
   border-bottom: 2px solid #3c415e;
 }
 
-body #informationBar #infoTableInfo .collapsible {
+body #informationBar .accordion-section .accordion-section-title {
   background: #738598;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,31 +77,27 @@ body #informationBar #infoTableInfo .collapsible {
   text-align: center;
 }
 
-body #informationBar #infoTableInfo .collapsible div {
+body #informationBar .accordion-section .accordion-section-title div {
   width: 33%;
   height: 100%;
 }
 
-body #informationBar #infoTableInfo .active,
-body #informationBar #infoTableInfo .collapsible:hover {
+body #informationBar .accordion-section .active,
+body #informationBar .accordion-section .accordion-section-title:hover {
   background-color: #66788b;
 }
 
-body #informationBar #infoTableInfo .content {
-  max-height: 0;
+body #informationBar .accordion-section .accordion-section-content {
   overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
   padding: 15px;
   display: none;
-}
-
-body #informationBar #infoTableInfo #moreInfo {
   width: 100%;
   background: #dfe2e2;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos {
+body #informationBar .accordion-section .accordion-section-content #detailInfos {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -109,22 +105,22 @@ body #informationBar #infoTableInfo #moreInfo #detailInfos {
   height: 120px;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos #gigAddress {
+body #informationBar .accordion-section .accordion-section-content #detailInfos #gigAddress {
   margin-top: 10px;
   margin-left: 10px;
   width: 80%;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos #gigAddress p {
+body #informationBar .accordion-section .accordion-section-content #detailInfos #gigAddress p {
   font-size: 20px;
   margin: 0;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos #gigAddress #institution {
+body #informationBar .accordion-section .accordion-section-content #detailInfos #gigAddress #institution {
   font-weight: bold;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice {
+body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice {
   width: 20%;
   text-align: center;
   -webkit-box-pack: center;
@@ -133,27 +129,27 @@ body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice {
   padding-right: 40px;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a {
+body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice a {
   text-decoration: none;
   border: 2px solid #3c415e;
   border-radius: 10px;
 }
 
-body #informationBar #infoTableInfo #moreInfo #detailInfos #ticketsPrice a p {
+body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice a p {
   font-size: 20px;
   color: #3c415e;
   font-weight: bold;
   cursor: pointer;
 }
 
-body #informationBar #infoTableInfo #moreInfo #map .mapouter {
+body #informationBar .accordion-section .accordion-section-content #map .mapouter {
   position: relative;
   text-align: right;
   height: 500px;
   width: 100%;
 }
 
-body #informationBar #infoTableInfo #moreInfo #map .gmap_canvas {
+body #informationBar .accordion-section .accordion-section-content #map .gmap_canvas {
   overflow: hidden;
   background: none !important;
   height: 500px;
@@ -410,9 +406,4 @@ body #topBtn {
 .accordion-section:last-child .accordion-section-title {
 	border-bottom:none;
 } */
-/*----- Section Content -----*/
-.accordion-section-content {
-  padding: 15px;
-  display: none;
-}
 /*# sourceMappingURL=styles.css.map */

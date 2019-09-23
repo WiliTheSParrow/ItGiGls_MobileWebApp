@@ -154,3 +154,11 @@ $(document).ready(function () {
         e.preventDefault();
     });
 });
+
+$(document).ready(function () {
+    var i = 0;
+    $('.accordion-section-content').each(function () {
+        $(this).attr('id', "chSelect" + i);
+        i++;
+    });
+});

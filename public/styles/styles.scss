@@ -92,11 +92,11 @@ body {
             }
         }
 
-        #infoTableInfo {
+       .accordion-section {
             background: color(accent);
             border-bottom: 2px solid color(fontLine);
 
-            .collapsible {
+            .accordion-section-title {
                 background: color(accent);
                 display: flex;
                 width: 100%;
@@ -111,19 +111,16 @@ body {
             }
 
             .active,
-            .collapsible:hover {
+            .accordion-section-title:hover {
                 background-color: color(accentDarken);
             }
 
-            .content {
-                max-height: 0;
+           .accordion-section-content {
+                //max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.5s ease-out;
                 padding: 15px;
                 display: none;
-            }
-
-            #moreInfo {
                 width: 100%;
                 background: color(lightest);
 
@@ -416,8 +413,3 @@ body {
 	border-bottom:none;
 } */
 
-/*----- Section Content -----*/
-.accordion-section-content {
-    padding: 15px;
-    display: none;
-}
