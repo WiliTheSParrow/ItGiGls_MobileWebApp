@@ -31,10 +31,6 @@
         <!--- FIRST PAGE --->
         <div id="homePage" data-role="page">
 
-            <div class="loadergif" v-if="hidegif">
-                <img src="/public/img/loading.gif">
-            </div>
-
             <!--- Header START --->
             <div id="header" data-role="header">
                 <a href="#homePage" data-role="button">
@@ -48,6 +44,9 @@
                 </a>
             </div>
             <!--- Header END --->
+            <div class="loadergif" v-if="hidegif">
+                <img src="/public/img/loading.gif">
+            </div>
             <!--- Information Bar START--->
             <div role="main" class="ui-content" id="informationBar">
                 <!--- Header START-->

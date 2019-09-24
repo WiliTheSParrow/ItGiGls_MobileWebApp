@@ -8,11 +8,11 @@ var app = new Vue({
         loggedIn: '',
         isActive: "hide",
         posts: {},
-        hidegif: true,
+        hidegif: true
     },
+
     created: function () {
         this.getGigData();
-        this.hidegif = false;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user != null) {
                 this.loggedIn = true;
@@ -34,7 +34,10 @@ var app = new Vue({
         getGigData: function () {
             for (var i = 0; i < gigInfo.length; i++) {
                 this.dataForTable.push(gigInfo[i]);
-            }
+            };
+
+           this.hidegif=false;
+            
         },
         sortingTheDataByBand: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
