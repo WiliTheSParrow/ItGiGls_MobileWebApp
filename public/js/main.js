@@ -8,9 +8,11 @@ var app = new Vue({
         loggedIn: '',
         isActive: "hide",
         posts: {},
+        hidegif: true,
     },
     created: function () {
         this.getGigData();
+        this.hidegif = false;
         firebase.auth().onAuthStateChanged(function (user) {
             if (user != null) {
                 this.loggedIn = true;
