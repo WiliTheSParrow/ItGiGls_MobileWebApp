@@ -134,7 +134,23 @@ $(document).ready(function () {
 });
 
 //Collapsible:
+$(document).ready(function () {
+    var i = 0;
+    $('.accordion-section-content').each(function () {
+        $(this).attr('id', "chSelect" + i);
+        i++;
+    });
 
+    
+});
+
+$(document).ready(function () {
+    var i = 0;
+    $('.accordion-section-title').each(function () {
+        $(this).attr('href', "#chSelect" + i);
+        i++;
+    });
+});
 $(document).ready(function () {
     function close_accordion_section() {
         $('.accordion .accordion-section-title').removeClass('active');
@@ -157,23 +173,5 @@ $(document).ready(function () {
         }
 
         e.preventDefault();
-    });
-});
-
-$(document).ready(function () {
-    var i = 0;
-    $('.accordion-section-content').each(function () {
-        $(this).attr('id', "chSelect" + i);
-        i++;
-    });
-
-    
-});
-
-$(document).ready(function () {
-    var i = 0;
-    $('.accordion-section-title').each(function () {
-        $(this).attr('href', "#chSelect" + i);
-        i++;
     });
 });
