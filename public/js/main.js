@@ -36,8 +36,8 @@ var app = new Vue({
                 this.dataForTable.push(gigInfo[i]);
             };
 
-           this.hidegif=false;
-            
+            this.hidegif = false;
+
         },
         sortingTheDataByBand: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
@@ -144,7 +144,7 @@ $(document).ready(function () {
         i++;
     });
 
-    
+
 });
 $(document).ready(function () {
     var i = 0;
