@@ -119,17 +119,20 @@ var app = new Vue({
 
 //Scroll To Top Button:
 $(document).ready(function () {
+    console.log("button not yet clicked");
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 20) {
+        if ($(this).scrollTop() > 10) {
             $('#topBtn').fadeIn();
         } else {
             $('#topBtn').fadeOut();
         }
     });
+
     $("#topBtn").click(function () {
+        console.log("button clicked");
         $('html , body').animate({
             scrollTop: 0
-        }, 800);
+        }, 100);
     });
 });
 
@@ -143,7 +146,6 @@ $(document).ready(function () {
 
     
 });
-
 $(document).ready(function () {
     var i = 0;
     $('.accordion-section-title').each(function () {
