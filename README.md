@@ -16,7 +16,6 @@ There's a group of friends with a passion for metal music and they really enjoy 
 * my first experience making [UI flow diagrams](https://github.com/WiliTheSParrow/ItGiGls_MobileWebApp/tree/master/preparation/UI%20diagram) and [screen mockups](https://github.com/WiliTheSParrow/ItGiGls_MobileWebApp/tree/master/preparation/Screen%20mockup) (It was a mess I can tell you! 😁)
 * interactive prototype: https://marvelapp.com/94fja9i
 * please check out [this](https://github.com/WiliTheSParrow/ItGIGls_MobileWebApp/blob/master/preparation/deliverable.docx) document for personas, scenarios and mockups
-* started to use CSS Flexbox and CSS Media Queries properly
 
 ## Technologies
 * HTML5
@@ -37,7 +36,7 @@ There's a group of friends with a passion for metal music and they really enjoy 
 * Version 1.0
 
 ## Status
-Project is: _ongoing_
+Project is: _finished_
 
 ## Contact
 Created by [@wjulia91](https://www.linkedin.com/in/wjulia91/) - feel free to contact me!
