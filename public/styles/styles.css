@@ -162,35 +162,48 @@ body #informationBar #footerPadding {
 }
 
 body #footer {
-  border-top: 1px solid #3c415e;
-  font-size: 15px;
-  background: #1cb3c8;
-  color: #3c415e;
-  font-weight: bold;
-  position: fixed;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /*  border-top: 1px solid color(fontLine);
+        font-size: font(footer);
+        background: color(primary);
+        color: color(fontLine);
+        font-weight: bold;
+        position: fixed;
+        bottom: 0;
+        height: 100px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: padding(topSide); */
+  /* #topBtn {
+            border: 2px solid red;
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            background: color(primary);
+            color: color(accent);
+            border: none;
+            text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
+            cursor: pointer;
+            //display: none;
+        } */
 }
 
-body #footer #topBtn {
-  border: 2px solid red;
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  font-size: 22px;
-  width: 50px;
-  height: 50px;
-  background: #1cb3c8;
-  color: #738598;
-  border: none;
-  text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
-  cursor: pointer;
+body #footer #footerCont {
+  width: 80%;
+}
+
+body #footer #footerTopBtn {
+  width: 15%;
 }
 
 body #footer div {

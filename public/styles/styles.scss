@@ -197,7 +197,18 @@ body {
     }
 
     #footer {
-        border-top: 1px solid color(fontLine);
+        display: flex;
+        flex-wrap: wrap-reverse;
+        justify-content: space-around;
+
+        #footerCont{
+            width: 80%;
+        }
+
+        #footerTopBtn{
+            width: 15%;
+        }
+       /*  border-top: 1px solid color(fontLine);
         font-size: font(footer);
         background: color(primary);
         color: color(fontLine);
@@ -208,10 +219,10 @@ body {
         width: 100%;
         text-align: center;
         justify-content: center;
-        padding: padding(topSide);
+        padding: padding(topSide); */
 
         
-        #topBtn {
+        /* #topBtn {
             border: 2px solid red;
             position: fixed;
             bottom: 2%;
@@ -225,7 +236,7 @@ body {
             text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
             cursor: pointer;
             //display: none;
-        }
+        } */
         div {
             border: 2px solid red;
         }
