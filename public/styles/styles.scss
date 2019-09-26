@@ -197,7 +197,6 @@ body {
     }
 
     #footer {
-        border: 2px solid purple;
         width: 100vw;
         height: 70px;
         display: flex;
@@ -205,6 +204,12 @@ body {
         justify-content: space-around;
         position: fixed;
         bottom: 0;
+        border-top: 1px solid color(fontLine);
+        font-size: font(footer);
+        background: color(primary);
+        color: color(fontLine);
+        font-weight: bold;
+        text-align: center;
 
         #footerCont{
             width: 80%;
@@ -213,20 +218,7 @@ body {
         #footerTopBtn{
             width: 15%;
         }
-       /*  border-top: 1px solid color(fontLine);
-        font-size: font(footer);
-        background: color(primary);
-        color: color(fontLine);
-        font-weight: bold;
-        
-        
-        
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        padding: padding(topSide); */
-
-        
+       
         /* #topBtn {
             border: 2px solid red;
             position: fixed;

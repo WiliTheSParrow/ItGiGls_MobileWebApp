@@ -162,7 +162,6 @@ body #informationBar #footerPadding {
 }
 
 body #footer {
-  border: 2px solid purple;
   width: 100vw;
   height: 70px;
   display: -webkit-box;
@@ -174,18 +173,12 @@ body #footer {
       justify-content: space-around;
   position: fixed;
   bottom: 0;
-  /*  border-top: 1px solid color(fontLine);
-        font-size: font(footer);
-        background: color(primary);
-        color: color(fontLine);
-        font-weight: bold;
-        
-        
-        
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        padding: padding(topSide); */
+  border-top: 1px solid #3c415e;
+  font-size: 15px;
+  background: #1cb3c8;
+  color: #3c415e;
+  font-weight: bold;
+  text-align: center;
   /* #topBtn {
             border: 2px solid red;
             position: fixed;
