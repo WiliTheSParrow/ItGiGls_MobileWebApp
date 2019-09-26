@@ -121,6 +121,7 @@ var app = new Vue({
 $(document).ready(function () {
     console.log("button not yet clicked");
     $(window).scroll(function () {
+        console.log("scrolling down");
         if ($(this).scrollTop() > 10) {
             $('#topBtn').fadeIn();
         } else {
@@ -128,13 +129,14 @@ $(document).ready(function () {
         }
     });
 
-    $("#topBtn").click(function () {
+    $('.topBtn').click(function () {
         console.log("button clicked");
-        $('html , body').animate({
+       $('html , body').animate({
             scrollTop: 0
         }, 100);
     });
 });
+
 
 //Collapsible:
 $(document).ready(function () {
