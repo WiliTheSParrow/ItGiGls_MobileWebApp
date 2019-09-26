@@ -261,6 +261,7 @@ body {
         overflow-y: scroll;
 
         .chat {
+            border: 1px solid purple;
             display: flex;
             flex-flow: row wrap;
             align-items: flex-start;
@@ -290,6 +291,28 @@ body {
                 font-size: font(basic);
                 border-radius: 10px;
                 box-shadow: 4px 5px 10px color(accent);
+
+                #name{
+                    font-weight: bold;
+                    margin: 1px;
+                }
+
+                #date{
+                    font-style: italic;
+                    font-size: font(footer);
+                    margin: 1px;
+                    margin-top:5px;
+                    
+                }
+
+                #message{
+                    margin: 2px;
+                }
+            }
+
+            .chat-message #date{
+                justify-content: end;
+                border: 1px solid green;
             }
         }
 
