@@ -310,6 +310,8 @@ body {
                 }
             }
 
+            
+
         }
 
         .friend .chat-message {
@@ -318,17 +320,6 @@ body {
 
         }
 
-        /* .friend .chat-message::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-top: 13px solid transparent;
-            border-right: 26px solid #fff;
-            border-bottom: 13px solid transparent;
-            margin: 13px 00 -25px;
-            
-        } */
         .self .chat-message {
             background: color(lightestDarken);
             order: -1;

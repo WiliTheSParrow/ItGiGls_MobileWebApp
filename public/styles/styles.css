@@ -223,17 +223,6 @@ body #footer p i {
   height: 70%;
   overflow-x: hidden;
   overflow-y: scroll;
-  /* .friend .chat-message::before {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-top: 13px solid transparent;
-            border-right: 26px solid #fff;
-            border-bottom: 13px solid transparent;
-            margin: 13px 00 -25px;
-            
-        } */
 }
 
 .chatbox .chatlogs .chat {
