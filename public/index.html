@@ -176,34 +176,11 @@
                                 <p id="date">{{post.creationTime}}</p>
                             </div>
                         </div>
-
-                        <!-- Message Bubbles START-->
-                        <div class="chat friend">
-                            <div class="user-photo"><img alt="User One"></div>
-
-                            <div class="chat-message">
-                                <p id="name">ValakiFelhaszn</p>
-                                <p id="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit saepe delectus laborum
-                                    reprehenderit placeat consequatur nemo quaerat illo eum eos architecto, inventore
-                                    molestiae cum vitae commodi quo aliquam, in quibusdam!</p>
-                               <p id="date">2019.09.02.</p>
-                            </div>
-                        </div>
-
-
-                        <!---<div class="chat self">
-                        <div class="user-photo"><img src="/public/img/userTwo.jpg" alt="User Two"></div>
-                        <p class="chat-message">Hey! :-) </p>
-                    </div>-->
-
-
-                        <!-- Message Bubbles END-->
-
                     </div>
                     <!--- Message Textarea START-->
                     <div class="chat-form">
                         <textarea id="textInput" @keyup.enter="writeNewPost"
-                            placeholder="Write your text here/public."></textarea>
+                            placeholder="Write your text here..."></textarea>
                         <button @click="writeNewPost"><i class="far fa-paper-plane"></i></button>
                     </div>
                     <!--- Message Textarea END-->

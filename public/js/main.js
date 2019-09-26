@@ -145,8 +145,6 @@ $(document).ready(function () {
         $(this).attr('id', "chSelect" + i);
         i++;
     });
-
-
 });
 $(document).ready(function () {
     var i = 0;
@@ -162,7 +160,7 @@ $(document).ready(function () {
     }
 
     $('.accordion-section-title').click(function (e) {
-        // Grab current anchor value
+
         var currentAttrValue = $(this).attr('href');
 
         if ($(e.target).is('.active')) {
@@ -170,9 +168,8 @@ $(document).ready(function () {
         } else {
             close_accordion_section();
 
-            // Add active class to section title
             $(this).addClass('active');
-            // Open up the hidden content panel
+
             $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
         }
 

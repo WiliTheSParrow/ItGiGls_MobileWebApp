@@ -393,28 +393,4 @@ body #footer p i {
   border-radius: 3px;
   background: #f7f7f7;
 }
-
-/*----- Section Titles -----*/
-/* .accordion-section-title {
-	width:100%;
-	padding:15px;
-	display:inline-block;
-	border-bottom:1px solid #1a1a1a;
-	background:#333;
-	transition:all linear 0.15s;
-	
-	font-size:1.200em;
-	text-shadow:0px 1px 0px #1a1a1a;
-	color:#fff;
-} */
-/* .accordion-section-title.active,
-.accordion-section-title:hover {
-	background:#4c4c4c;
-	
-	text-decoration:none;
-} */
-/* 
-.accordion-section:last-child .accordion-section-title {
-	border-bottom:none;
-} */
 /*# sourceMappingURL=styles.css.map */
