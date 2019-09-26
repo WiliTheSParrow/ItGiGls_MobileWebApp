@@ -184,10 +184,6 @@ body #footer {
           align-items: center;
 }
 
-body #footer div {
-  border: 2px solid red;
-}
-
 body #footer #footerCont {
   width: 80%;
 }

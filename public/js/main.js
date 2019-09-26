@@ -123,13 +123,13 @@ $(document).ready(function () {
     $(window).scroll(function () {
         console.log("scrolling down");
         if ($(this).scrollTop() > 10) {
-            $('#topBtn').fadeIn();
+            $('#footerTopBtn').fadeIn();
         } else {
-            $('#topBtn').fadeOut();
+            $('#footerTopBtn').fadeOut();
         }
     });
 
-    $('.topBtn').click(function () {
+    $('#footerTopBtn').click(function () {
         console.log("button clicked");
        $('html , body').animate({
             scrollTop: 0
