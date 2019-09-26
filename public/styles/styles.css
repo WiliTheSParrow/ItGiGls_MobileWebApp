@@ -237,7 +237,6 @@ body #footer p i {
 }
 
 .chatbox .chatlogs .chat {
-  border: 1px solid purple;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +258,7 @@ body #footer p i {
 }
 
 .chatbox .chatlogs .chat .user-photo {
-  width: 60px;
+  width: 70px;
   height: 60px;
   background: #1cb3c8;
   border-radius: 50%;
@@ -295,17 +294,11 @@ body #footer p i {
   font-size: 15px;
   margin: 1px;
   margin-top: 5px;
+  text-align: right;
 }
 
 .chatbox .chatlogs .chat .chat-message #message {
   margin: 2px;
-}
-
-.chatbox .chatlogs .chat .chat-message #date {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  border: 1px solid green;
 }
 
 .chatbox .chatlogs .friend .chat-message {

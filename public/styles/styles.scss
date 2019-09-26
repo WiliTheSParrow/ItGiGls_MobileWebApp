@@ -261,7 +261,7 @@ body {
         overflow-y: scroll;
 
         .chat {
-            border: 1px solid purple;
+
             display: flex;
             flex-flow: row wrap;
             align-items: flex-start;
@@ -271,7 +271,7 @@ body {
             justify-content: center;
 
             .user-photo {
-                width: 60px;
+                width: 70px;
                 height: 60px;
                 background: color(primary);
                 border-radius: 50%;
@@ -292,28 +292,24 @@ body {
                 border-radius: 10px;
                 box-shadow: 4px 5px 10px color(accent);
 
-                #name{
+                #name {
                     font-weight: bold;
                     margin: 1px;
                 }
 
-                #date{
+                #date {
                     font-style: italic;
                     font-size: font(footer);
                     margin: 1px;
-                    margin-top:5px;
-                    
+                    margin-top: 5px;
+                    text-align: right;
                 }
 
-                #message{
+                #message {
                     margin: 2px;
                 }
             }
 
-            .chat-message #date{
-                justify-content: end;
-                border: 1px solid green;
-            }
         }
 
         .friend .chat-message {
