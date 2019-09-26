@@ -204,16 +204,36 @@ body {
         font-weight: bold;
         position: fixed;
         bottom: 0;
-        height: 40px;
+        height: 100px;
         width: 100%;
         text-align: center;
         justify-content: center;
         padding: padding(topSide);
 
+        
+        #topBtn {
+            border: 2px solid red;
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            font-size: 22px;
+            width: 50px;
+            height: 50px;
+            background: color(primary);
+            color: color(accent);
+            border: none;
+            text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
+            cursor: pointer;
+            //display: none;
+        }
+        div {
+            border: 2px solid red;
+        }
+
         p {
             padding: 0;
             margin: 0;
-
+            
             a,
             i {
                 text-decoration: none;
@@ -222,23 +242,13 @@ body {
                 padding-left: padding(topSide);
                 font-size: font(headerSize);
             }
+           
         }
+
+        
     }
 
-    #topBtn {
-        position: fixed;
-        bottom: 2%;
-        right: 2%;
-        font-size: 22px;
-        width: 50px;
-        height: 50px;
-        background: color(primary);
-        color: color(accent);
-        border: none;
-        text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
-        cursor: pointer;
-        //display: none;
-    }
+    
 }
 
 // CHAT ============================

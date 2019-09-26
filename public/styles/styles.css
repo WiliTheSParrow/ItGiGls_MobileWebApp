@@ -169,13 +169,32 @@ body #footer {
   font-weight: bold;
   position: fixed;
   bottom: 0;
-  height: 40px;
+  height: 100px;
   width: 100%;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px;
+}
+
+body #footer #topBtn {
+  border: 2px solid red;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  background: #1cb3c8;
+  color: #738598;
+  border: none;
+  text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
+  cursor: pointer;
+}
+
+body #footer div {
+  border: 2px solid red;
 }
 
 body #footer p {
@@ -190,20 +209,6 @@ body #footer p i {
   font-weight: normal;
   padding-left: 10px;
   font-size: 24px;
-}
-
-body #topBtn {
-  position: fixed;
-  bottom: 2%;
-  right: 2%;
-  font-size: 22px;
-  width: 50px;
-  height: 50px;
-  background: #1cb3c8;
-  color: #738598;
-  border: none;
-  text-shadow: 1px 1px 2px black, 0 0 25px brown, 0 0 5px darkblue;
-  cursor: pointer;
 }
 
 .chatbox {
