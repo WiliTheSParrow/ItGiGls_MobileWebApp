@@ -119,9 +119,7 @@ var app = new Vue({
 
 //Scroll To Top Button:
 $(document).ready(function () {
-    console.log("button not yet clicked");
-    $(window).scroll(function () {
-        console.log("scrolling down");
+    $(window).scroll(function () { 
         if ($(this).scrollTop() > 10) {
             $('#footerTopBtn').fadeIn();
         } else {
@@ -129,8 +127,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#footerTopBtn').click(function () {
-        console.log("button clicked");
+    $('#footerTopBtn').click(function () {      
        $('html , body').animate({
             scrollTop: 0
         }, 100);
@@ -153,10 +150,11 @@ $(document).ready(function () {
         i++;
     });
 });
+
 $(document).ready(function () {
     function close_accordion_section() {
-        $('.accordion .accordion-section-title').removeClass('active');
-        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+        $('.accordion .accordion-section-title').removeClass('.active');
+        $('.accordion .accordion-section-content').slideUp(300).removeClass('.open');
     }
 
     $('.accordion-section-title').click(function (e) {
@@ -168,9 +166,9 @@ $(document).ready(function () {
         } else {
             close_accordion_section();
 
-            $(this).addClass('active');
+            $(this).addClass('.active');
 
-            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+            $('.accordion ' + currentAttrValue).slideDown(300).addClass('.open');
         }
 
         e.preventDefault();

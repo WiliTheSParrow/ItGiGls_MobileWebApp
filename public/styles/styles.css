@@ -64,6 +64,7 @@ body #informationBar .accordion-section {
 }
 
 body #informationBar .accordion-section .accordion-section-title {
+  font-weight: bold;
   background: #738598;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,7 +89,6 @@ body #informationBar .accordion-section .accordion-section-title:hover {
 }
 
 body #informationBar .accordion-section .accordion-section-content {
-  overflow: hidden;
   -webkit-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
   display: none;
