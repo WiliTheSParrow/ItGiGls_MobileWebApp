@@ -39,6 +39,7 @@ var app = new Vue({
             this.hidegif = false;
 
         },
+        
         sortingTheDataByBand: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.band < b.band) {
@@ -49,7 +50,12 @@ var app = new Vue({
                 }
                 return 0;
             })
+           
+
         },
+
+        
+
         sortingTheDataByDate: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.date < b.date) {
