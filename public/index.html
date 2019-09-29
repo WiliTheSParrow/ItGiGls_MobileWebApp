@@ -72,7 +72,7 @@
                 <div class="accordion">
                     <div class="accordion-section" data-role="navbar" v-for="(value,key) in dataForTable">
 
-                        <div class="accordion-section-title" href="#chSelect">
+                        <div class="accordion-section-title" href="#chSelect" v-on:click="collapse">
                             <div>
                                 <p>{{value.band}}</p>
                             </div>

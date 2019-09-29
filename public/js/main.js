@@ -1,4 +1,6 @@
 var gigInfo = data.concerts;
+var accordionSectionTitle = document.getElementsByClassName('accordion-section-title');
+var accordionSectionContent = document.getElementsByClassName('accordion-section-content');
 var app = new Vue({
     el: "#app",
 
@@ -39,7 +41,7 @@ var app = new Vue({
             this.hidegif = false;
 
         },
-        
+
         sortingTheDataByBand: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
                 if (a.band < b.band) {
@@ -50,11 +52,9 @@ var app = new Vue({
                 }
                 return 0;
             })
-           
+
 
         },
-
-        
 
         sortingTheDataByDate: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
@@ -120,12 +120,33 @@ var app = new Vue({
                 }, 700);
             })
         },
-    },
-}, );
+
+        collapse: function () {
+            console.log("A vjúbó vagyok");
+
+
+            /* if (accordionSectionTitle.classList.contains('active')) {
+
+                console.log("Az else-ből vagyok, aktív");
+                accordionSectionTitle.removeClass('active');
+                accordionSectionContent.slideUp(300).removeClass('open');
+
+            } else {
+
+
+                console.log("Az if-ből vagyok, nem aktív");
+                accordionSectionTitle.addClass('active');
+                accordionSectionContent.slideDown(300).addClass('open');
+            } */
+        }
+
+
+    }
+});
 
 //Scroll To Top Button:
 $(document).ready(function () {
-    $(window).scroll(function () { 
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 10) {
             $('#footerTopBtn').fadeIn();
         } else {
@@ -133,8 +154,8 @@ $(document).ready(function () {
         }
     });
 
-    $('#footerTopBtn').click(function () {      
-       $('html , body').animate({
+    $('#footerTopBtn').click(function () {
+        $('html , body').animate({
             scrollTop: 0
         }, 100);
     });
@@ -157,29 +178,31 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
+// Accordion:
+/* $(document).ready(function () {
+    // Closing function:
     function close_accordion_section() {
-        $('.accordion .accordion-section-title').removeClass('active');
-        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-        
-    }
+        console.log("bezárok");
+        $('.accordion-section-title').removeClass('active');
+        $('.accordion-section-content').slideUp(300).removeClass('open');
+
+    };
 
     $('.accordion-section-title').click(function (e) {
 
-        var currentAttrValue = $(this).attr('href');
-        
-
-        if ($(e.target).is('active')) {
+        if ($(e.target).is('.active')) {
+            console.log("aktív vagyok");
             close_accordion_section();
-           
+
         } else {
+            console.log("no aktív");
             close_accordion_section();
-
+            var currentAttrValue = $(this).attr('href');
             $(this).addClass('active');
-
             $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+
         }
 
         e.preventDefault();
     });
-});
+}); */
