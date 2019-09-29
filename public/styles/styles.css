@@ -58,6 +58,11 @@ body #informationBar #infoTableHeader ul div {
           justify-content: space-evenly;
 }
 
+body #informationBar #infoTableHeader ul div .fas {
+  position: absolute;
+  padding-left: 5px;
+}
+
 body #informationBar .accordion-section {
   background: #738598;
   border-bottom: 2px solid #3c415e;

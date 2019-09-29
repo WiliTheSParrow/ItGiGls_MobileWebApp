@@ -89,12 +89,26 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-evenly;
+                
+             
+
+
+                .fas {
+                    
+                    position: absolute;
+                    padding-left: 5px;
+                    
+                }
+
             }
+
+
 
         }
 
-        
-        
+
+
+
         .accordion-section {
             background: color(accent);
             border-bottom: 2px solid color(fontLine);
