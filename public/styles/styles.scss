@@ -118,39 +118,118 @@ body {
         .accordion {
             overflow: hidden;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-            border-radius: 3px;
-            background: #f7f7f7;
-        }
+            //border-radius: 3px;
 
-        /*----- Section Titles -----*/
-        .accordion-section-title {
-            width: 100%;
-            padding: 15px;
-            display: inline-block;
-            border-bottom: 1px solid #1a1a1a;
-            background: #333;
-            transition: all linear 0.15s;
-            /* Type */
-            font-size: 1.200em;
-            text-shadow: 0px 1px 0px #1a1a1a;
-            color: #fff;
-        }
+            .accordion-section {
+                background: color(accent);
+                border-bottom: 2px solid color(fontLine);
 
-        .accordion-section-title.active,
-        .accordion-section-title:hover {
-            background: #4c4c4c;
-            /* Type */
-            text-decoration: none;
-        }
 
-        .accordion-section:last-child .accordion-section-title {
-            border-bottom: none;
-        }
 
-        /*----- Section Content -----*/
-        .accordion-section-content {
-            padding: 15px;
-            display: none;
+                /*----- Section Titles -----*/
+                .accordion-section-title {
+                    width: 100%;
+                    padding: 15px;
+                    display: inline-block;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    border-bottom: 1px solid #1a1a1a;
+                    background: color(accent);
+                    transition: all linear 0.15s;
+                    /* Type */
+                    font-size: 1.200em;
+                    text-shadow: 0px 1px 0px #1a1a1a;
+                    color: #fff;
+                    font-weight: bold;
+
+                    div {
+                        width: 33%;
+                        height: 100%;
+                    }
+
+                }
+
+                .accordion-section-title.active,
+                .accordion-section-title:hover {
+
+                    background: color(accentDarken);
+                    /* Type */
+                    text-decoration: none;
+                }
+
+                .accordion-section:last-child .accordion-section-title {
+                    border-bottom: none;
+                }
+
+                /*----- Section Content -----*/
+                .accordion-section-content {
+                    padding: 15px;
+                    display: none;
+
+
+                    background: color(lightest);
+
+                    #detailInfos {
+                        display: inline-flex;
+                        width: 100%;
+                        height: 120px;
+
+                        #gigAddress {
+                            margin-top: 10px;
+                            margin-left: 10px;
+                            width: 80%;
+
+                            p {
+                                font-size: font(basic);
+                                margin: 0;
+                            }
+
+                            #institution {
+                                font-weight: bold;
+                            }
+                        }
+
+                        #ticketsPrice {
+                            text-align: center;
+                            justify-content: center;
+                            padding-right: 40px;
+                            width: 40vw;
+
+                            a {
+                                text-decoration: none;
+                                border: 2px solid color(fontLine);
+                                border-radius: 10px;
+
+                                p {
+                                    font-size: font(basic);
+                                    color: color(fontLine);
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+
+                    #map {
+
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 500px;
+                            width: 100%;
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        .gmap_canvas {
+                            background: none !important;
+                            height: 500px;
+                            width: 100vw;
+                        }
+                    }
+                }
+            }
         }
 
         // TEST END

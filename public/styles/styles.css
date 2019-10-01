@@ -37,8 +37,6 @@ body #informationBar {
   border-top: 2px solid #3c415e;
   width: 100%;
   /*----- Accordion -----*/
-  /*----- Section Titles -----*/
-  /*----- Section Content -----*/
   /* .accordion-section {
             background: color(accent);
             border-bottom: 2px solid color(fontLine);
@@ -169,38 +167,116 @@ body #informationBar .accordion {
   overflow: hidden;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  background: #f7f7f7;
 }
 
-body #informationBar .accordion-section-title {
+body #informationBar .accordion .accordion-section {
+  background: #738598;
+  border-bottom: 2px solid #3c415e;
+  /*----- Section Titles -----*/
+  /*----- Section Content -----*/
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-title {
   width: 100%;
   padding: 15px;
   display: inline-block;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
   border-bottom: 1px solid #1a1a1a;
-  background: #333;
+  background: #738598;
   -webkit-transition: all linear 0.15s;
   transition: all linear 0.15s;
   /* Type */
   font-size: 1.200em;
   text-shadow: 0px 1px 0px #1a1a1a;
   color: #fff;
+  font-weight: bold;
 }
 
-body #informationBar .accordion-section-title.active,
-body #informationBar .accordion-section-title:hover {
-  background: #4c4c4c;
+body #informationBar .accordion .accordion-section .accordion-section-title div {
+  width: 33%;
+  height: 100%;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-title.active,
+body #informationBar .accordion .accordion-section .accordion-section-title:hover {
+  background: #66788b;
   /* Type */
   text-decoration: none;
 }
 
-body #informationBar .accordion-section:last-child .accordion-section-title {
+body #informationBar .accordion .accordion-section .accordion-section:last-child .accordion-section-title {
   border-bottom: none;
 }
 
-body #informationBar .accordion-section-content {
+body #informationBar .accordion .accordion-section .accordion-section-content {
   padding: 15px;
   display: none;
+  background: #dfe2e2;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 120px;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos #gigAddress {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 80%;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos #gigAddress p {
+  font-size: 20px;
+  margin: 0;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos #gigAddress #institution {
+  font-weight: bold;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos #ticketsPrice {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 40px;
+  width: 40vw;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos #ticketsPrice a {
+  text-decoration: none;
+  border: 2px solid #3c415e;
+  border-radius: 10px;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos #ticketsPrice a p {
+  font-size: 20px;
+  color: #3c415e;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #map .mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-content #map .gmap_canvas {
+  background: none !important;
+  height: 500px;
+  width: 100vw;
 }
 
 body #informationBar #footerPadding {
