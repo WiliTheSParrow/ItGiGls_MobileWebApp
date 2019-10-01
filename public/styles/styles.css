@@ -36,6 +36,102 @@ body #header .fa-sign-out-alt {
 body #informationBar {
   border-top: 2px solid #3c415e;
   width: 100%;
+  /*----- Accordion -----*/
+  /*----- Section Titles -----*/
+  /*----- Section Content -----*/
+  /* .accordion-section {
+            background: color(accent);
+            border-bottom: 2px solid color(fontLine);
+
+            .accordion-section-title {
+                font-weight: bold;
+                background: color(accent);
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                text-align: center;
+
+                div {
+                    width: 33%;
+                    height: 100%;
+                }
+            }
+
+            .active,
+            .accordion-section-title:hover {
+                background-color: color(accentDarken);
+            }
+
+            .accordion-section-content {
+                //max-height: 0;
+                //overflow: hidden;
+                transition: max-height 0.5s ease-out;
+                //padding: 15px;
+                display: none;
+                width: 100%;
+                background: color(lightest);
+
+                #detailInfos {
+                    display: inline-flex;
+                    width: 100%;
+                    height: 120px;
+
+                    #gigAddress {
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        width: 80%;
+
+                        p {
+                            font-size: font(basic);
+                            margin: 0;
+                        }
+
+                        #institution {
+                            font-weight: bold;
+                        }
+                    }
+
+                    #ticketsPrice {
+                        text-align: center;
+                        justify-content: center;
+                        padding-right: 40px;
+                        width: 40vw;
+
+                        a {
+                            text-decoration: none;
+                            border: 2px solid color(fontLine);
+                            border-radius: 10px;
+
+                            p {
+                                font-size: font(basic);
+                                color: color(fontLine);
+                                font-weight: bold;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                #map {
+
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .gmap_canvas {
+                        background: none !important;
+                        height: 500px;
+                        width: 100vw;
+                    }
+                }
+            }
+        } */
 }
 
 body #informationBar #infoTableHeader {
@@ -63,102 +159,48 @@ body #informationBar #infoTableHeader ul div .fas {
   padding-left: 5px;
 }
 
-body #informationBar .accordion-section {
-  background: #738598;
-  border-bottom: 2px solid #3c415e;
+body #informationBar .accordion,
+body #informationBar .accordion * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body #informationBar .accordion-section .accordion-section-title {
-  font-weight: bold;
-  background: #738598;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body #informationBar .accordion {
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  background: #f7f7f7;
+}
+
+body #informationBar .accordion-section-title {
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: center;
+  padding: 15px;
+  display: inline-block;
+  border-bottom: 1px solid #1a1a1a;
+  background: #333;
+  -webkit-transition: all linear 0.15s;
+  transition: all linear 0.15s;
+  /* Type */
+  font-size: 1.200em;
+  text-shadow: 0px 1px 0px #1a1a1a;
+  color: #fff;
 }
 
-body #informationBar .accordion-section .accordion-section-title div {
-  width: 33%;
-  height: 100%;
-}
-
-body #informationBar .accordion-section .active,
-body #informationBar .accordion-section .accordion-section-title:hover {
-  background-color: #66788b;
-}
-
-body #informationBar .accordion-section .accordion-section-content {
-  -webkit-transition: max-height 0.5s ease-out;
-  transition: max-height 0.5s ease-out;
-  display: none;
-  width: 100%;
-  background: #dfe2e2;
-}
-
-body #informationBar .accordion-section .accordion-section-content #detailInfos {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  height: 120px;
-}
-
-body #informationBar .accordion-section .accordion-section-content #detailInfos #gigAddress {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 80%;
-}
-
-body #informationBar .accordion-section .accordion-section-content #detailInfos #gigAddress p {
-  font-size: 20px;
-  margin: 0;
-}
-
-body #informationBar .accordion-section .accordion-section-content #detailInfos #gigAddress #institution {
-  font-weight: bold;
-}
-
-body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice {
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-right: 40px;
-  width: 40vw;
-}
-
-body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice a {
+body #informationBar .accordion-section-title.active,
+body #informationBar .accordion-section-title:hover {
+  background: #4c4c4c;
+  /* Type */
   text-decoration: none;
-  border: 2px solid #3c415e;
-  border-radius: 10px;
 }
 
-body #informationBar .accordion-section .accordion-section-content #detailInfos #ticketsPrice a p {
-  font-size: 20px;
-  color: #3c415e;
-  font-weight: bold;
-  cursor: pointer;
+body #informationBar .accordion-section:last-child .accordion-section-title {
+  border-bottom: none;
 }
 
-body #informationBar .accordion-section .accordion-section-content #map .mapouter {
-  position: relative;
-  text-align: right;
-  height: 500px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-body #informationBar .accordion-section .accordion-section-content #map .gmap_canvas {
-  background: none !important;
-  height: 500px;
-  width: 100vw;
+body #informationBar .accordion-section-content {
+  padding: 15px;
+  display: none;
 }
 
 body #informationBar #footerPadding {
