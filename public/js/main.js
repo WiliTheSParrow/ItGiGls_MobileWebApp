@@ -1,6 +1,6 @@
 var gigInfo = data.concerts;
-var accordionSectionTitle = document.getElementsByClassName('accordion-section-title');
-var accordionSectionContent = document.getElementsByClassName('accordion-section-content');
+/* var accordionSectionTitle = document.getElementsByClassName('accordion-section-title');
+var accordionSectionContent = document.getElementsByClassName('accordion-section-content'); */
 var app = new Vue({
     el: "#app",
 
@@ -119,13 +119,13 @@ var app = new Vue({
                     scrollTop: $(".chatlogs").prop("scrollHeight")
                 }, 700);
             })
-        },
+        }
 
-        collapse: function () {
+        /* collapse: function () {
             console.log("A vjúbó vagyok");
 
 
-            /* if (accordionSectionTitle.classList.contains('active')) {
+            if (accordionSectionTitle.classList.contains('active')) {
 
                 console.log("Az else-ből vagyok, aktív");
                 accordionSectionTitle.removeClass('active');
@@ -137,8 +137,8 @@ var app = new Vue({
                 console.log("Az if-ből vagyok, nem aktív");
                 accordionSectionTitle.addClass('active');
                 accordionSectionContent.slideDown(300).addClass('open');
-            } */
-        }
+            }
+        } */
 
 
     }
