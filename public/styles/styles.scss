@@ -90,20 +90,13 @@ body {
                 flex-wrap: wrap;
                 justify-content: space-evenly;
 
-
-
-
                 .fas {
 
                     position: absolute;
                     padding-left: 5px;
 
                 }
-
             }
-
-
-
         }
 
         // TEST START
@@ -122,31 +115,25 @@ body {
 
             .accordion-section {
                 background: color(accent);
-                border-bottom: 2px solid color(fontLine);
-
+               
 
 
                 /*----- Section Titles -----*/
                 .accordion-section-title {
                     width: 100%;
-                    padding: 15px;
-                    display: inline-block;
+                    //padding: 15px;
+                    display: flex;
                     justify-content: space-evenly;
                     flex-wrap: wrap;
                     text-align: center;
-                    border-bottom: 1px solid #1a1a1a;
+                    //border-bottom: 1px solid #1a1a1a;
                     background: color(accent);
                     transition: all linear 0.15s;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: color(fontLine);
                     /* Type */
                     font-size: 1.200em;
-                    text-shadow: 0px 1px 0px #1a1a1a;
-                    color: #fff;
-                    font-weight: bold;
-
-                    div {
-                        width: 33%;
-                        height: 100%;
-                    }
 
                 }
 

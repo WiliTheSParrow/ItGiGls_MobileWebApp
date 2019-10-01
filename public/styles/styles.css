@@ -171,35 +171,29 @@ body #informationBar .accordion {
 
 body #informationBar .accordion .accordion-section {
   background: #738598;
-  border-bottom: 2px solid #3c415e;
   /*----- Section Titles -----*/
   /*----- Section Content -----*/
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-title {
   width: 100%;
-  padding: 15px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
-  border-bottom: 1px solid #1a1a1a;
   background: #738598;
   -webkit-transition: all linear 0.15s;
   transition: all linear 0.15s;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3c415e;
   /* Type */
   font-size: 1.200em;
-  text-shadow: 0px 1px 0px #1a1a1a;
-  color: #fff;
-  font-weight: bold;
-}
-
-body #informationBar .accordion .accordion-section .accordion-section-title div {
-  width: 33%;
-  height: 100%;
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-title.active,

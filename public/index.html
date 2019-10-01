@@ -129,15 +129,12 @@
                
                     <div class="accordion-section" v-for="(value,key) in dataForTable">
                         <a class="accordion-section-title" href="#chSelect">
-                            <div>
-                                <p>{{value.band}}</p>
-                            </div>
-                            <div>
-                                <p>{{value.date}}</p>
-                            </div>
-                            <div>
-                                <p>{{value.country}}</p>
-                            </div>
+                            {{value.band}}
+                            
+                                {{value.date}}
+                            
+                                {{value.country}}
+                            
                         </a>
 
                         <div id="chSelect" class="accordion-section-content">
