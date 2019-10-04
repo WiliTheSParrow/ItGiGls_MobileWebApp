@@ -126,7 +126,7 @@ body {
                     justify-content: space-evenly;
                     flex-wrap: wrap;
                     text-align: center;
-                    //border-bottom: 1px solid #1a1a1a;
+                    border-bottom: 1px solid color(fontLine);
                     background: color(accent);
                     transition: all linear 0.15s;
                     font-weight: bold;
@@ -153,8 +153,7 @@ body {
                 .accordion-section-content {
                     padding: 15px;
                     display: none;
-
-
+                    border-bottom: 1px solid color(fontLine);
                     background: color(lightest);
 
                     #detailInfos {

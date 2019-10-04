@@ -186,6 +186,7 @@ body #informationBar .accordion .accordion-section .accordion-section-title {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
+  border-bottom: 1px solid #3c415e;
   background: #738598;
   -webkit-transition: all linear 0.15s;
   transition: all linear 0.15s;
@@ -210,6 +211,7 @@ body #informationBar .accordion .accordion-section .accordion-section:last-child
 body #informationBar .accordion .accordion-section .accordion-section-content {
   padding: 15px;
   display: none;
+  border-bottom: 1px solid #3c415e;
   background: #dfe2e2;
 }
 
