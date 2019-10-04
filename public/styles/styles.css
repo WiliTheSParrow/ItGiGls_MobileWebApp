@@ -176,7 +176,6 @@ body #informationBar .accordion .accordion-section {
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-title {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,6 +194,11 @@ body #informationBar .accordion .accordion-section .accordion-section-title {
   color: #3c415e;
   /* Type */
   font-size: 1.200em;
+  width: 100%;
+}
+
+body #informationBar .accordion .accordion-section .accordion-section-title p {
+  width: 30%;
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-title.active,

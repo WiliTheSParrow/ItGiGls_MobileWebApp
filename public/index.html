@@ -68,9 +68,10 @@
                     </ul>
                 </div>
                 <!-- Header END-->
+
                 <!---TESTING -->
                 <div class="accordion">
-                    <div class="accordion-section">
+                    <!-- <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-1">Accordion Section #1</a>
 
                         <div id="accordion-1" class="accordion-section-content">
@@ -81,11 +82,9 @@
                                 lacus, semper sit amet elit sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu
                                 rhoncus. Suspendisse ornare gravida mi, et placerat tellus tempor vitae.</p>
                         </div>
-                        <!--end .accordion-section-content-->
+                       
                     </div>
-                    <!--end .accordion-section-->
-
-
+              
 
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-2">Accordion Section #2</a>
@@ -101,10 +100,8 @@
                                 sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare
                                 gravida mi, et placerat tellus tempor vitae.</p>
                         </div>
-                        <!--end .accordion-section-content-->
+                       
                     </div>
-
-
 
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-3">Accordion Section #3</a>
@@ -120,25 +117,31 @@
                                 sit amet, aliquet pulvinar erat. Nunc pretium quis sapien eu rhoncus. Suspendisse ornare
                                 gravida mi, et placerat tellus tempor vitae.</p>
                         </div>
-                        <!--end .accordion-section-content-->
-                    </div>
-                    <!--end .accordion-section-->
-                
-                <!--end .accordion-->
+                        
+                    </div> -->
 
-               
+                    <!---TESTING-->
+
+
                     <div class="accordion-section" v-for="(value,key) in dataForTable">
                         <a class="accordion-section-title" href="#chSelect">
-                            {{value.band}}
-                            
-                                {{value.date}}
-                            
-                                {{value.country}}
-                            
+                            <p>{{value.band}}</p>
+                            <p>{{value.date}}</p>
+                            <p>{{value.country}}</p>
+
+                            <!--  <ul>
+                                <div>
+                                    <li>{{value.band}}</li>
+                                    <li>{{value.date}}</li>
+                                    <li>{{value.country}}</li>
+                                </div>
+                            </ul> -->
+
+
                         </a>
 
                         <div id="chSelect" class="accordion-section-content">
-                            
+
                             <div id="detailInfos">
                                 <div id="gigAddress">
                                     <p id="institution">{{value.institution}}</p>
@@ -146,7 +149,7 @@
                                     <p>{{value.place}}</p>
                                     <p>{{value.zipCode}}</p>
                                 </div>
-                                
+
                                 <div id="ticketsPrice">
                                     <a :href=value.ticketBuy target="_blank">
                                         <p>
@@ -172,7 +175,7 @@
                 <!--end .accordion-->
 
 
-                <!---TESTING-->
+
                 <!-- Concert Info Table START -->
                 <!-- <div class="accordion">
                     <div class="accordion-section" data-role="navbar" v-for="(value,key) in dataForTable">
