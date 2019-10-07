@@ -10,7 +10,8 @@ var app = new Vue({
         loggedIn: '',
         isActive: "hide",
         posts: {},
-        hidegif: true
+        hidegif: true,
+
     },
 
     created: function () {
@@ -52,6 +53,15 @@ var app = new Vue({
                 }
                 return 0;
             })
+            /*fgv, ami semmi mast nem fog csinalni csak azt, hogz a sorting data return ertekeit 
+            felveszi parameternek es egy ennek megfelelo string valtozoval visszater, ezt a string 
+            valtozot hozzuk letre fenn a vue instance-ben, o mondja meg, hogy a legutolso sorting eredmenye mi volt. 
+            Ezt a sorting string valtozot minden egyes sorting fgv meghivasakor megvizsgaljuk es ehhez kotjuk azt, 
+            hogy a meghivott sorting fgv-unk milyen iranzyba sortingoljon
+            .
+            .
+            Adam hulye volt, nem kell kulon funct. egz return kell, ide alam
+            szoval a leguccso sortingot irja felul es azzal terjen vissza*/
 
 
         },
