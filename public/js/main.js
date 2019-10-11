@@ -11,7 +11,7 @@ var app = new Vue({
         isActive: "hide",
         posts: {},
         hidegif: true,
-        sortingBookmark: true
+        sortingBookmark: 0
     },
 
     created: function () {
@@ -46,7 +46,21 @@ var app = new Vue({
         sortingTheDataByBand: function () {
             console.log(this.sortingBookmark);
             this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if (this.sortingBookmark=true) {
+
+                if (this.sortingBookmark != 1) {
+                    if (b.band < a.band) {
+                        return -1;
+                    }
+                    return app.sortingBookmark = 1;
+                }
+
+                else {
+                    if (b.band > a.band) {
+                        return 1;
+                    }
+                    return app.sortingBookmark = 0;
+                }
+                /* if (this.sortingBookmark = true) {
                     if (a.band < b.band) {
                         return -1;
                     }
@@ -59,11 +73,14 @@ var app = new Vue({
                     app.sortingBookmark = true;
                     console.log("lefutok b-bol a-ba");
                 }
-                console.log("lefutok");
+                console.log("lefutok"); */
+
+                return 0;
+
             })
 
             console.log(this.sortingBookmark);
-
+            console.log(this.dataForTable);
             /*fgv, ami semmi mast nem fog csinalni csak azt, hogz a sorting data return ertekeit 
             felveszi parameternek es egy ennek megfelelo string valtozoval visszater, ezt a string 
             valtozot hozzuk letre fenn a vue instance-ben, o mondja meg, hogy a legutolso sorting eredmenye mi volt. 
