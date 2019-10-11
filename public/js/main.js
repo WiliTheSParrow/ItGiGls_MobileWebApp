@@ -45,21 +45,24 @@ var app = new Vue({
 
         sortingTheDataByBand: function () {
             console.log(this.sortingBookmark);
-            this.dataForTable = [...gigInfo].sort(function (a, b) {
+            this.dataForTable = gigInfo.sort(function (a, b) {
 
-                if (this.sortingBookmark != 1) {
+                if (app.sortingBookmark === 0) {
                     if (b.band < a.band) {
                         return -1;
                     }
                     return app.sortingBookmark = 1;
                 }
 
-                else {
+                if (app.sortingBookmark === 1) {
                     if (b.band > a.band) {
-                        return 1;
+                        return -1;
                     }
                     return app.sortingBookmark = 0;
+                    
                 }
+               
+                
                 /* if (this.sortingBookmark = true) {
                     if (a.band < b.band) {
                         return -1;
@@ -75,7 +78,7 @@ var app = new Vue({
                 }
                 console.log("lefutok"); */
 
-                return 0;
+           
 
             })
 
