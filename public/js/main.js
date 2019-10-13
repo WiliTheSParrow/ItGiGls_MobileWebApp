@@ -44,7 +44,7 @@ var app = new Vue({
 
         },
 
-        sortingTheDataByBand: function () {
+        sortDataByBand: function () {
             console.log(app.currentBandOrder);
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
