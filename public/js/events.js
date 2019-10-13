@@ -1,4 +1,4 @@
-var data = {
+var concertData = {
   "concerts": [{
       "band": "Rammstein",
       "address": "Meiereistraße 7",

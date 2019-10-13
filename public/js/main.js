@@ -1,17 +1,18 @@
-var gigInfo = data.concerts;
+// var globalGigInfo = concertData.concerts;
 /* var accordionSectionTitle = document.getElementsByClassName('accordion-section-title');
 var accordionSectionContent = document.getElementsByClassName('accordion-section-content'); */
 var app = new Vue({
     el: "#app",
 
     data: {
+        gigInfo: concertData.concerts,
         dataForTable: [],
         currentUser: '',
         loggedIn: '',
         isActive: "hide",
         posts: {},
         hidegif: true,
-        sortingBookmark: 0
+        currentBandOrder: "mixed"
     },
 
     created: function () {
@@ -35,8 +36,8 @@ var app = new Vue({
             }
         },
         getGigData: function () {
-            for (var i = 0; i < gigInfo.length; i++) {
-                this.dataForTable.push(gigInfo[i]);
+            for (var i = 0; i < this.gigInfo.length; i++) {
+                this.dataForTable.push(this.gigInfo[i]);
             };
 
             this.hidegif = false;
@@ -44,57 +45,32 @@ var app = new Vue({
         },
 
         sortingTheDataByBand: function () {
-            console.log(this.sortingBookmark);
-            this.dataForTable = gigInfo.sort(function (a, b) {
-
-                if (app.sortingBookmark === 0) {
-                    if (b.band < a.band) {
-                        return -1;
+            console.log(app.currentBandOrder);
+            var orderToUse = '';
+            this.dataForTable = this.gigInfo.sort(
+                function (a, b) {
+                    if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
+                        orderToUse = 'ascending';
+                        if (a.band < b.band) {
+                            return -1;
+                        } else {
+                            return 1;
+                        }
+                    } else {
+                        orderToUse = 'descending';
+                        if (a.band < b.band) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
                     }
-                    return app.sortingBookmark = 1;
                 }
-
-                if (app.sortingBookmark === 1) {
-                    if (b.band > a.band) {
-                        return -1;
-                    }
-                    return app.sortingBookmark = 0;
-                    
-                }
-               
-                
-                /* if (this.sortingBookmark = true) {
-                    if (a.band < b.band) {
-                        return -1;
-                    }
-                    app.sortingBookmark = false;
-                    console.log("lefutok a-bol b-be");
-                } else {
-                    if (a.band > b.band) {
-                        return 1;
-                    }
-                    app.sortingBookmark = true;
-                    console.log("lefutok b-bol a-ba");
-                }
-                console.log("lefutok"); */
-
-           
-
-            })
-
-            console.log(this.sortingBookmark);
-            console.log(this.dataForTable);
-            /*fgv, ami semmi mast nem fog csinalni csak azt, hogz a sorting data return ertekeit 
-            felveszi parameternek es egy ennek megfelelo string valtozoval visszater, ezt a string 
-            valtozot hozzuk letre fenn a vue instance-ben, o mondja meg, hogy a legutolso sorting eredmenye mi volt. 
-            Ezt a sorting string valtozot minden egyes sorting fgv meghivasakor megvizsgaljuk es ehhez kotjuk azt, 
-            hogy a meghivott sorting fgv-unk milyen iranzyba sortingoljon
-            .
-            .
-            Adam hulye volt, nem kell kulon funct. egz return kell, ide alam
-            szoval a leguccso sortingot irja felul es azzal terjen vissza*/
-
-
+            );
+            app.currentBandOrder = orderToUse;
+            for (var i = 0; i < this.dataForTable.length; i++) {
+                console.log(this.dataForTable[i].band);
+            }
+            console.log(app.currentBandOrder);
         },
 
         sortingTheDataByDate: function () {
