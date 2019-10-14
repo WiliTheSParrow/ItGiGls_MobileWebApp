@@ -51,7 +51,7 @@ var app = new Vue({
                 function (a, b) {
                     if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
                         orderToUse = 'ascending';
-                        if (a.band < b.band) {
+                        if (a.band < b.band /* b.band -> ha ezt kirakod parameterbe, pl. sortDataByBand: function (kuki), akkor -> b[kuki]*/) {
                             return -1;
                         } else {
                             return 1;
