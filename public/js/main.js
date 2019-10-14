@@ -1,6 +1,8 @@
 // var globalGigInfo = concertData.concerts;
 /* var accordionSectionTitle = document.getElementsByClassName('accordion-section-title');
 var accordionSectionContent = document.getElementsByClassName('accordion-section-content'); */
+
+
 var app = new Vue({
     el: "#app",
 
@@ -14,7 +16,13 @@ var app = new Vue({
         hidegif: true,
         currentBandOrder: "mixed",
         currentDateOrder: "order1",
-        currentCountryOrder: "mixed"
+        currentCountryOrder: "mixed",
+        arrowUpBand: document.getElementById("arrowUpBand"),
+        arrowDownBand: document.getElementById("arrowDownBand"),
+        arrowUpDate: document.getElementById("arrowUpDate"),
+        arrowDownDate: document.getElementById("arrowDownDate"),
+        arrowUpCountry: document.getElementById("arrowUpCountry"),
+        arrowDownCountry: document.getElementById("arrowDownCountry")
     },
 
     created: function () {
@@ -43,6 +51,12 @@ var app = new Vue({
             };
             this.hidegif = false;
         },
+
+        visualizeTableArrow: function (showArrow, hideArrow) {
+            hideArrow.style.display = 'none';
+            showArrow.style.display = 'inline-block';
+        },
+
         sortDataByBand: function () {
             // console.log(app.currentBandOrder);
             var orderToUse = '';
@@ -50,13 +64,15 @@ var app = new Vue({
                 function (a, b) {
                     if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
                         orderToUse = 'ascending';
-                        if (a.band < b.band /* b.band -> ha ezt kirakod parameterbe, pl. sortDataByBand: function (kuki), akkor -> b[kuki]*/) {
+                        app.visualizeTableArrow(this.arrowDownBand, this.arrowUpBand);
+                        if (a.band < b.band /* b.band -> ha ezt kirakod parameterbe, pl. sortDataByBand: function (kuki), akkor -> b[kuki]*/ ) {
                             return -1;
                         } else {
                             return 1;
                         }
                     } else {
                         orderToUse = 'descending';
+                        app.visualizeTableArrow(this.arrowUpBand, this.arrowDownBand);
                         if (a.band < b.band) {
                             return 1;
                         } else {
@@ -77,6 +93,7 @@ var app = new Vue({
                 function (a, b) {
                     if (app.currentBandOrder == 'order1' || app.currentBandOrder == 'order3') {
                         orderToUse = 'order2';
+                        app.visualizeTableArrow(this.arrowDownDate, this.arrowUpDate);
                         if (a.date < b.date) {
                             return -1;
                         } else {
@@ -84,6 +101,7 @@ var app = new Vue({
                         }
                     } else {
                         orderToUse = 'order3';
+                        app.visualizeTableArrow(this.arrowUpDate, this.arrowDownDate);
                         if (a.date < b.date) {
                             return 1;
                         } else {
@@ -100,6 +118,7 @@ var app = new Vue({
                 function (a, b) {
                     if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
                         orderToUse = 'ascending';
+                        app.visualizeTableArrow(this.arrowDownCountry, this.arrowUpCountry);
                         if (a.country < b.country) {
                             return -1;
                         } else {
@@ -107,6 +126,7 @@ var app = new Vue({
                         }
                     } else {
                         orderToUse = 'descending';
+                        app.visualizeTableArrow(this.arrowUpCountry, this.arrowDownCountry);
                         if (a.country < b.country) {
                             return 1;
                         } else {
