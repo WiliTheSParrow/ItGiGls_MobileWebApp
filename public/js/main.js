@@ -15,14 +15,7 @@ var app = new Vue({
         posts: {},
         hidegif: true,
         currentBandOrder: "mixed",
-        currentDateOrder: "order1",
-        currentCountryOrder: "mixed",
-        arrowUpBand: document.getElementById("arrowUpBand"),
-        arrowDownBand: document.getElementById("arrowDownBand"),
-        arrowUpDate: document.getElementById("arrowUpDate"),
-        arrowDownDate: document.getElementById("arrowDownDate"),
-        arrowUpCountry: document.getElementById("arrowUpCountry"),
-        arrowDownCountry: document.getElementById("arrowDownCountry")
+        currentArrowStatus: "both"
     },
 
     created: function () {
@@ -52,18 +45,28 @@ var app = new Vue({
             this.hidegif = false;
         },
 
-        /* visualizeTableArrow: function (showArrow, hideArrow) {
-            hideArrow.style.display = 'none';
-            showArrow.style.display = 'inline-block';
+        visualizeTableArrow: function (arrow1, arrow2) {
+            var showArrow = document.getElementById(arrow1);
+            var hideArrow = document.getElementById(arrow2);
+            var orderToUse = '';
+            if (app.currentArrowStatus == 'both' || app.currentArrowStatus == 'down') {
+                orderToUse = 'up';
+                hideArrow.style.display = 'none';
+                showArrow.style.display = 'inline-block'
+            } else {
+                orderToUse = 'down';
+                showArrow.style.display = 'none';
+                hideArrow.style.display = 'inline-block'
+            }
+            app.currentArrowStatus = orderToUse;
         },
- */
-        sortDataInTable: function (category) {
+
+        sortDataInTable: function (category, arrow1, arrow2) {
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
                 function (a, b) {
                     if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
                         orderToUse = 'ascending';
-                      
                         if (a[category] < b[category]) {
                             return -1;
                         } else {
@@ -71,7 +74,6 @@ var app = new Vue({
                         }
                     } else {
                         orderToUse = 'descending';
-                    
                         if (a[category] < b[category]) {
                             return 1;
                         } else {
@@ -159,6 +161,7 @@ var app = new Vue({
             );
             app.currentBandOrder = orderToUse;
         }, */
+        
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
