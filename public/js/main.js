@@ -52,20 +52,45 @@ var app = new Vue({
             this.hidegif = false;
         },
 
-        visualizeTableArrow: function (showArrow, hideArrow) {
+        /* visualizeTableArrow: function (showArrow, hideArrow) {
             hideArrow.style.display = 'none';
             showArrow.style.display = 'inline-block';
         },
+ */
+        sortDataInTable: function (category) {
+            var orderToUse = '';
+            this.dataForTable = this.gigInfo.sort(
+                function (a, b) {
+                    if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
+                        orderToUse = 'ascending';
+                      
+                        if (a[category] < b[category]) {
+                            return -1;
+                        } else {
+                            return 1;
+                        }
+                    } else {
+                        orderToUse = 'descending';
+                    
+                        if (a[category] < b[category]) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
+                    }
+                }
+            );
+            app.currentBandOrder = orderToUse;
+        },
 
-        sortDataByBand: function () {
-            // console.log(app.currentBandOrder);
+        /* sortDataByBand: function (valami1) {
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
                 function (a, b) {
                     if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
                         orderToUse = 'ascending';
                         app.visualizeTableArrow(this.arrowDownBand, this.arrowUpBand);
-                        if (a.band < b.band /* b.band -> ha ezt kirakod parameterbe, pl. sortDataByBand: function (kuki), akkor -> b[kuki]*/ ) {
+                        if (a.band < b.band) {
                             return -1;
                         } else {
                             return 1;
@@ -82,12 +107,9 @@ var app = new Vue({
                 }
             );
             app.currentBandOrder = orderToUse;
-            /* for (var i = 0; i < this.dataForTable.length; i++) {
-                console.log(this.dataForTable[i].band);
-            }
-            console.log(app.currentBandOrder); */
-        },
-        sortDataByDate: function () {
+           
+        }, */
+        /* sortDataByDate: function () {
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
                 function (a, b) {
@@ -111,8 +133,8 @@ var app = new Vue({
                 }
             );
             app.currentBandOrder = orderToUse;
-        },
-        sortDataByCountry: function () {
+        }, */
+        /* sortDataByCountry: function () {
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
                 function (a, b) {
@@ -136,7 +158,7 @@ var app = new Vue({
                 }
             );
             app.currentBandOrder = orderToUse;
-        },
+        }, */
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {

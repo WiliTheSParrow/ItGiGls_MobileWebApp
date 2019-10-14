@@ -52,17 +52,17 @@
                 <div id="infoTableHeader" data-role="navbar">
                     <ul>
                         <div>
-                            <li id="headerBand" v-on:click="sortDataByBand">
+                            <li id="headerBand" v-on:click="sortDataInTable('band')">
                                 Band <i class="fas fa-sort-up" id="arrowUpBand"></i><i class="fas fa-sort-down" id="arrowDownBand"></i>
                             </li>
                         </div>
                         <div>
-                            <li id="headerDate" v-on:click="sortDataByDate">
+                            <li id="headerDate" v-on:click="sortDataInTable('date')">
                                 Date <i class="fas fa-sort-up" id="arrowUpDate"></i><i class="fas fa-sort-down" id="arrowDownDate"></i>
                             </li>
                         </div>
                         <div>
-                            <li id="headerCountry" v-on:click="sortDataByCountry">
+                            <li id="headerCountry" v-on:click="sortDataInTable('country')">
                                 Where <i class="fas fa-sort-up" id="arrowUpCountry"></i><i class="fas fa-sort-down" id="arrowDownCountry"></i>
                             </li>
                         </div>
