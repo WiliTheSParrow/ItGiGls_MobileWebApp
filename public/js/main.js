@@ -12,7 +12,8 @@ var app = new Vue({
         isActive: "hide",
         posts: {},
         hidegif: true,
-        currentBandOrder: "mixed"
+        currentBandOrder: "mixed",
+        currentDateOrder: "order1"
     },
 
     created: function () {
@@ -45,7 +46,7 @@ var app = new Vue({
         },
 
         sortDataByBand: function () {
-            console.log(app.currentBandOrder);
+            // console.log(app.currentBandOrder);
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
                 function (a, b) {
@@ -67,22 +68,34 @@ var app = new Vue({
                 }
             );
             app.currentBandOrder = orderToUse;
-            for (var i = 0; i < this.dataForTable.length; i++) {
+            /* for (var i = 0; i < this.dataForTable.length; i++) {
                 console.log(this.dataForTable[i].band);
             }
-            console.log(app.currentBandOrder);
+            console.log(app.currentBandOrder); */
         },
 
-        sortingTheDataByDate: function () {
-            this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if (a.date < b.date) {
-                    return -1;
+        sortDataByDate: function () {
+            var orderToUse = '';
+            this.dataForTable = this.gigInfo.sort(
+                function (a, b) {
+                    if (app.currentBandOrder == 'order1' || app.currentBandOrder == 'order3') {
+                        orderToUse = 'order2';
+                        if (a.date < b.date) {
+                            return -1;
+                        } else {
+                            return 1;
+                        }
+                    } else {
+                        orderToUse = 'order3';
+                        if (a.date < b.date) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
+                    }
                 }
-                if (a.date > b.date) {
-                    return 1;
-                }
-                return 0;
-            })
+            );
+            app.currentBandOrder = orderToUse;
         },
         sortingTheDataByCountry: function () {
             this.dataForTable = [...gigInfo].sort(function (a, b) {
