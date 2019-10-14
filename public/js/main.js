@@ -13,7 +13,8 @@ var app = new Vue({
         posts: {},
         hidegif: true,
         currentBandOrder: "mixed",
-        currentDateOrder: "order1"
+        currentDateOrder: "order1",
+        currentCountryOrder: "mixed"
     },
 
     created: function () {
@@ -40,11 +41,8 @@ var app = new Vue({
             for (var i = 0; i < this.gigInfo.length; i++) {
                 this.dataForTable.push(this.gigInfo[i]);
             };
-
             this.hidegif = false;
-
         },
-
         sortDataByBand: function () {
             // console.log(app.currentBandOrder);
             var orderToUse = '';
@@ -73,7 +71,6 @@ var app = new Vue({
             }
             console.log(app.currentBandOrder); */
         },
-
         sortDataByDate: function () {
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
@@ -97,16 +94,28 @@ var app = new Vue({
             );
             app.currentBandOrder = orderToUse;
         },
-        sortingTheDataByCountry: function () {
-            this.dataForTable = [...gigInfo].sort(function (a, b) {
-                if (a.country < b.country) {
-                    return -1;
+        sortDataByCountry: function () {
+            var orderToUse = '';
+            this.dataForTable = this.gigInfo.sort(
+                function (a, b) {
+                    if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
+                        orderToUse = 'ascending';
+                        if (a.country < b.country) {
+                            return -1;
+                        } else {
+                            return 1;
+                        }
+                    } else {
+                        orderToUse = 'descending';
+                        if (a.country < b.country) {
+                            return 1;
+                        } else {
+                            return -1;
+                        }
+                    }
                 }
-                if (a.country > b.country) {
-                    return 1;
-                }
-                return 0;
-            })
+            );
+            app.currentBandOrder = orderToUse;
         },
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
