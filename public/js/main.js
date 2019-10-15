@@ -1,8 +1,3 @@
-// var globalGigInfo = concertData.concerts;
-/* var accordionSectionTitle = document.getElementsByClassName('accordion-section-title');
-var accordionSectionContent = document.getElementsByClassName('accordion-section-content'); */
-
-
 var app = new Vue({
     el: "#app",
 
