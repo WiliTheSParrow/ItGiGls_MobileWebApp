@@ -116,20 +116,20 @@ var app = new Vue({
                 }, 700);
             })
         },
-        toggleBandInfos: function () {
-            var accordionTitle = document.getElementsByClassName('accordion-section-title');
-            console.log(accordionTitle);
-            for (var i = 0; i < accordionTitle.length; i++) {
-                console.log(accordionTitle[i]);
-                var accordionPanel=accordionTitle[i].nextElementSibling;
-                console.log(accordionPanel);
+        toggleBandInfo: function (key) {
+            var accordionTitle = document.getElementById(key);
+            var accordionContent = accordionTitle.nextElementSibling;
 
-                if (accordionPanel.style.maxHeight) {
-                    accordionPanel.style.maxHeight = null;
-                } else {
-                    accordionPanel.style.maxHeight = accordionPanel.scrollHeight + 'px';
-                };
-            };
+            if (accordionContent.style.maxHeight == "") {
+                for (var i = 0; i < this.dataForTable.length; i++) {
+                    var everythingElse = document.getElementById(i);
+                    var everythingElseContent = everythingElse.nextElementSibling;
+                    everythingElseContent.style.maxHeight = null;
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                }
+            } else if (accordionContent.style.maxHeight == accordionContent.scrollHeight + 'px') {
+                accordionContent.style.maxHeight = null;
+            }
         }
     }
 });
@@ -147,20 +147,5 @@ $(document).ready(function () {
         $('html , body').animate({
             scrollTop: 0
         }, 100);
-    });
-});
-//Collapsible id generator for accordionTitle and accordionPanel:
-$(document).ready(function () {
-    var i = 0;
-    $('.accordion-section-content').each(function () {
-        $(this).attr('id', "chSelect" + i);
-        i++;
-    });
-});
-$(document).ready(function () {
-    var i = 0;
-    $('.accordion-section-title').each(function () {
-        $(this).attr('href', "#chSelect" + i);
-        i++;
     });
 });

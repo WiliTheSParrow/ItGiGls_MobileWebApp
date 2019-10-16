@@ -41,7 +41,6 @@
                     <img src="/public//img/msg2.png" alt="message icon" class="responsiveImg">
                 </a>
             </div>
-            
             <!--- Header END --->
             <div class="loadergif" v-if="hidegif">
                 <img src="/public//img/loading.gif">
@@ -52,61 +51,63 @@
                 <div id="infoTableHeader" data-role="navbar">
                     <ul>
                         <div>
-                            <li id="headerBand" v-on:click="sortDataInTable('band'), visualizeTableArrow('arrowDownBand', 'arrowUpBand')">
-                                Band <i class="fas fa-sort-up" id="arrowUpBand"></i><i class="fas fa-sort-down" id="arrowDownBand"></i>
+                            <li id="headerBand"
+                                v-on:click="sortDataInTable('band'), visualizeTableArrow('arrowDownBand', 'arrowUpBand')">
+                                Band <i class="fas fa-sort-up" id="arrowUpBand"></i><i class="fas fa-sort-down"
+                                    id="arrowDownBand"></i>
                             </li>
                         </div>
                         <div>
-                            <li id="headerDate" v-on:click="sortDataInTable('date'), visualizeTableArrow('arrowUpDate','arrowDownDate')">
-                                Date <i class="fas fa-sort-up" id="arrowUpDate"></i><i class="fas fa-sort-down" id="arrowDownDate"></i>
+                            <li id="headerDate"
+                                v-on:click="sortDataInTable('date'), visualizeTableArrow('arrowUpDate','arrowDownDate')">
+                                Date <i class="fas fa-sort-up" id="arrowUpDate"></i><i class="fas fa-sort-down"
+                                    id="arrowDownDate"></i>
                             </li>
                         </div>
                         <div>
-                            <li id="headerCountry" v-on:click="sortDataInTable('country'), visualizeTableArrow('arrowDownCountry', 'arrowUpCountry')">
-                                Where <i class="fas fa-sort-up" id="arrowUpCountry"></i><i class="fas fa-sort-down" id="arrowDownCountry"></i>
+                            <li id="headerCountry"
+                                v-on:click="sortDataInTable('country'), visualizeTableArrow('arrowDownCountry', 'arrowUpCountry')">
+                                Where <i class="fas fa-sort-up" id="arrowUpCountry"></i><i class="fas fa-sort-down"
+                                    id="arrowDownCountry"></i>
                             </li>
                         </div>
                     </ul>
                 </div>
                 <!-- Header END-->
-
-
                 <div class="accordion">
-                        <div class="accordion-section" v-for="(value,key) in dataForTable">
-                                <a class="accordion-section-title" id="accordionTitle" href="#chSelect" v-on:click="toggleBandInfos">
-                                    <p>{{value.band}}</p>
-                                    <p>{{value.date}}</p>
-                                    <p>{{value.country}}</p>
-                                </a>
-                                <div id="chSelect" class="accordion-section-content">
-                                    <div id="detailInfos">
-                                        <div id="gigAddress">
-                                            <p id="institution">{{value.institution}}</p>
-                                            <p>{{value.address}}</p>
-                                            <p>{{value.place}}</p>
-                                            <p>{{value.zipCode}}</p>
-                                        </div>
-                                        <div id="ticketsPrice">
-                                            <a :href=value.ticketBuy target="_blank">
-                                                <p>
-                                                    {{value.ticketPrice}}
-                                                </p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div id="map">
-                                        <div class="mapouter">
-                                            <div class="gmap_canvas">
-                                                <iframe width="100%" height="500" id="gmap_canvas"
-                                                    :src=value.mapsToShow frameborder="0" scrolling="no" marginheight="0"
-                                                    marginwidth="0"></iframe>
-                                                    <a
-                                                    href="https://www.pureblack.de/beste-wordpress-themes/"></a>
-                                            </div>
-                                        </div>
+                    <div class="accordion-section" v-for="(value,key) in dataForTable">
+                        <a class="accordion-section-title" :id="key" v-on:click="toggleBandInfo(key)">
+                            <p>{{value.band}}</p>
+                            <p>{{value.date}}</p>
+                            <p>{{value.country}}</p>
+                        </a>
+                        <div id="chSelect" class="accordion-section-content">
+                            <div id="detailInfos">
+                                <div id="gigAddress">
+                                    <p id="institution">{{value.institution}}</p>
+                                    <p>{{value.address}}</p>
+                                    <p>{{value.place}}</p>
+                                    <p>{{value.zipCode}}</p>
+                                </div>
+                                <div id="ticketsPrice">
+                                    <a :href=value.ticketBuy target="_blank">
+                                        <p>
+                                            {{value.ticketPrice}}
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="map">
+                                <div class="mapouter">
+                                    <div class="gmap_canvas">
+                                        <iframe width="100%" height="500" id="gmap_canvas" :src=value.mapsToShow
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                        <a href="https://www.pureblack.de/beste-wordpress-themes/"></a>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                 </div>
                 <!--Footer with contact info START -->
                 <div id="footer" data-role="footer">
@@ -184,7 +185,6 @@
             <!--- Chat END--->
         </div>
     </div>
-
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <script>
         // Your web app's Firebase configuration

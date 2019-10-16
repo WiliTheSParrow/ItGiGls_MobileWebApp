@@ -113,7 +113,7 @@ body {
 
             .accordion-section {
                 background: color(accent);
-               
+
                 /*----- Section Titles -----*/
                 .accordion-section-title {
                     display: flex;
@@ -128,8 +128,11 @@ body {
                     color: color(fontLine);
                     /* Type */
                     font-size: 1.200em;
-                    width:100%;
-                    p{width: 30%;}
+                    width: 100%;
+
+                    p {
+                        width: 30%;
+                    }
                 }
 
                 .accordion-section-title.active,
@@ -147,7 +150,7 @@ body {
                     // display: none;
                     max-height: 0;
                     overflow: hidden;
-                    transition: max-height 0.5s ease-out;                  
+                    transition: max-height 0.5s ease-out;
                     border-bottom: 1px solid color(fontLine);
                     background: color(lightest);
 
@@ -212,102 +215,6 @@ body {
                 }
             }
         }
-        // TEST END
-
-
-        /* .accordion-section {
-            background: color(accent);
-            border-bottom: 2px solid color(fontLine);
-
-            .accordion-section-title {
-                font-weight: bold;
-                background: color(accent);
-                display: flex;
-                width: 100%;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                text-align: center;
-
-                div {
-                    width: 33%;
-                    height: 100%;
-                }
-            }
-
-            .active,
-            .accordion-section-title:hover {
-                background-color: color(accentDarken);
-            }
-
-            .accordion-section-content {
-                //max-height: 0;
-                //overflow: hidden;
-                transition: max-height 0.5s ease-out;
-                //padding: 15px;
-                display: none;
-                width: 100%;
-                background: color(lightest);
-
-                #detailInfos {
-                    display: inline-flex;
-                    width: 100%;
-                    height: 120px;
-
-                    #gigAddress {
-                        margin-top: 10px;
-                        margin-left: 10px;
-                        width: 80%;
-
-                        p {
-                            font-size: font(basic);
-                            margin: 0;
-                        }
-
-                        #institution {
-                            font-weight: bold;
-                        }
-                    }
-
-                    #ticketsPrice {
-                        text-align: center;
-                        justify-content: center;
-                        padding-right: 40px;
-                        width: 40vw;
-
-                        a {
-                            text-decoration: none;
-                            border: 2px solid color(fontLine);
-                            border-radius: 10px;
-
-                            p {
-                                font-size: font(basic);
-                                color: color(fontLine);
-                                font-weight: bold;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
-
-                #map {
-
-                    .mapouter {
-                        position: relative;
-                        text-align: right;
-                        height: 500px;
-                        width: 100%;
-                        padding: 0;
-                        margin: 0;
-                    }
-
-                    .gmap_canvas {
-                        background: none !important;
-                        height: 500px;
-                        width: 100vw;
-                    }
-                }
-            }
-        } */
 
         #footerPadding {
             width: 100vw;
@@ -360,10 +267,6 @@ body {
             }
         }
     }
-
-
-
-
 }
 
 // CHAT ============================

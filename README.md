@@ -33,7 +33,7 @@ There's a group of friends with a passion for metal music and they really enjoy 
 <a href="https://itgigls-7ea48.firebaseapp.com/">https://itgigls-7ea48.firebaseapp.com/</a>
 
 ## Features
-* Version 1.0
+* Version 2.0
 
 ## Status
 Project is: _finished_
