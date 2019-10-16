@@ -201,20 +201,23 @@ var app = new Vue({
         },
 
         toggleBandInfos: function () {
-            // var accordionTitle = document.getElementsByClassName('accordion-section-title');
-            var accordionTitle = document.getElementById('accordionTitle');
-
+            var accordionTitle = document.getElementsByClassName('accordion-section-title');
             console.log(accordionTitle);
-
             for (var i = 0; i < accordionTitle.length; i++) {
+                console.log(accordionTitle[i]);
+                var accordionPanel=accordionTitle[i].nextElementSibling;
+                console.log(accordionPanel);
 
-                var accordionPanel = document.getElementById("chSelect");
                 if (accordionPanel.style.display === 'block') {
                     accordionPanel.style.display = "none";
                 } else {
                     accordionPanel.style.display = "block";
-                }
+                };
             };
+             
+
+            
+
 
         }
 
