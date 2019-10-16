@@ -37,6 +37,12 @@ body #informationBar {
   border-top: 2px solid #3c415e;
   width: 100%;
   /*----- Accordion -----*/
+  /* .accordion,
+        .accordion * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        } */
   /* .accordion-section {
             background: color(accent);
             border-bottom: 2px solid color(fontLine);
@@ -157,21 +163,17 @@ body #informationBar #infoTableHeader ul div .fas {
   padding-left: 5px;
 }
 
-body #informationBar .accordion,
-body #informationBar .accordion * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body #informationBar .accordion {
-  overflow: hidden;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  /* overflow: hidden;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25); */
 }
 
 body #informationBar .accordion .accordion-section {
   background: #738598;
   /*----- Section Titles -----*/
+  /* .accordion-section:last-child .accordion-section-title {
+                    border-bottom: none;
+                } */
   /*----- Section Content -----*/
 }
 
@@ -204,19 +206,15 @@ body #informationBar .accordion .accordion-section .accordion-section-title p {
 body #informationBar .accordion .accordion-section .accordion-section-title.active,
 body #informationBar .accordion .accordion-section .accordion-section-title:hover {
   background: #66788b;
-  /* Type */
   text-decoration: none;
 }
 
-body #informationBar .accordion .accordion-section .accordion-section:last-child .accordion-section-title {
-  border-bottom: none;
-}
-
 body #informationBar .accordion .accordion-section .accordion-section-content {
-  padding: 15px;
   display: none;
-  border-bottom: 1px solid #3c415e;
-  background: #dfe2e2;
+  overflow: hidden;
+  /* padding: 15px;
+                    border-bottom: 1px solid color(fontLine);
+                    background: color(lightest); */
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos {

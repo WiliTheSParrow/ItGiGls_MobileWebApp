@@ -156,7 +156,7 @@ var app = new Vue({
             );
             app.currentBandOrder = orderToUse;
         }, */
-        
+
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
@@ -198,6 +198,24 @@ var app = new Vue({
                     scrollTop: $(".chatlogs").prop("scrollHeight")
                 }, 700);
             })
+        },
+
+        toggleBandInfos: function () {
+            // var accordionTitle = document.getElementsByClassName('accordion-section-title');
+            var accordionTitle = document.getElementById('accordionTitle');
+
+            console.log(accordionTitle);
+
+            for (var i = 0; i < accordionTitle.length; i++) {
+
+                var accordionPanel = document.getElementById("chSelect");
+                if (accordionPanel.style.display === 'block') {
+                    accordionPanel.style.display = "none";
+                } else {
+                    accordionPanel.style.display = "block";
+                }
+            };
+
         }
 
         /* collapse: function () {
@@ -241,7 +259,7 @@ $(document).ready(function () {
 });
 
 
-//Collapsible:
+//Collapsible id generator:
 $(document).ready(function () {
     var i = 0;
     $('.accordion-section-content').each(function () {
@@ -287,7 +305,7 @@ $(document).ready(function () {
 }); */
 
 // ACCORDION TEST START
-$(document).ready(function () {
+/* $(document).ready(function () {
     function close_accordion_section() {
         $('.accordion .accordion-section-title').removeClass('active');
         $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
@@ -310,5 +328,5 @@ $(document).ready(function () {
 
         e.preventDefault();
     });
-});
+}); */
 // ACCORDION TEST END

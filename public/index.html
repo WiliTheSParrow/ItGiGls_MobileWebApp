@@ -72,6 +72,41 @@
 
 
                 <div class="accordion">
+                        <div class="accordion-section" v-for="(value,key) in dataForTable">
+                                <a class="accordion-section-title" id="accordionTitle" href="#chSelect" v-on:click="toggleBandInfos">
+                                    <p>{{value.band}}</p>
+                                    <p>{{value.date}}</p>
+                                    <p>{{value.country}}</p>
+                                </a>
+                                <div id="chSelect" class="accordion-section-content">
+                                    <div id="detailInfos">
+                                        <div id="gigAddress">
+                                            <p id="institution">{{value.institution}}</p>
+                                            <p>{{value.address}}</p>
+                                            <p>{{value.place}}</p>
+                                            <p>{{value.zipCode}}</p>
+                                        </div>
+                                        <div id="ticketsPrice">
+                                            <a :href=value.ticketBuy target="_blank">
+                                                <p>
+                                                    {{value.ticketPrice}}
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="map">
+                                        <div class="mapouter">
+                                            <div class="gmap_canvas">
+                                                <iframe width="100%" height="500" id="gmap_canvas"
+                                                    :src=value.mapsToShow frameborder="0" scrolling="no" marginheight="0"
+                                                    marginwidth="0"></iframe>
+                                                    <a
+                                                    href="https://www.pureblack.de/beste-wordpress-themes/"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     <!---TESTING -->
                     <!-- <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-1">Accordion Section #1</a>
@@ -122,42 +157,6 @@
 
                     </div> -->
                     <!---TESTING-->
-
-                    <div class="accordion-section" v-for="(value,key) in dataForTable">
-                        <a class="accordion-section-title" href="#chSelect">
-                            <p>{{value.band}}</p>
-                            <p>{{value.date}}</p>
-                            <p>{{value.country}}</p>
-                        </a>
-                        <div id="chSelect" class="accordion-section-content">
-                            <div id="detailInfos">
-                                <div id="gigAddress">
-                                    <p id="institution">{{value.institution}}</p>
-                                    <p>{{value.address}}</p>
-                                    <p>{{value.place}}</p>
-                                    <p>{{value.zipCode}}</p>
-                                </div>
-                                <div id="ticketsPrice">
-                                    <a :href=value.ticketBuy target="_blank">
-                                        <p>
-                                            {{value.ticketPrice}}
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div id="map">
-                                <div class="mapouter">
-                                    <div class="gmap_canvas">
-                                        <iframe width="100%" height="500" id="gmap_canvas"
-                                            :src=value.mapsToShow frameborder="0" scrolling="no" marginheight="0"
-                                            marginwidth="0"></iframe>
-                                            <a
-                                            href="https://www.pureblack.de/beste-wordpress-themes/"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <!--Footer with contact info START -->
                 <div id="footer" data-role="footer">
