@@ -1,6 +1,5 @@
 var app = new Vue({
     el: "#app",
-
     data: {
         gigInfo: concertData.concerts,
         dataForTable: [],
@@ -12,7 +11,6 @@ var app = new Vue({
         currentBandOrder: "mixed",
         currentArrowStatus: "both"
     },
-
     created: function () {
         this.getGigData();
         firebase.auth().onAuthStateChanged(function (user) {
@@ -24,7 +22,6 @@ var app = new Vue({
             }
         });
     },
-
     methods: {
         toggleClass: function (value) {
             if (this.isActive != value) {
@@ -39,7 +36,6 @@ var app = new Vue({
             };
             this.hidegif = false;
         },
-
         visualizeTableArrow: function (arrow1, arrow2) {
             var showArrow = document.getElementById(arrow1);
             var hideArrow = document.getElementById(arrow2);
@@ -55,7 +51,6 @@ var app = new Vue({
             }
             app.currentArrowStatus = orderToUse;
         },
-
         sortDataInTable: function (category, arrow1, arrow2) {
             var orderToUse = '';
             this.dataForTable = this.gigInfo.sort(
@@ -79,84 +74,6 @@ var app = new Vue({
             );
             app.currentBandOrder = orderToUse;
         },
-
-        /* sortDataByBand: function (valami1) {
-            var orderToUse = '';
-            this.dataForTable = this.gigInfo.sort(
-                function (a, b) {
-                    if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
-                        orderToUse = 'ascending';
-                        app.visualizeTableArrow(this.arrowDownBand, this.arrowUpBand);
-                        if (a.band < b.band) {
-                            return -1;
-                        } else {
-                            return 1;
-                        }
-                    } else {
-                        orderToUse = 'descending';
-                        app.visualizeTableArrow(this.arrowUpBand, this.arrowDownBand);
-                        if (a.band < b.band) {
-                            return 1;
-                        } else {
-                            return -1;
-                        }
-                    }
-                }
-            );
-            app.currentBandOrder = orderToUse;
-           
-        }, */
-        /* sortDataByDate: function () {
-            var orderToUse = '';
-            this.dataForTable = this.gigInfo.sort(
-                function (a, b) {
-                    if (app.currentBandOrder == 'order1' || app.currentBandOrder == 'order3') {
-                        orderToUse = 'order2';
-                        app.visualizeTableArrow(this.arrowDownDate, this.arrowUpDate);
-                        if (a.date < b.date) {
-                            return -1;
-                        } else {
-                            return 1;
-                        }
-                    } else {
-                        orderToUse = 'order3';
-                        app.visualizeTableArrow(this.arrowUpDate, this.arrowDownDate);
-                        if (a.date < b.date) {
-                            return 1;
-                        } else {
-                            return -1;
-                        }
-                    }
-                }
-            );
-            app.currentBandOrder = orderToUse;
-        }, */
-        /* sortDataByCountry: function () {
-            var orderToUse = '';
-            this.dataForTable = this.gigInfo.sort(
-                function (a, b) {
-                    if (app.currentBandOrder == 'mixed' || app.currentBandOrder == 'descending') {
-                        orderToUse = 'ascending';
-                        app.visualizeTableArrow(this.arrowDownCountry, this.arrowUpCountry);
-                        if (a.country < b.country) {
-                            return -1;
-                        } else {
-                            return 1;
-                        }
-                    } else {
-                        orderToUse = 'descending';
-                        app.visualizeTableArrow(this.arrowUpCountry, this.arrowDownCountry);
-                        if (a.country < b.country) {
-                            return 1;
-                        } else {
-                            return -1;
-                        }
-                    }
-                }
-            );
-            app.currentBandOrder = orderToUse;
-        }, */
-
         login: function () {
             var provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider).then(function () {
@@ -199,7 +116,6 @@ var app = new Vue({
                 }, 700);
             })
         },
-
         toggleBandInfos: function () {
             var accordionTitle = document.getElementsByClassName('accordion-section-title');
             console.log(accordionTitle);
@@ -214,37 +130,10 @@ var app = new Vue({
                     accordionPanel.style.maxHeight = accordionPanel.scrollHeight + 'px';
                 };
             };
-             
-
-            
-
-
         }
-
-        /* collapse: function () {
-            console.log("A vjúbó vagyok");
-
-
-            if (accordionSectionTitle.classList.contains('active')) {
-
-                console.log("Az else-ből vagyok, aktív");
-                accordionSectionTitle.removeClass('active');
-                accordionSectionContent.slideUp(300).removeClass('open');
-
-            } else {
-
-
-                console.log("Az if-ből vagyok, nem aktív");
-                accordionSectionTitle.addClass('active');
-                accordionSectionContent.slideDown(300).addClass('open');
-            }
-        } */
-
-
     }
 });
-
-//Scroll To Top Button:
+//Scroll To Top Button function:
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 10) {
@@ -260,9 +149,7 @@ $(document).ready(function () {
         }, 100);
     });
 });
-
-
-//Collapsible id generator:
+//Collapsible id generator for accordionTitle and accordionPanel:
 $(document).ready(function () {
     var i = 0;
     $('.accordion-section-content').each(function () {
@@ -277,59 +164,3 @@ $(document).ready(function () {
         i++;
     });
 });
-
-// Accordion:
-/* $(document).ready(function () {
-    // Closing function:
-    function close_accordion_section() {
-        console.log("bezárok");
-        $('.accordion-section-title').removeClass('active');
-        $('.accordion-section-content').slideUp(300).removeClass('open');
-
-    };
-
-    $('.accordion-section-title').click(function (e) {
-
-        if ($(e.target).is('.active')) {
-            console.log("aktív vagyok");
-            close_accordion_section();
-
-        } else {
-            console.log("no aktív");
-            close_accordion_section();
-            var currentAttrValue = $(this).attr('href');
-            $(this).addClass('active');
-            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-
-        }
-
-        e.preventDefault();
-    });
-}); */
-
-// ACCORDION TEST START
-/* $(document).ready(function () {
-    function close_accordion_section() {
-        $('.accordion .accordion-section-title').removeClass('active');
-        $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
-    }
-
-    $('.accordion-section-title').click(function (e) {
-        // Grab current anchor value
-        var currentAttrValue = $(this).attr('href');
-
-        if ($(e.target).is('.active')) {
-            close_accordion_section();
-        } else {
-            close_accordion_section();
-
-            // Add active class to section title
-            $(this).addClass('active');
-            // Open up the hidden content panel
-            $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
-        }
-
-        e.preventDefault();
-    });
-}); */
-// ACCORDION TEST END
