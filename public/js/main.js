@@ -208,10 +208,10 @@ var app = new Vue({
                 var accordionPanel=accordionTitle[i].nextElementSibling;
                 console.log(accordionPanel);
 
-                if (accordionPanel.style.display === 'block') {
-                    accordionPanel.style.display = "none";
+                if (accordionPanel.style.maxHeight) {
+                    accordionPanel.style.maxHeight = null;
                 } else {
-                    accordionPanel.style.display = "block";
+                    accordionPanel.style.maxHeight = accordionPanel.scrollHeight + 'px';
                 };
             };
              

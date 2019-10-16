@@ -144,11 +144,12 @@ body {
 
                 /*----- Section Content -----*/
                 .accordion-section-content {
-                    display: none;
+                    // display: none;
+                    max-height: 0;
                     overflow: hidden;
-                    /* padding: 15px;
+                    transition: max-height 0.5s ease-out;                  
                     border-bottom: 1px solid color(fontLine);
-                    background: color(lightest); */
+                    background: color(lightest);
 
                     #detailInfos {
                         display: inline-flex;

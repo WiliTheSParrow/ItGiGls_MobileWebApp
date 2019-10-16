@@ -210,11 +210,12 @@ body #informationBar .accordion .accordion-section .accordion-section-title:hove
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-content {
-  display: none;
+  max-height: 0;
   overflow: hidden;
-  /* padding: 15px;
-                    border-bottom: 1px solid color(fontLine);
-                    background: color(lightest); */
+  -webkit-transition: max-height 0.5s ease-out;
+  transition: max-height 0.5s ease-out;
+  border-bottom: 1px solid #3c415e;
+  background: #dfe2e2;
 }
 
 body #informationBar .accordion .accordion-section .accordion-section-content #detailInfos {
